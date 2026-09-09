@@ -1,0 +1,4 @@
+node_modules/
+output/*.json
+output/debug/
+credenciales-google.json
