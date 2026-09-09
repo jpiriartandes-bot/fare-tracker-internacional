@@ -29,8 +29,9 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Instalar Xvfb
-        # Avianca bloquea con 403 el modo headless real (Akamai detecta
-        # "HeadlessChrome" en los Client Hints) — scrapers/avianca.js fuerza
+        # Avianca y Gol bloquean/fallan en modo headless real (Avianca:
+        # Akamai detecta "HeadlessChrome" en los Client Hints y da 403;
+        # Gol: ni carga bien el formulario) — ambos scrapers fuerzan
         # headless:false, así que en un runner sin display hace falta un
         # framebuffer virtual para que Chromium pueda abrir una ventana real.
         run: sudo apt-get update && sudo apt-get install -y xvfb

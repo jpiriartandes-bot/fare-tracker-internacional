@@ -43,6 +43,27 @@ aerolíneas activas en `config.js`.
   (`apicm.copaair.com/catalog/booking-airports`) pero no la de precios,
   porque esa parte del flujo sí queda detrás del captcha. Decisión: no
   seguir insistiendo, se prioriza Gol/American en su lugar.
+- **Gol** (`scrapers/gol.js`): **funcional para precio**, con reintentos.
+  Sin bloqueos de bot-detection en el flujo de búsqueda (a diferencia de
+  Copa). Usa la API de calendario (`bff-flight.voegol.com.br/
+  flightcalendar`) — a diferencia de Avianca, esta exige un header
+  `x-aat` (token anti-fraude generado por JS) que no se pudo replicar
+  aislado, así que se deja que la propia página arme la request
+  completando el buscador (origen/destino/"Só ida"), pero se INTERCEPTA
+  esa request con `page.route()` para reescribir el mes pedido y así
+  llegar a +60d sin navegar el calendario visual mes a mes.
+  Mismo gotcha que Avianca: `headless:true` real falla (acá ni se pudo
+  interactuar con el formulario) — se fuerza `headless:false`.
+  **Dato real del sitio, no bug**: la ruta EZE↔CCS en Gol es esparcida,
+  no diaria (EZE→CCS: 2 de 61 días con vuelo; CCS→EZE: ~20 de 61) — cuando
+  no hay vuelo esa fecha, el resultado es `ok:true, tarifa:null` (se
+  determinó correctamente el estado, no es una falla).
+  Probado con la grilla completa (31 fechas × 2 rutas = 62): 59/62 OK a la
+  primera, 3 fallas transitorias de timing (la SPA de Gol es más pesada en
+  Web Components que la de Avianca) — se agregó backoff de reintentos
+  (mismo patrón que Aerolíneas Argentinas en el doméstico) y las 3 pasaron
+  al reintentar. Hora de salida: no investigada todavía (a diferencia de
+  Avianca/Copa, acá no hay evidencia de bloqueo — vale la pena retomarlo).
 - **Google Sheets**: todavía no hay Sheet creado ni `sheets.js` escrito.
   El plan es reutilizar la misma service account del fare-tracker
   doméstico (`fare-tracker-writer@fare-tracker-506113.iam.gserviceaccount.com`),
@@ -61,16 +82,13 @@ npx playwright install chromium
 ```
 
 ## Próximos pasos (en orden)
-1. Decidir qué hacer con la hora de salida de Avianca: ¿aceptar precio-only
-   por ahora, buscar otra vía de entrada (API interna del motor de
-   reservas en vez de la página web), o dejarlo pendiente?
-2. Reconocimiento en vivo de Copa (`scrapers/copa.js`) — primero chequear
-   si expone una API interna como Aerolíneas Argentinas y Avianca, antes
-   de ir a selectores DOM. Mismo cuidado con headless real vs headless
-   verdadero si el sitio tiene protección parecida.
-3. Backoff/reintentos agresivos desde el arranque en ambos scrapers — en
-   el fare-tracker doméstico, JetSMART tuvo inestabilidad recurrente por
-   no tener esto desde el principio.
+1. Decidir qué hacer con la hora de salida de Avianca (bloqueada) y si
+   vale la pena investigar la de Gol (no bloqueada, no probada todavía).
+2. Agregar reintentos con backoff a `scrapers/avianca.js` también (Gol ya
+   los tiene; Avianca no mostró fallas en 62/62 pero conviene ser
+   consistente antes de confiar en el cron diario).
+3. Evaluar American Airlines (etapa 2) para tener una tercera aerolínea
+   activa, dado que Copa quedó pausado.
 4. Crear el Google Sheet nuevo, compartirlo con la service account, y
    escribir `sheets.js` (mismo patrón que el doméstico).
 5. Configurar el secret `GOOGLE_CREDENTIALS` en este repo (Settings →

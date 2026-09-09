@@ -8,10 +8,12 @@ const path = require("path");
 const config = require("./config");
 const { scrapeAvianca } = require("./scrapers/avianca");
 const { scrapeCopa } = require("./scrapers/copa");
+const { scrapeGol } = require("./scrapers/gol");
 
 const SCRAPERS = {
   avianca: scrapeAvianca,
   copa: scrapeCopa,
+  gol: scrapeGol,
 };
 
 function fechaDesdeHoy(dias) {
