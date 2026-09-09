@@ -1,14 +1,15 @@
-# fare-tracker-internacional — EZE ↔ CCS / Avianca, Copa
+# fare-tracker-internacional — EZE ↔ CCS
 
 ## Qué es
 Hermano internacional del [fare-tracker](https://github.com/jpiriartandes-bot/fare-tracker)
 doméstico: mismo patrón (Playwright + GitHub Actions + Google Sheets), pero
-para rutas internacionales. Etapa 1: EZE↔CCS (Buenos Aires Ezeiza ↔ Caracas,
-aeropuerto Simón Bolívar) en Avianca y Copa Airlines. Gol y American Airlines
-quedan para la etapa 2.
+para rutas internacionales. EZE↔CCS (Buenos Aires Ezeiza ↔ Caracas,
+aeropuerto Simón Bolívar). Aerolíneas originalmente previstas para la etapa
+1 (Avianca, Copa) y etapa 2 (Gol, American) — Copa quedó pausado por un
+bloqueo total (ver abajo) y se adelantó Gol en su lugar.
 
-Por corrida: 31 fechas (día 1 a 30 + un extra a día 60) × 2 rutas × 2
-aerolíneas = 124 búsquedas.
+Por corrida: 31 fechas (día 1 a 30 + un extra a día 60) × 2 rutas ×
+aerolíneas activas en `config.js`.
 
 ## Estado actual (2026-09-09)
 - **Avianca** (`scrapers/avianca.js`): **funcional para precio**, probado
@@ -33,8 +34,15 @@ aerolíneas = 124 búsquedas.
   mismo código de error 15. Por ahora `hora_salida` queda `null` para
   Avianca — no vale la pena seguir insistiendo con evasión sin una idea
   nueva concreta.
-- **Copa** (`scrapers/copa.js`): sin reconocimiento en vivo todavía, solo
-  el inventario de campos del formulario de búsqueda.
+- **Copa** (`scrapers/copa.js`): **pausado**. Siguiendo el mismo criterio
+  que Avianca (buscar API antes que pelear el DOM), se probó cargar la
+  home directo — apareció un CAPTCHA explícito de DataDome en la carga
+  inicial de la página, antes de tocar el formulario. El sitio detecta el
+  protocolo CDP que usa Playwright, no algo ajustable con flags/headers.
+  No se intentó resolver/evadir el captcha. Se vio una API legítima
+  (`apicm.copaair.com/catalog/booking-airports`) pero no la de precios,
+  porque esa parte del flujo sí queda detrás del captcha. Decisión: no
+  seguir insistiendo, se prioriza Gol/American en su lugar.
 - **Google Sheets**: todavía no hay Sheet creado ni `sheets.js` escrito.
   El plan es reutilizar la misma service account del fare-tracker
   doméstico (`fare-tracker-writer@fare-tracker-506113.iam.gserviceaccount.com`),
