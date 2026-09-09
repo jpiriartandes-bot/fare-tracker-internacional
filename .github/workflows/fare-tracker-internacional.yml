@@ -28,13 +28,20 @@ jobs:
       - name: Instalar Chromium (Playwright)
         run: npx playwright install --with-deps chromium
 
+      - name: Instalar Xvfb
+        # Avianca bloquea con 403 el modo headless real (Akamai detecta
+        # "HeadlessChrome" en los Client Hints) — scrapers/avianca.js fuerza
+        # headless:false, así que en un runner sin display hace falta un
+        # framebuffer virtual para que Chromium pueda abrir una ventana real.
+        run: sudo apt-get update && sudo apt-get install -y xvfb
+
       - name: Escribir credenciales de Google
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         run: echo "$GOOGLE_CREDENTIALS" > credenciales-google.json
 
       - name: Correr relevamiento
-        run: npm start
+        run: xvfb-run -a npm start
 
       - name: Limpiar credenciales
         if: always()

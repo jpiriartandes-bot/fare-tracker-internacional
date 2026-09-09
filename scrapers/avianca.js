@@ -2,52 +2,57 @@
 //
 // Scraper de tarifa más económica para un tramo/fecha en Avianca.
 //
-// ESTADO (2026-09-09): reconocimiento parcial hecho con headless:false contra
-// el sitio real (avianca.com). Lo que sigue está CONFIRMADO funcionando:
+// ESTADO (2026-09-09): funcional para PRECIO. Hora de salida NO disponible
+// por ahora — ver "Bloqueo de hora de salida" abajo.
 //
-//   1. Home: https://www.avianca.com/ar/es/ (redirige a /es/ofertas/ofertas-vuelos)
-//   2. Cookies: botón `button:has-text("Aceptar")`
-//   3. "Solo ida": `text=Solo ida` (click force, si no el buscador arma ida y vuelta)
-//   4. Origen: input `#origin-desktop`, escribir el código IATA, aparecen
-//      sugerencias como <li class="routes-list-item"> con texto
-//      "Buenos Aires Ezeiza (Argentina) EZE" — click en la primera.
-//   5. Destino: mismo patrón, el input parece tomar foco solo tras elegir
-//      origen (probar `#destination-desktop` como selector, si no existe
-//      buscar el input focuseado).
-//
-// HALLAZGO CLAVE — API interna de calendario de precios:
+// ESTRATEGIA — API de calendario de precios (no hace falta ni tocar el
+// formulario de búsqueda):
 //   GET https://www.avianca.com/airmkt/api/pricing/calendar
 //       ?tenantId=Avianca&tripType=OW&origin=EZE&destination=CCS
 //       &month=MM&year=YYYY&currencyCode=USD
 //   → { dayPrices: [{ date: "2026-09-09", price: 1778.7, ... }, ...] }
-//   Devuelve precio por día para una ventana de ~40 días hacia adelante
-//   desde la fecha de la llamada (parece ignorar bastante el parámetro
-//   month/year real, priorizando "hoy + N días"). Esto podría cubrir buena
-//   parte de las 31 fechas que necesitamos con muchas menos llamadas que
-//   una búsqueda por fecha.
+//   Devuelve precio por día para una ventana de ~40-44 días hacia adelante
+//   (arranca en "hoy" si month=mes actual, o en el día 1 del mes pedido si
+//   es un mes futuro). Un solo llamado cubre de sobra cualquier fecha
+//   dentro de esa ventana — no hace falta iterar el date-picker visual.
 //
-//   GOTCHA IMPORTANTE: Avianca usa Akamai Bot Manager. Pegarle a esta API
-//   con un cliente HTTP directo (curl, o `page.request` de Playwright) da
-//   ECONNRESET aunque se manden las cookies de sesión reales — Akamai
-//   fingerprinta el motor/JS real del browser, que esos clientes no
-//   replican. La ÚNICA forma que funcionó fue ejecutar `fetch()` DESDE
-//   ADENTRO de una página ya navegada, vía `page.evaluate()`. Cualquier
-//   implementación tiene que mantener una page real de Playwright viva,
-//   no puede ser un cliente HTTP liviano.
+//   GOTCHA — Akamai Bot Manager: pegarle a esta API con un cliente HTTP
+//   directo (curl, o `page.request` de Playwright) da ECONNRESET aunque se
+//   manden cookies de sesión reales — Akamai fingerprinta el motor/JS real
+//   del browser. La ÚNICA forma que funcionó fue ejecutar `fetch()` DESDE
+//   ADENTRO de una página ya navegada (`page.evaluate`), después de dejar
+//   unos segundos para que el sensor de Akamai se inicialice. No hace
+//   falta interactuar con el formulario (origen/destino/fecha) para esto,
+//   simplemente cargar la home alcanza.
 //
-// TODO — lo que falta para tener esto productivo:
-//   - Completar el click en el día del calendario visual (el date-picker
-//     de "Ida" no respondió a clicks por texto plano en las pruebas; es un
-//     widget custom, hay que inspeccionarlo más — capaz conviene manejar
-//     la fecha vía la API de calendario en vez del date-picker visual, y
-//     armar la URL de resultados directamente si el sitio lo permite).
-//   - Confirmar el endpoint real de resultados de búsqueda (no el
-//     calendario) para sacar la tarifa Y la hora de salida — el calendario
-//     solo da precio, no hora.
-//   - Decidir: ¿nos alcanza con el precio de la API de calendario (sin
-//     hora de salida) o vale la pena el costo extra de tiempo de llegar
-//     hasta los resultados reales para tener la hora? (evaluar costo en
-//     tiempo de corrida, como pide el brief).
+// BLOQUEO DE HORA DE SALIDA — Imperva WAF en booking.avianca.com:
+//   Completar el buscador (origen/destino/"Solo ida"/fecha en el
+//   date-picker — selectores: `#origin-desktop`, `#destination-desktop`,
+//   `.routes-list-item`, `.month-title` + `.day:not(.disabled) .day-value`
+//   dentro de `.calendar-picker-wrapper`, avanzar de mes con
+//   `.nav-button.right`) y hacer click en "Buscar" (`.searchbar-bottom-button`)
+//   SÍ arma correctamente la URL de resultados:
+//     https://booking.avianca.com/av/booking/avail?departureDate=...&from=EZE&to=CCS&...
+//   pero navegar ahí da "Acceso denegado (código de error 15)" — un WAF
+//   Imperva/Incapsula DISTINTO del Akamai de la home, y más agresivo.
+//   Probado sin éxito: spoofear `navigator.webdriver`, sacar el flag
+//   `--disable-blink-features=AutomationControlled`, e ir más lento entre
+//   acciones. Bloqueó las 3 veces con el mismo código de error. No vale la
+//   pena seguir insistiendo con evasión — para conseguir hora_salida hace
+//   falta otra estrategia (¿API interna del motor de reservas en vez del
+//   WAF de la página?, ¿otro punto de entrada?) a evaluar más adelante.
+//   Por ahora `hora_salida` queda siempre `null` para Avianca.
+//
+// GOTCHA #2 — Akamai bloquea headless:true con 403 (determinístico, no
+// intermitente): igual que se encontró en el fare-tracker doméstico con
+// Aerolíneas Argentinas, Chromium en modo headless real ("new headless")
+// expone "HeadlessChrome" en los Client Hints (Sec-CH-UA) sin importar el
+// User-Agent que se mande — y acá Akamai lo usa para bloquear directo con
+// 403 en vez de dejar pasar la request. Probado: con headless:false anda
+// al toque, con headless:true falla siempre. Por eso este scraper FUERZA
+// headless:false sin importar la opción que le pasen. En GitHub Actions
+// (sin display) esto necesita correr bajo un framebuffer virtual — ver
+// `xvfb-run` en el workflow.
 
 const { chromium } = require("playwright");
 
@@ -55,19 +60,10 @@ const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
-async function dismissCookies(page) {
-  try {
-    const el = page.locator('button:has-text("Aceptar")').first();
-    if ((await el.count()) > 0 && (await el.isVisible())) {
-      await el.click();
-      await page.waitForTimeout(500);
-    }
-  } catch (_) {}
-}
-
-async function scrapeAvianca({ origen, destino, fechaVuelo, tramoId }, opts = {}) {
-  const headless = opts.headless ?? (process.env.HEADLESS !== "false");
-  const browser = await chromium.launch({ headless, args: ["--disable-blink-features=AutomationControlled"] });
+async function scrapeAvianca({ origen, destino, fechaVuelo, tramoId }, _opts = {}) {
+  // headless:true da 403 determinístico contra Akamai (ver GOTCHA #2 arriba)
+  // — se ignora cualquier opción/env y se fuerza siempre headless:false.
+  const browser = await chromium.launch({ headless: false });
   const timestamp = new Date().toISOString();
   const base = {
     aerolinea: "avianca",
@@ -76,34 +72,44 @@ async function scrapeAvianca({ origen, destino, fechaVuelo, tramoId }, opts = {}
     dias_anticipacion: null,
     tarifa: null,
     moneda: null,
-    hora_salida: null,
+    hora_salida: null, // ver "Bloqueo de hora de salida" arriba
     timestamp,
     ok: false,
   };
 
   try {
-    const page = await browser.newPage({ userAgent: UA, viewport: { width: 1366, height: 900 } });
+    const page = await browser.newPage({ userAgent: UA, viewport: { width: 1280, height: 900 } });
 
     await page.goto("https://www.avianca.com/ar/es/", { waitUntil: "domcontentloaded", timeout: 60_000 });
-    await page.waitForTimeout(6_000);
-    await dismissCookies(page);
+    await page.waitForTimeout(6_000); // dejar que el sensor de Akamai se inicialice
 
-    await page.locator("text=Solo ida").click({ force: true });
-    await page.waitForTimeout(500);
+    const [y, m] = fechaVuelo.split("-");
+    const url =
+      `https://www.avianca.com/airmkt/api/pricing/calendar?tenantId=Avianca&tripType=OW` +
+      `&origin=${origen}&destination=${destino}&month=${m}&year=${y}&currencyCode=USD`;
 
-    await page.click("#origin-desktop");
-    await page.fill("#origin-desktop", "");
-    await page.type("#origin-desktop", origen, { delay: 100 });
-    await page.waitForTimeout(1500);
-    await page.locator(".routes-list-item").first().click();
-    await page.waitForTimeout(800);
+    const result = await page.evaluate(async (u) => {
+      try {
+        const r = await fetch(u, { credentials: "include" });
+        return { status: r.status, text: await r.text() };
+      } catch (e) {
+        return { status: null, text: `FETCH ERROR: ${e.message}` };
+      }
+    }, url);
 
-    // TODO: destino + fecha + submit + extracción de tarifa/hora. Ver notas
-    // arriba — este es el punto exacto donde quedó el reconocimiento.
-    throw new Error(
-      "Scraper de Avianca incompleto: falta destino/fecha/submit/extracción. " +
-        "Ver TODOs en scrapers/avianca.js — correr con headless:false para continuar."
-    );
+    if (result.status !== 200) {
+      throw new Error(`API de calendario respondió ${result.status}: ${result.text.slice(0, 200)}`);
+    }
+
+    const json = JSON.parse(result.text);
+    const entry = (json.dayPrices || []).find((dp) => dp.date === fechaVuelo);
+    if (!entry) {
+      throw new Error(
+        `Fecha ${fechaVuelo} no está en la ventana que devolvió el calendario (${(json.dayPrices || []).length} días recibidos)`
+      );
+    }
+
+    return { ...base, tarifa: entry.price, moneda: "USD", hora_salida: null, ok: true };
   } catch (err) {
     return { ...base, error: err.message };
   } finally {
