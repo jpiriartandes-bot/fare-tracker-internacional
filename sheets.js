@@ -13,6 +13,7 @@ const COL_ORDER = [
   "fecha",
   "dias_anticipacion",
   "tarifa",
+  "moneda",
   "hora_salida",
   "ok",
 ];
@@ -24,6 +25,7 @@ const HEADER_ROW = [
   "fecha_vuelo",
   "dias_anticipacion",
   "precio",
+  "moneda",
   "hora_salida",
   "ok",
 ];
