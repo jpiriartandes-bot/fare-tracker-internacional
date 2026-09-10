@@ -1,7 +1,7 @@
 // index.js
 // Orquestador de la corrida: recorre rutas x aerolíneas x ventanas de
 // anticipación de config.js, junta resultados y los guarda en output/
-// (CSV + JSON). Push a Google Sheets: TODO, ver README.
+// (CSV + JSON) y en Google Sheets (pestaña "Historico").
 
 const fs = require("fs");
 const path = require("path");
@@ -9,6 +9,7 @@ const config = require("./config");
 const { scrapeAvianca } = require("./scrapers/avianca");
 const { scrapeCopa } = require("./scrapers/copa");
 const { scrapeGol } = require("./scrapers/gol");
+const { ensureHeader, appendToSheet } = require("./sheets");
 
 const SCRAPERS = {
   avianca: scrapeAvianca,
@@ -76,11 +77,14 @@ async function run() {
 
   console.log(`\nListo. JSON: ${jsonPath} | histórico acumulado: ${csvPath}`);
 
-  // TODO: push a Google Sheets (Sheet nuevo, separado del "Fare Tracker"
-  // doméstico), reutilizando la misma service account
-  // (fare-tracker-writer@fare-tracker-506113.iam.gserviceaccount.com).
-  // Ver mismo patrón que ../fare-tracker/sheets.js una vez que el Sheet
-  // exista y esté compartido con esa cuenta de servicio.
+  // Subir a Google Sheets (pestaña "Historico")
+  try {
+    await ensureHeader();
+    const filasSubidas = await appendToSheet(resultados);
+    console.log(`Google Sheets: ${filasSubidas} fila(s) agregada(s).`);
+  } catch (err) {
+    console.error(`Google Sheets: error al subir datos — ${err.message}`);
+  }
 }
 
 run();
