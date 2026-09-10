@@ -54,6 +54,11 @@ aerolíneas activas en `config.js`.
   llegar a +60d sin navegar el calendario visual mes a mes.
   Mismo gotcha que Avianca: `headless:true` real falla (acá ni se pudo
   interactuar con el formulario) — se fuerza `headless:false`.
+  **Moneda: USD** (igual que Avianca) — la página pide BRL por defecto,
+  pero la misma intercepción de `page.route()` que reescribe el mes
+  también reescribe `currencyCode` a "USD" y la API lo respeta sin
+  problema (confirmado: 2070 BRL ≈ 407 USD, consistente con el tipo de
+  cambio real).
   **Dato real del sitio, no bug**: la ruta EZE↔CCS en Gol es esparcida,
   no diaria (EZE→CCS: 2 de 61 días con vuelo; CCS→EZE: ~20 de 61) — cuando
   no hay vuelo esa fecha, el resultado es `ok:true, tarifa:null` (se
@@ -64,15 +69,17 @@ aerolíneas activas en `config.js`.
   (mismo patrón que Aerolíneas Argentinas en el doméstico) y las 3 pasaron
   al reintentar. Hora de salida: no investigada todavía (a diferencia de
   Avianca/Copa, acá no hay evidencia de bloqueo — vale la pena retomarlo).
-- **Google Sheets**: todavía no hay Sheet creado ni `sheets.js` escrito.
-  El plan es reutilizar la misma service account del fare-tracker
-  doméstico (`fare-tracker-writer@fare-tracker-506113.iam.gserviceaccount.com`),
-  compartiendo un Sheet nuevo con esa cuenta.
-- **GitHub Actions**: el workflow (`fare-tracker-internacional.yml`) está
-  armado siguiendo el mismo patrón del doméstico (cron diario +
-  `workflow_dispatch`, secret `GOOGLE_CREDENTIALS` escrito a archivo y
-  borrado al final), pero todavía no tiene el secret configurado en el
-  repo, y correrlo hoy fallaría porque los scrapers no están terminados.
+- **Google Sheets**: **funcional**. `sheets.js` (mismo patrón que el
+  doméstico) pushea a "Fare Tracker Internacional" → pestaña "Historico",
+  compartida con la service account
+  (`fare-tracker-writer@fare-tracker-506113.iam.gserviceaccount.com`).
+  Columnas: fecha_busqueda, ruta, aerolinea, fecha_vuelo,
+  dias_anticipacion, precio, moneda, hora_salida, ok.
+- **GitHub Actions**: **funcional**. Cron diario a las 13:00 UTC +
+  `workflow_dispatch`, con `xvfb-run` (necesario porque Avianca y Gol
+  fuerzan `headless:false`), secret `GOOGLE_CREDENTIALS` configurado, y
+  push automático de `output/historico.csv`. Probado end-to-end con las
+  124 combinaciones completas: 43m 58s, 124/124 OK.
 
 ## Setup local (correr con Claude Code local — necesita salida a internet real)
 
@@ -86,12 +93,6 @@ npx playwright install chromium
    vale la pena investigar la de Gol (no bloqueada, no probada todavía).
 2. Agregar reintentos con backoff a `scrapers/avianca.js` también (Gol ya
    los tiene; Avianca no mostró fallas en 62/62 pero conviene ser
-   consistente antes de confiar en el cron diario).
+   consistente antes de confiar en el cron diario sin supervisión).
 3. Evaluar American Airlines (etapa 2) para tener una tercera aerolínea
    activa, dado que Copa quedó pausado.
-4. Crear el Google Sheet nuevo, compartirlo con la service account, y
-   escribir `sheets.js` (mismo patrón que el doméstico).
-5. Configurar el secret `GOOGLE_CREDENTIALS` en este repo (Settings →
-   Secrets and variables → Actions).
-6. Corrida de prueba end-to-end (unas pocas combinaciones primero, no las
-   124 de una) antes de confiar en el cron diario.

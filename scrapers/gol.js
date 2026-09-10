@@ -22,8 +22,11 @@
 //   de la fecha que nos interesa — así no hace falta clickear "mes
 //   siguiente" en el calendario visual para llegar a noviembre (+60d).
 //
-//   `currencyCode` viene fijo en "BRL" (moneda nativa del sitio) — no se
-//   intentó forzar otra moneda vía la request real.
+//   `currencyCode` se reescribe a "USD" en la misma intercepción que ya se
+//   usa para el mes (ver más abajo) — la API lo respeta igual que
+//   origin/destination, no hace falta tocar ningún selector de moneda en
+//   la UI. Confirmado: pedir USD da valores ~5x menores que BRL,
+//   consistentes con el tipo de cambio real (ej. 2070 BRL ≈ 407 USD).
 //
 // GOTCHA — igual que Avianca: headless:true real es bloqueado (probado:
 // con headless:true ni siquiera se pudo interactuar con el formulario;
@@ -93,11 +96,13 @@ async function _scrapeGolOnce({ origen, destino, fechaVuelo, tramoId }) {
     const page = await browser.newPage({ userAgent: UA, viewport: { width: 1280, height: 900 } });
 
     // Reescribir el POST a flightcalendar para pedir directo el mes de la
-    // fecha objetivo, sin depender de qué mes abre el calendario por defecto.
+    // fecha objetivo (sin depender de qué mes abre el calendario por
+    // defecto) y la moneda en USD (por defecto la página pide BRL).
     await page.route("**/flightcalendar", async (route) => {
       const body = JSON.parse(route.request().postData());
       body.calendar.month = m;
       body.calendar.year = y;
+      body.currencyCode = "USD";
       await route.continue({ postData: JSON.stringify(body) });
     });
 
@@ -146,10 +151,10 @@ async function _scrapeGolOnce({ origen, destino, fechaVuelo, tramoId }) {
     if (!entry.hasFlight) {
       // No es una falla: Gol no opera esta ruta todos los días, se
       // determinó correctamente que no hay vuelo en esta fecha.
-      return { ...base, tarifa: null, moneda: "BRL", ok: true };
+      return { ...base, tarifa: null, moneda: "USD", ok: true };
     }
 
-    return { ...base, tarifa: entry.value, moneda: "BRL", ok: true };
+    return { ...base, tarifa: entry.value, moneda: "USD", ok: true };
   } catch (err) {
     return { ...base, error: err.message };
   } finally {
