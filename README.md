@@ -80,6 +80,21 @@ aerolíneas activas en `config.js`.
   fuerzan `headless:false`), secret `GOOGLE_CREDENTIALS` configurado, y
   push automático de `output/historico.csv`. Probado end-to-end con las
   124 combinaciones completas: 43m 58s, 124/124 OK.
+- **Frecuencias históricas** (`frecuencias.js`): **funcional**, mismo
+  patrón que `pasajeros.js` del doméstico (misma fuente ANAC/SIAC,
+  overwrite completo de la pestaña cada corrida, cron mensual día 5).
+  **Hallazgo importante**: no hay vuelos NONSTOP registrados en ANAC para
+  EZE↔CCS desde 2023-05-04 (último operado por Aerolíneas Argentinas;
+  antes, Conviasa). Ni Avianca ni Gol aparecen nunca en esta ruta directa
+  en todo el histórico (2017-2026) — consistente con que sus itinerarios
+  "EZE→CCS" vendidos hoy son en realidad con escala (Avianca vía Bogotá,
+  Gol vía algún hub brasileño), no tramos directos. ANAC registra por
+  tramo operado, no por itinerario vendido, así que esos vuelos con escala
+  no aparecen acá. Por eso la pestaña "Frecuencias" va a estar vacía
+  (excepto encabezado) para el período actual — es el resultado correcto,
+  no un bug. Esto es justamente lo que la Parte 2 (Google Flights, aún sin
+  implementar) busca resolver, capturando los itinerarios con escala que
+  realmente se venden.
 
 ## Setup local (correr con Claude Code local — necesita salida a internet real)
 
