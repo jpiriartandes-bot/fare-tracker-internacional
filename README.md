@@ -119,7 +119,9 @@ aerolíneas activas en `config.js`.
   error de extracción).
   Sube a una pestaña nueva "Frecuencias_Futuras" (separada de
   "Frecuencias" porque la estructura es por-vuelo-individual, no
-  agregada por día).
+  agregada por día). Cron semanal, lunes 11:00 UTC (los horarios de
+  vuelo cambian poco día a día, a diferencia del precio) +
+  `workflow_dispatch`.
 
 ## Setup local (correr con Claude Code local — necesita salida a internet real)
 
