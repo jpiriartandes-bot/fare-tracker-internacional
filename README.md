@@ -92,9 +92,34 @@ aerolíneas activas en `config.js`.
   tramo operado, no por itinerario vendido, así que esos vuelos con escala
   no aparecen acá. Por eso la pestaña "Frecuencias" va a estar vacía
   (excepto encabezado) para el período actual — es el resultado correcto,
-  no un bug. Esto es justamente lo que la Parte 2 (Google Flights, aún sin
-  implementar) busca resolver, capturando los itinerarios con escala que
-  realmente se venden.
+  no un bug. Esto es justamente lo que la Parte 2 (Google Flights) resuelve.
+- **Frecuencias futuras / Google Flights** (`google_flights.js`):
+  **funcional**, 62/62 OK, 800 vuelos individuales relevados. Google
+  Flights no expone una API JSON plana (usa RPCs internas ofuscadas tipo
+  protobuf, `batchexecute`), pero la URL de resultados
+  (`/travel/flights/search?tfs=<base64>`) SÍ es un protobuf simple donde
+  origen/destino/fecha están en texto plano dentro de los bytes. Se armó
+  UNA plantilla por ruta (vía la UI real, una sola vez) y de ahí en
+  adelante se arma la URL de cada una de las 31 fechas reemplazando
+  directamente el string de fecha (largo fijo, 10 caracteres, no hace
+  falta recalcular ningún largo de protobuf) — sin tocar el formulario,
+  sin calendario, sin clicks. Extracción de cada vuelo vía DOM
+  (`li.pIav2d`, con un `aria-label` maestro por fila que trae aerolínea,
+  horarios, escalas y precio en texto natural).
+  Confirmado: Google Flights muestra **todas las aerolíneas juntas**,
+  incluida **Copa** (bloqueada en su propio sitio) — resuelve exactamente
+  el problema que Copa dejó pendiente.
+  A diferencia de Avianca/Gol, **funciona con `headless:true` real**, sin
+  bloqueo — no necesita `xvfb-run`.
+  Precio (`precio_gf`) viene en ARS (moneda del punto de venta detectado
+  por geo/idioma) — es solo referencia cruzada para frecuencias, NO
+  reemplaza las tarifas oficiales de Avianca/Gol (puede tener markup).
+  ~161 de 800 filas tienen `precio_gf` null — son itinerarios que Google
+  Flights lista pero marca "Precio total no disponible" (dato real, no
+  error de extracción).
+  Sube a una pestaña nueva "Frecuencias_Futuras" (separada de
+  "Frecuencias" porque la estructura es por-vuelo-individual, no
+  agregada por día).
 
 ## Setup local (correr con Claude Code local — necesita salida a internet real)
 

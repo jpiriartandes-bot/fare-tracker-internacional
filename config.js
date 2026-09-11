@@ -20,9 +20,10 @@ module.exports = {
 
   // Metodología: tarifa más económica visible, SIN impuestos/tasas,
   // consistente con la metodología v2 usada en el fare-tracker doméstico.
-  // Nota: cada aerolínea devuelve su propia moneda nativa en el campo
-  // "moneda" del resultado (Avianca: USD, Gol: BRL) — no hay una moneda
-  // global única todavía.
+  // Nota: ambas aerolíneas devuelven el campo "moneda" del resultado en
+  // USD (Avianca nativo; Gol se fuerza a USD vía interceptación de
+  // request, ver scrapers/gol.js) — filas históricas previas al cambio
+  // quedaron en BRL, documentado en sheets.js/README.
   metodologia: "v2_sin_impuestos",
 
   outputDir: "./output",
