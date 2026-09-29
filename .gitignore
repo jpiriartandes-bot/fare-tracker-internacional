@@ -3,3 +3,4 @@ output/*.json
 output/debug/
 output/_anac*.csv
 credenciales-google.json
+output/prueba/

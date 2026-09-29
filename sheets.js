@@ -16,6 +16,10 @@ const COL_ORDER = [
   "moneda",
   "hora_salida",
   "ok",
+  // 2026-09-28: aerolínea operadora cuando no es la que vende (Laser
+  // CCS<->MIA -> G6/GlobalX). Columna nueva al final: ensureHeader()
+  // actualiza el encabezado solo, las filas anteriores quedan vacías.
+  "operador",
 ];
 
 const HEADER_ROW = [
@@ -28,6 +32,7 @@ const HEADER_ROW = [
   "moneda",
   "hora_salida",
   "ok",
+  "operador",
 ];
 
 async function getAuth() {
