@@ -74,7 +74,10 @@ aerolíneas activas en `config.js`.
   compartida con la service account
   (`fare-tracker-writer@fare-tracker-506113.iam.gserviceaccount.com`).
   Columnas: fecha_busqueda, ruta, aerolinea, fecha_vuelo,
-  dias_anticipacion, precio, moneda, hora_salida, ok.
+  dias_anticipacion, precio, moneda, hora_salida, ok, operador, fuente,
+  nota. `fuente` = `sitio_aerolinea` (scrapers propios) o
+  `google_flights` (ver abajo); `nota` explica los precios vacíos de
+  Google Flights.
 - **GitHub Actions**: **funcional**. Cron diario a las 13:00 UTC +
   `workflow_dispatch`, con `xvfb-run` (necesario porque Avianca y Gol
   fuerzan `headless:false`), secret `GOOGLE_CREDENTIALS` configurado, y
@@ -111,17 +114,37 @@ aerolíneas activas en `config.js`.
   el problema que Copa dejó pendiente.
   A diferencia de Avianca/Gol, **funciona con `headless:true` real**, sin
   bloqueo — no necesita `xvfb-run`.
-  Precio (`precio_gf`) viene en ARS (moneda del punto de venta detectado
-  por geo/idioma) — es solo referencia cruzada para frecuencias, NO
-  reemplaza las tarifas oficiales de Avianca/Gol (puede tener markup).
+  Precio (`precio_gf`) en USD desde 2026-09-29 (`&curr=USD` en la URL;
+  antes ARS por geo/idioma) — es solo referencia cruzada para
+  frecuencias, NO reemplaza las tarifas oficiales de Avianca/Gol (es el
+  mínimo entre todos los vendedores, agencias incluidas).
   ~161 de 800 filas tienen `precio_gf` null — son itinerarios que Google
   Flights lista pero marca "Precio total no disponible" (dato real, no
   error de extracción).
   Sube a una pestaña nueva "Frecuencias_Futuras" (separada de
   "Frecuencias" porque la estructura es por-vuelo-individual, no
-  agregada por día). Cron semanal, lunes 11:00 UTC (los horarios de
-  vuelo cambian poco día a día, a diferencia del precio) +
-  `workflow_dispatch`.
+  agregada por día). Cron diario 07:00 UTC (04:00 ART) + `workflow_dispatch`.
+  El workflow corre 3 jobs en paralelo (matrix, uno por par de rutas:
+  EZE↔CCS, CCS↔MIA, BUE↔MIA; ~1,5 h cada uno, `fail-fast: false`,
+  timeout 300 min). Solo el job EZE↔CCS reescribe Frecuencias_Futuras.
+- **Tarifas vía Google Flights** (`google_flights.js`, 2026-09-29): para
+  las aerolíneas bloqueadas en su propio sitio. CCS↔MIA: American y
+  Copa; EZE↔CCS: Copa; BUE↔MIA (Buenos Aires como ciudad, EZE+AEP; MIA
+  como aeropuerto): Copa y LATAM, solo itinerarios con 1 escala.
+  Para cada ruta/fecha/aerolínea se abren las "opciones de reserva" de
+  sus 2 vuelos más baratos de la lista y se lee SOLO la fila "Reservar
+  con <aerolínea>" (marcada "Compañía aérea"); se guarda el menor de esos
+  precios. Nunca el precio de la lista (puede ser de una agencia o de una
+  aerolínea socia) ni el de una agencia. Si la aerolínea no vende
+  directo, fila con precio vacío, `ok=true` y `nota`. Van a "Historico"
+  con `fuente=google_flights`, en USD y **con impuestos** (Google Flights
+  muestra precio final) — no comparables 1:1 con las tarifas sin
+  impuestos de los scrapers propios. Pausas de 5-10 s entre páginas.
+  Se escribe a medida que avanza (después de cada ruta/fecha) en
+  "Historico" y en un CSV propio por job (`output/historico_gf_<par>.csv`,
+  nunca en `historico.csv`, que es del workflow de tarifas).
+  Prueba: `node google_flights.js --prueba --ventanas=1,15,60`
+  (no sube a Sheets).
 
 ## Setup local (correr con Claude Code local — necesita salida a internet real)
 

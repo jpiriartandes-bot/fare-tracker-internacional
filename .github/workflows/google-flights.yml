@@ -1,16 +1,33 @@
-name: Actualización de frecuencias futuras (Google Flights)
+name: Google Flights (tarifas Copa/American/LATAM + frecuencias futuras)
 
 on:
   schedule:
-    # Todos los lunes a las 11:00 UTC. Los horarios/frecuencias de vuelos
-    # cambian poco de un día a otro (a diferencia del precio), así que no
-    # hace falta el cron diario del scraper de tarifas.
-    - cron: "0 11 * * 1"
+    # Diario a las 07:00 UTC (04:00 ART). Además de las frecuencias
+    # futuras, releva tarifas de Copa/American/LATAM hacia "Historico" (el
+    # precio cambia día a día). Con ~1,5 h por job termina bien antes del
+    # cron de tarifas de las 13:00 UTC, así no se superponen.
+    - cron: "0 7 * * *"
   workflow_dispatch: {} # permite dispararlo a mano desde Actions
 
 jobs:
-  actualizar-google-flights:
+  relevar:
+    # Un job por par de rutas, en paralelo (~1,5 h cada uno en vez de
+    # ~4,5 h uno solo, medido 2026-09-29). Cada job:
+    #   - escribe sus tarifas en "Historico" a medida que avanza y en su
+    #     PROPIO CSV (output/historico_gf_<par>.csv), nunca en
+    #     output/historico.csv, que es del workflow de tarifas;
+    #   - solo el de EZE_CCS reescribe "Frecuencias_Futuras" (los otros no
+    #     relevan esas rutas y google_flights.js no la toca).
+    strategy:
+      fail-fast: false # si un par falla, los otros siguen
+      matrix:
+        par:
+          - { id: EZE_CCS, rutas: "EZE-CCS,CCS-EZE" }
+          - { id: CCS_MIA, rutas: "CCS-MIA,MIA-CCS" }
+          - { id: BUE_MIA, rutas: "BUE-MIA,MIA-BUE" }
+    name: relevar (${{ matrix.par.id }})
     runs-on: ubuntu-latest
+    timeout-minutes: 300
     permissions:
       contents: write
 
@@ -34,16 +51,30 @@ jobs:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         run: echo "$GOOGLE_CREDENTIALS" > credenciales-google.json
 
-      - name: Correr relevamiento de Google Flights
-        run: node google_flights.js
+      - name: Correr relevamiento de Google Flights (${{ matrix.par.id }})
+        run: node google_flights.js --rutas=${{ matrix.par.rutas }} --csv=historico_gf_${{ matrix.par.id }}.csv
 
       - name: Limpiar credenciales
         if: always()
         run: rm -f credenciales-google.json
 
-      - name: Commitear cambios locales (si los hay)
+      - name: Commitear CSV del job
+        # always(): si el relevamiento se cortó a mitad, igual se guarda lo
+        # que alcanzó a escribir. Cada job toca solo su CSV, así que el
+        # rebase no tiene conflictos; el reintento cubre el caso de que otro
+        # job (o el workflow de tarifas) pushee justo entre el pull y el push.
+        if: always()
         run: |
           git config user.name "fare-tracker-internacional-bot"
           git config user.email "actions@github.com"
-          git diff --quiet --cached || git commit -m "Google Flights: frecuencias futuras actualizadas $(date -u +%Y-%m-%d)"
-          git push || true
+          CSV=output/historico_gf_${{ matrix.par.id }}.csv
+          [ -f "$CSV" ] || { echo "No hay $CSV, nada para commitear."; exit 0; }
+          git add "$CSV"
+          git diff --quiet --cached && { echo "Sin cambios."; exit 0; }
+          git commit -m "Google Flights ${{ matrix.par.id }}: relevamiento $(date -u +%Y-%m-%d)"
+          for intento in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "Push rechazado (intento $intento), reintentando..."
+            sleep $((intento * 10))
+          done
+          exit 1

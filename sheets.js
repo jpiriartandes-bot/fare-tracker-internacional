@@ -20,7 +20,17 @@ const COL_ORDER = [
   // CCS<->MIA -> G6/GlobalX). Columna nueva al final: ensureHeader()
   // actualiza el encabezado solo, las filas anteriores quedan vacías.
   "operador",
+  // 2026-09-29: de dónde sale la tarifa — "sitio_aerolinea" (scrapers
+  // propios, default) o "google_flights" (google_flights.js, precio que
+  // vende la propia aerolínea en Google Flights, CON impuestos). "nota"
+  // explica los precios vacíos con ok=true de Google Flights (ej. la
+  // aerolínea no aparece como vendedora). Mismo criterio que "operador":
+  // columnas al final, las filas anteriores quedan vacías.
+  "fuente",
+  "nota",
 ];
+
+const FUENTE_DEFAULT = "sitio_aerolinea";
 
 const HEADER_ROW = [
   "fecha_busqueda",
@@ -33,6 +43,8 @@ const HEADER_ROW = [
   "hora_salida",
   "ok",
   "operador",
+  "fuente",
+  "nota",
 ];
 
 async function getAuth() {
@@ -75,7 +87,7 @@ async function appendToSheet(resultados) {
 
   const rows = resultados.map((r) =>
     COL_ORDER.map((col) => {
-      const v = r[col];
+      const v = col === "fuente" ? (r.fuente ?? FUENTE_DEFAULT) : r[col];
       if (v === null || v === undefined) return "";
       return v;
     })
