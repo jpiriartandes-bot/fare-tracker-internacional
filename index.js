@@ -11,6 +11,7 @@ const { scrapeCopa } = require("./scrapers/copa");
 const { scrapeGol } = require("./scrapers/gol");
 const { scrapeAmerican } = require("./scrapers/american");
 const { scrapeLaser } = require("./scrapers/laser");
+const { scrapeLatam } = require("./scrapers/latam");
 const { ensureHeader, appendToSheet } = require("./sheets");
 
 const SCRAPERS = {
@@ -19,6 +20,7 @@ const SCRAPERS = {
   gol: scrapeGol,
   american: scrapeAmerican,
   laser: scrapeLaser,
+  latam: scrapeLatam,
 };
 
 const PRUEBA = process.argv.includes("--prueba");
