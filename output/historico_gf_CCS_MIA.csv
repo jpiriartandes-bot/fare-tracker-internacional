@@ -1,0 +1,125 @@
+fecha_busqueda,ruta,aerolinea,fecha_vuelo,dias_anticipacion,precio,moneda,hora_salida,ok,error,operador,fuente,nota
+2026-09-30T12:21:24.274Z,CCS_MIA,american,2026-10-01,1,704,USD,14:40,true,,,google_flights,
+2026-09-30T12:21:37.041Z,CCS_MIA,copa,2026-10-01,1,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:21:51.957Z,CCS_MIA,american,2026-10-02,2,725,USD,14:40,true,,,google_flights,
+2026-09-30T12:22:04.763Z,CCS_MIA,copa,2026-10-02,2,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:22:21.174Z,CCS_MIA,american,2026-10-03,3,725,USD,14:40,true,,,google_flights,
+2026-09-30T12:22:34.553Z,CCS_MIA,copa,2026-10-03,3,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:22:53.959Z,CCS_MIA,american,2026-10-04,4,725,USD,14:40,true,,,google_flights,
+2026-09-30T12:23:05.944Z,CCS_MIA,copa,2026-10-04,4,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:23:22.450Z,CCS_MIA,american,2026-10-05,5,704,USD,14:40,true,,,google_flights,
+2026-09-30T12:23:35.952Z,CCS_MIA,copa,2026-10-05,5,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:07.145Z,CCS_MIA,american,2026-10-06,6,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:07.146Z,CCS_MIA,copa,2026-10-06,6,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:25.358Z,CCS_MIA,american,2026-10-07,7,704,USD,14:40,true,,,google_flights,
+2026-09-30T12:24:38.260Z,CCS_MIA,copa,2026-10-07,7,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:54.435Z,CCS_MIA,american,2026-10-08,8,950,USD,14:40,true,,,google_flights,
+2026-09-30T12:25:07.182Z,CCS_MIA,copa,2026-10-08,8,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:25:25.925Z,CCS_MIA,american,2026-10-09,9,725,USD,14:40,true,,,google_flights,
+2026-09-30T12:25:38.832Z,CCS_MIA,copa,2026-10-09,9,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:25:54.840Z,CCS_MIA,american,2026-10-10,10,725,USD,14:40,true,,,google_flights,
+2026-09-30T12:26:09.431Z,CCS_MIA,copa,2026-10-10,10,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:26:24.395Z,CCS_MIA,american,2026-10-11,11,725,USD,14:40,true,,,google_flights,
+2026-09-30T12:26:33.645Z,CCS_MIA,copa,2026-10-11,11,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:26:48.610Z,CCS_MIA,american,2026-10-12,12,704,USD,14:40,true,,,google_flights,
+2026-09-30T12:26:57.521Z,CCS_MIA,copa,2026-10-12,12,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:27:29.782Z,CCS_MIA,american,2026-10-13,13,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:27:29.782Z,CCS_MIA,copa,2026-10-13,13,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:27:46.058Z,CCS_MIA,american,2026-10-14,14,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:27:46.058Z,CCS_MIA,copa,2026-10-14,14,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:28:03.211Z,CCS_MIA,american,2026-10-15,15,638,USD,14:40,true,,,google_flights,
+2026-09-30T12:28:53.501Z,CCS_MIA,copa,2026-10-15,15,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:29:23.900Z,CCS_MIA,american,2026-10-16,16,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:29:23.900Z,CCS_MIA,copa,2026-10-16,16,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:29:43.126Z,CCS_MIA,american,2026-10-17,17,660,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:30:16.349Z,CCS_MIA,copa,2026-10-17,17,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:31:18.406Z,CCS_MIA,american,2026-10-18,18,660,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:31:55.013Z,CCS_MIA,copa,2026-10-18,18,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:33:01.516Z,CCS_MIA,american,2026-10-19,19,638,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:33:36.465Z,CCS_MIA,copa,2026-10-19,19,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:34:40.877Z,CCS_MIA,american,2026-10-20,20,638,USD,14:40,true,,,google_flights,
+2026-09-30T12:35:15.943Z,CCS_MIA,copa,2026-10-20,20,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:36:22.384Z,CCS_MIA,american,2026-10-21,21,638,USD,14:40,true,,,google_flights,
+2026-09-30T12:36:54.755Z,CCS_MIA,copa,2026-10-21,21,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:37:52.862Z,CCS_MIA,american,2026-10-22,22,638,USD,14:40,true,,,google_flights,
+2026-09-30T12:38:31.146Z,CCS_MIA,copa,2026-10-22,22,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:39:40.553Z,CCS_MIA,american,2026-10-23,23,660,USD,14:40,true,,,google_flights,
+2026-09-30T12:40:13.855Z,CCS_MIA,copa,2026-10-23,23,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:41:19.770Z,CCS_MIA,american,2026-10-24,24,660,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:41:50.371Z,CCS_MIA,copa,2026-10-24,24,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:42:52.027Z,CCS_MIA,american,2026-10-25,25,660,USD,14:40,true,,,google_flights,
+2026-09-30T12:43:27.814Z,CCS_MIA,copa,2026-10-25,25,461,USD,13:37,true,,,google_flights,
+2026-09-30T12:44:33.236Z,CCS_MIA,american,2026-10-26,26,638,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:45:09.962Z,CCS_MIA,copa,2026-10-26,26,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:46:25.187Z,CCS_MIA,american,2026-10-27,27,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:46:25.187Z,CCS_MIA,copa,2026-10-27,27,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:46:42.660Z,CCS_MIA,american,2026-10-28,28,638,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:47:16.297Z,CCS_MIA,copa,2026-10-28,28,461,USD,13:37,true,,,google_flights,
+2026-09-30T12:48:31.458Z,CCS_MIA,american,2026-10-29,29,638,USD,13:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:49:06.897Z,CCS_MIA,copa,2026-10-29,29,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:50:11.750Z,CCS_MIA,american,2026-10-30,30,660,USD,14:40,true,,,google_flights,
+2026-09-30T12:50:48.021Z,CCS_MIA,copa,2026-10-30,30,461,USD,6:35,true,,,google_flights,
+2026-09-30T12:51:49.229Z,CCS_MIA,american,2026-11-29,60,936,USD,14:00,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:52:20.787Z,CCS_MIA,copa,2026-11-29,60,652,USD,6:35,true,,,google_flights,
+2026-09-30T12:53:27.803Z,MIA_CCS,american,2026-10-01,1,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:53:27.803Z,MIA_CCS,copa,2026-10-01,1,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:53:43.633Z,MIA_CCS,american,2026-10-02,2,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:53:43.633Z,MIA_CCS,copa,2026-10-02,2,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:01.114Z,MIA_CCS,american,2026-10-03,3,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:01.114Z,MIA_CCS,copa,2026-10-03,3,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:17.295Z,MIA_CCS,american,2026-10-04,4,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:17.295Z,MIA_CCS,copa,2026-10-04,4,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:36.180Z,MIA_CCS,american,2026-10-05,5,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:36.180Z,MIA_CCS,copa,2026-10-05,5,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:52.647Z,MIA_CCS,american,2026-10-06,6,,USD,,true,,,google_flights,American no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:54:52.647Z,MIA_CCS,copa,2026-10-06,6,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:55:07.717Z,MIA_CCS,american,2026-10-07,7,1095,USD,10:09,true,,,google_flights,
+2026-09-30T12:55:20.616Z,MIA_CCS,copa,2026-10-07,7,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:55:36.479Z,MIA_CCS,american,2026-10-08,8,877,USD,10:09,true,,,google_flights,
+2026-09-30T12:55:50.206Z,MIA_CCS,copa,2026-10-08,8,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:56:05.999Z,MIA_CCS,american,2026-10-09,9,761,USD,10:09,true,,,google_flights,
+2026-09-30T12:56:16.361Z,MIA_CCS,copa,2026-10-09,9,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:56:35.173Z,MIA_CCS,american,2026-10-10,10,829,USD,10:09,true,,,google_flights,
+2026-09-30T12:56:48.075Z,MIA_CCS,copa,2026-10-10,10,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:57:04.843Z,MIA_CCS,american,2026-10-11,11,761,USD,10:09,true,,,google_flights,
+2026-09-30T12:57:13.693Z,MIA_CCS,copa,2026-10-11,11,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:57:28.334Z,MIA_CCS,american,2026-10-12,12,741,USD,10:09,true,,,google_flights,
+2026-09-30T12:57:42.021Z,MIA_CCS,copa,2026-10-12,12,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:57:57.229Z,MIA_CCS,american,2026-10-13,13,741,USD,10:09,true,,,google_flights,
+2026-09-30T12:58:08.568Z,MIA_CCS,copa,2026-10-13,13,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:58:23.237Z,MIA_CCS,american,2026-10-14,14,646,USD,10:09,true,,,google_flights,
+2026-09-30T12:58:37.082Z,MIA_CCS,copa,2026-10-14,14,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:58:53.334Z,MIA_CCS,american,2026-10-15,15,646,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T12:59:25.210Z,MIA_CCS,copa,2026-10-15,15,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:59:42.624Z,MIA_CCS,american,2026-10-16,16,591,USD,10:09,true,,,google_flights,
+2026-09-30T13:00:17.265Z,MIA_CCS,copa,2026-10-16,16,,USD,,true,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, FlightHub, Justfly.com, Ovago)"
+2026-09-30T13:01:28.458Z,MIA_CCS,american,2026-10-17,17,591,USD,10:09,true,,,google_flights,
+2026-09-30T13:02:05.425Z,MIA_CCS,copa,2026-10-17,17,563,USD,18:31,true,,,google_flights,
+2026-09-30T13:03:21.530Z,MIA_CCS,american,2026-10-18,18,667,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:03:54.760Z,MIA_CCS,copa,2026-10-18,18,544,USD,18:31,true,,,google_flights,
+2026-09-30T13:05:03.327Z,MIA_CCS,american,2026-10-19,19,571,USD,10:09,true,,,google_flights,
+2026-09-30T13:05:45.099Z,MIA_CCS,copa,2026-10-19,19,544,USD,18:31,true,,,google_flights,
+2026-09-30T13:06:55.419Z,MIA_CCS,american,2026-10-20,20,646,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:07:28.409Z,MIA_CCS,copa,2026-10-20,20,544,USD,18:31,true,,,google_flights,
+2026-09-30T13:08:42.042Z,MIA_CCS,american,2026-10-21,21,646,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:09:17.280Z,MIA_CCS,copa,2026-10-21,21,544,USD,5:57,true,,,google_flights,
+2026-09-30T13:10:27.957Z,MIA_CCS,american,2026-10-22,22,646,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:11:00.771Z,MIA_CCS,copa,2026-10-22,22,544,USD,5:57,true,,,google_flights,
+2026-09-30T13:12:12.242Z,MIA_CCS,american,2026-10-23,23,667,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:12:46.331Z,MIA_CCS,copa,2026-10-23,23,544,USD,5:57,true,,,google_flights,
+2026-09-30T13:13:51.170Z,MIA_CCS,american,2026-10-24,24,667,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:14:28.335Z,MIA_CCS,copa,2026-10-24,24,544,USD,5:57,true,,,google_flights,
+2026-09-30T13:15:37.347Z,MIA_CCS,american,2026-10-25,25,591,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:16:19.071Z,MIA_CCS,copa,2026-10-25,25,544,USD,18:23,true,,,google_flights,
+2026-09-30T13:17:25.536Z,MIA_CCS,american,2026-10-26,26,520,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:18:01.263Z,MIA_CCS,copa,2026-10-26,26,544,USD,5:40,true,,,google_flights,
+2026-09-30T13:19:05.294Z,MIA_CCS,american,2026-10-27,27,520,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:19:37.491Z,MIA_CCS,copa,2026-10-27,27,544,USD,5:40,true,,,google_flights,
+2026-09-30T13:20:48.222Z,MIA_CCS,american,2026-10-28,28,571,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:21:25.685Z,MIA_CCS,copa,2026-10-28,28,544,USD,5:40,true,,,google_flights,
+2026-09-30T13:22:28.881Z,MIA_CCS,american,2026-10-29,29,646,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:23:04.265Z,MIA_CCS,copa,2026-10-29,29,544,USD,5:40,true,,,google_flights,
+2026-09-30T13:24:16.232Z,MIA_CCS,american,2026-10-30,30,591,USD,8:51,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:24:51.836Z,MIA_CCS,copa,2026-10-30,30,544,USD,5:40,true,,,google_flights,
+2026-09-30T13:26:00.701Z,MIA_CCS,american,2026-11-29,60,540,USD,8:52,true,,Envoy Air as American Eagle,google_flights,
+2026-09-30T13:26:35.640Z,MIA_CCS,copa,2026-11-29,60,544,USD,4:41,true,,,google_flights,
