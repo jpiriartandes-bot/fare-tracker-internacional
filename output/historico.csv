@@ -2665,3 +2665,307 @@ fecha_busqueda,ruta,aerolinea,fecha_vuelo,dias_anticipacion,precio,moneda,hora_s
 2026-09-29T19:23:10.998Z,MIA_CCS,laser,2026-10-28,29,420.84,USD,07:30,true,"",G6
 2026-09-29T19:23:24.148Z,MIA_CCS,laser,2026-10-29,30,420.84,USD,07:30,true,"",G6
 2026-09-29T19:23:36.459Z,MIA_CCS,laser,2026-11-28,60,420.84,USD,07:30,true,"",G6
+2026-09-30T18:11:24.054Z,EZE_CCS,avianca,2026-10-01,1,1438.1,USD,,true,"",
+2026-09-30T18:11:33.747Z,EZE_CCS,avianca,2026-10-02,2,985.6,USD,,true,"",
+2026-09-30T18:11:43.152Z,EZE_CCS,avianca,2026-10-03,3,1774.2,USD,,true,"",
+2026-09-30T18:11:50.453Z,EZE_CCS,avianca,2026-10-04,4,1774.2,USD,,true,"",
+2026-09-30T18:11:57.739Z,EZE_CCS,avianca,2026-10-05,5,909.1,USD,,true,"",
+2026-09-30T18:12:05.036Z,EZE_CCS,avianca,2026-10-06,6,843.4,USD,,true,"",
+2026-09-30T18:12:12.448Z,EZE_CCS,avianca,2026-10-07,7,1774.2,USD,,true,"",
+2026-09-30T18:12:19.808Z,EZE_CCS,avianca,2026-10-08,8,1774.2,USD,,true,"",
+2026-09-30T18:12:26.991Z,EZE_CCS,avianca,2026-10-09,9,1774.2,USD,,true,"",
+2026-09-30T18:12:34.735Z,EZE_CCS,avianca,2026-10-10,10,1774.2,USD,,true,"",
+2026-09-30T18:12:41.984Z,EZE_CCS,avianca,2026-10-11,11,1774.2,USD,,true,"",
+2026-09-30T18:12:49.395Z,EZE_CCS,avianca,2026-10-12,12,1774.2,USD,,true,"",
+2026-09-30T18:12:56.828Z,EZE_CCS,avianca,2026-10-13,13,2092,USD,,true,"",
+2026-09-30T18:13:04.588Z,EZE_CCS,avianca,2026-10-14,14,,,,false,"Fecha 2026-10-14 no está en la ventana que devolvió el calendario (323 días recibidos)",
+2026-09-30T18:13:12.337Z,EZE_CCS,avianca,2026-10-15,15,1438.1,USD,,true,"",
+2026-09-30T18:13:19.493Z,EZE_CCS,avianca,2026-10-16,16,1774.2,USD,,true,"",
+2026-09-30T18:13:26.839Z,EZE_CCS,avianca,2026-10-17,17,1774.2,USD,,true,"",
+2026-09-30T18:13:34.160Z,EZE_CCS,avianca,2026-10-18,18,1541.5,USD,,true,"",
+2026-09-30T18:13:41.349Z,EZE_CCS,avianca,2026-10-19,19,1541.5,USD,,true,"",
+2026-09-30T18:13:48.540Z,EZE_CCS,avianca,2026-10-20,20,843.4,USD,,true,"",
+2026-09-30T18:13:55.810Z,EZE_CCS,avianca,2026-10-21,21,,,,false,"Fecha 2026-10-21 no está en la ventana que devolvió el calendario (323 días recibidos)",
+2026-09-30T18:14:02.925Z,EZE_CCS,avianca,2026-10-22,22,791.7,USD,,true,"",
+2026-09-30T18:14:10.169Z,EZE_CCS,avianca,2026-10-23,23,1541.5,USD,,true,"",
+2026-09-30T18:14:17.675Z,EZE_CCS,avianca,2026-10-24,24,1778.7,USD,,true,"",
+2026-09-30T18:14:24.810Z,EZE_CCS,avianca,2026-10-25,25,,,,false,"Fecha 2026-10-25 no está en la ventana que devolvió el calendario (323 días recibidos)",
+2026-09-30T18:14:32.175Z,EZE_CCS,avianca,2026-10-26,26,1774.2,USD,,true,"",
+2026-09-30T18:14:39.580Z,EZE_CCS,avianca,2026-10-27,27,1541.5,USD,,true,"",
+2026-09-30T18:14:46.894Z,EZE_CCS,avianca,2026-10-28,28,1774.2,USD,,true,"",
+2026-09-30T18:14:54.068Z,EZE_CCS,avianca,2026-10-29,29,1438.1,USD,,true,"",
+2026-09-30T18:15:01.293Z,EZE_CCS,avianca,2026-10-30,30,1774.2,USD,,true,"",
+2026-09-30T18:15:08.395Z,EZE_CCS,avianca,2026-11-29,60,1205.8,USD,,true,"",
+2026-09-30T18:17:06.107Z,EZE_CCS,gol,2026-10-01,1,,USD,,true,"",
+2026-09-30T18:18:10.909Z,EZE_CCS,gol,2026-10-02,2,,USD,,true,"",
+2026-09-30T18:20:23.549Z,EZE_CCS,gol,2026-10-03,3,,,,false,"locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Ida e volta').first()
+    - locator resolved to <tgr-text-label size="md-1" id="tgr-dropdown__label">…</tgr-text-label>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="container-modal">…</div> from <div id="redirGeo">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="container-modal">…</div> from <div id="redirGeo">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    28 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="container-modal">…</div> from <div id="redirGeo">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+",
+2026-09-30T18:20:48.759Z,EZE_CCS,gol,2026-10-04,4,,USD,,true,"",
+2026-09-30T18:21:10.477Z,EZE_CCS,gol,2026-10-05,5,,USD,,true,"",
+2026-09-30T18:23:22.092Z,EZE_CCS,gol,2026-10-06,6,,USD,,true,"",
+2026-09-30T18:23:44.361Z,EZE_CCS,gol,2026-10-07,7,,USD,,true,"",
+2026-09-30T18:24:06.426Z,EZE_CCS,gol,2026-10-08,8,,USD,,true,"",
+2026-09-30T18:24:28.219Z,EZE_CCS,gol,2026-10-09,9,,USD,,true,"",
+2026-09-30T18:25:35.645Z,EZE_CCS,gol,2026-10-10,10,,USD,,true,"",
+2026-09-30T18:25:59.175Z,EZE_CCS,gol,2026-10-11,11,,USD,,true,"",
+2026-09-30T18:26:21.377Z,EZE_CCS,gol,2026-10-12,12,,USD,,true,"",
+2026-09-30T18:26:43.495Z,EZE_CCS,gol,2026-10-13,13,,USD,,true,"",
+2026-09-30T18:28:49.377Z,EZE_CCS,gol,2026-10-14,14,,,,false,"No se recibió respuesta válida de flightcalendar",
+2026-09-30T18:30:55.119Z,EZE_CCS,gol,2026-10-15,15,,,,false,"No se recibió respuesta válida de flightcalendar",
+2026-09-30T18:31:58.918Z,EZE_CCS,gol,2026-10-16,16,,USD,,true,"",
+2026-09-30T18:32:22.045Z,EZE_CCS,gol,2026-10-17,17,,USD,,true,"",
+2026-09-30T18:32:46.517Z,EZE_CCS,gol,2026-10-18,18,,USD,,true,"",
+2026-09-30T18:33:11.221Z,EZE_CCS,gol,2026-10-19,19,,USD,,true,"",
+2026-09-30T18:35:24.125Z,EZE_CCS,gol,2026-10-20,20,,,,false,"No se recibió respuesta válida de flightcalendar",
+2026-09-30T18:37:32.747Z,EZE_CCS,gol,2026-10-21,21,,USD,,true,"",
+2026-09-30T18:37:54.453Z,EZE_CCS,gol,2026-10-22,22,,USD,,true,"",
+2026-09-30T18:38:16.344Z,EZE_CCS,gol,2026-10-23,23,,USD,,true,"",
+2026-09-30T18:38:37.914Z,EZE_CCS,gol,2026-10-24,24,,USD,,true,"",
+2026-09-30T18:39:45.421Z,EZE_CCS,gol,2026-10-25,25,,USD,,true,"",
+2026-09-30T18:40:07.174Z,EZE_CCS,gol,2026-10-26,26,803,USD,,true,"",
+2026-09-30T18:40:29.044Z,EZE_CCS,gol,2026-10-27,27,630,USD,,true,"",
+2026-09-30T18:40:51.746Z,EZE_CCS,gol,2026-10-28,28,,USD,,true,"",
+2026-09-30T18:41:15.131Z,EZE_CCS,gol,2026-10-29,29,501,USD,,true,"",
+2026-09-30T18:42:22.466Z,EZE_CCS,gol,2026-10-30,30,,USD,,true,"",
+2026-09-30T18:42:44.577Z,EZE_CCS,gol,2026-11-29,60,,USD,,true,"",
+2026-09-30T18:43:07.372Z,CCS_EZE,avianca,2026-10-01,1,2015.3,USD,,true,"",
+2026-09-30T18:43:20.518Z,CCS_EZE,avianca,2026-10-02,2,1678.7,USD,,true,"",
+2026-09-30T18:43:28.094Z,CCS_EZE,avianca,2026-10-03,3,973.2,USD,,true,"",
+2026-09-30T18:43:35.178Z,CCS_EZE,avianca,2026-10-04,4,792,USD,,true,"",
+2026-09-30T18:43:42.706Z,CCS_EZE,avianca,2026-10-05,5,2015.3,USD,,true,"",
+2026-09-30T18:43:49.993Z,CCS_EZE,avianca,2026-10-06,6,2015.3,USD,,true,"",
+2026-09-30T18:43:57.372Z,CCS_EZE,avianca,2026-10-07,7,973.2,USD,,true,"",
+2026-09-30T18:44:04.625Z,CCS_EZE,avianca,2026-10-08,8,565.4,USD,,true,"",
+2026-09-30T18:44:12.190Z,CCS_EZE,avianca,2026-10-09,9,565.4,USD,,true,"",
+2026-09-30T18:44:19.414Z,CCS_EZE,avianca,2026-10-10,10,565.4,USD,,true,"",
+2026-09-30T18:44:27.024Z,CCS_EZE,avianca,2026-10-11,11,565.4,USD,,true,"",
+2026-09-30T18:44:34.432Z,CCS_EZE,avianca,2026-10-12,12,733.7,USD,,true,"",
+2026-09-30T18:44:41.709Z,CCS_EZE,avianca,2026-10-13,13,1556.3,USD,,true,"",
+2026-09-30T18:44:49.007Z,CCS_EZE,avianca,2026-10-14,14,,,,false,"Fecha 2026-10-14 no está en la ventana que devolvió el calendario (323 días recibidos)",
+2026-09-30T18:44:56.194Z,CCS_EZE,avianca,2026-10-15,15,881,USD,,true,"",
+2026-09-30T18:45:03.506Z,CCS_EZE,avianca,2026-10-16,16,869.6,USD,,true,"",
+2026-09-30T18:45:10.680Z,CCS_EZE,avianca,2026-10-17,17,869.6,USD,,true,"",
+2026-09-30T18:45:18.023Z,CCS_EZE,avianca,2026-10-18,18,792,USD,,true,"",
+2026-09-30T18:45:25.091Z,CCS_EZE,avianca,2026-10-19,19,973.2,USD,,true,"",
+2026-09-30T18:45:32.219Z,CCS_EZE,avianca,2026-10-20,20,802.3,USD,,true,"",
+2026-09-30T18:45:39.477Z,CCS_EZE,avianca,2026-10-21,21,,,,false,"Fecha 2026-10-21 no está en la ventana que devolvió el calendario (323 días recibidos)",
+2026-09-30T18:45:46.844Z,CCS_EZE,avianca,2026-10-22,22,565.4,USD,,true,"",
+2026-09-30T18:45:53.996Z,CCS_EZE,avianca,2026-10-23,23,565.4,USD,,true,"",
+2026-09-30T18:46:01.325Z,CCS_EZE,avianca,2026-10-24,24,869.6,USD,,true,"",
+2026-09-30T18:46:08.725Z,CCS_EZE,avianca,2026-10-25,25,565.4,USD,,true,"",
+2026-09-30T18:46:16.169Z,CCS_EZE,avianca,2026-10-26,26,973.2,USD,,true,"",
+2026-09-30T18:46:23.500Z,CCS_EZE,avianca,2026-10-27,27,733.7,USD,,true,"",
+2026-09-30T18:46:30.680Z,CCS_EZE,avianca,2026-10-28,28,973.2,USD,,true,"",
+2026-09-30T18:46:37.839Z,CCS_EZE,avianca,2026-10-29,29,636.6,USD,,true,"",
+2026-09-30T18:46:45.073Z,CCS_EZE,avianca,2026-10-30,30,2015.3,USD,,true,"",
+2026-09-30T18:46:52.485Z,CCS_EZE,avianca,2026-11-29,60,533.5,USD,,true,"",
+2026-09-30T18:48:47.520Z,CCS_EZE,gol,2026-10-01,1,668,USD,,true,"",
+2026-09-30T18:50:55.665Z,CCS_EZE,gol,2026-10-02,2,,,,false,"No se recibió respuesta válida de flightcalendar",
+2026-09-30T18:52:01.841Z,CCS_EZE,gol,2026-10-03,3,,USD,,true,"",
+2026-09-30T18:53:09.282Z,CCS_EZE,gol,2026-10-04,4,591,USD,,true,"",
+2026-09-30T18:53:31.670Z,CCS_EZE,gol,2026-10-05,5,,USD,,true,"",
+2026-09-30T18:54:38.193Z,CCS_EZE,gol,2026-10-06,6,591,USD,,true,"",
+2026-09-30T18:55:45.237Z,CCS_EZE,gol,2026-10-07,7,,USD,,true,"",
+2026-09-30T18:56:08.394Z,CCS_EZE,gol,2026-10-08,8,874,USD,,true,"",
+2026-09-30T18:57:12.341Z,CCS_EZE,gol,2026-10-09,9,,USD,,true,"",
+2026-09-30T18:59:18.701Z,CCS_EZE,gol,2026-10-10,10,,USD,,true,"",
+2026-09-30T18:59:40.748Z,CCS_EZE,gol,2026-10-11,11,1103,USD,,true,"",
+2026-09-30T19:00:47.684Z,CCS_EZE,gol,2026-10-12,12,,USD,,true,"",
+2026-09-30T19:01:09.917Z,CCS_EZE,gol,2026-10-13,13,812,USD,,true,"",
+2026-09-30T19:01:32.447Z,CCS_EZE,gol,2026-10-14,14,,USD,,true,"",
+2026-09-30T19:01:54.289Z,CCS_EZE,gol,2026-10-15,15,637,USD,,true,"",
+2026-09-30T19:03:01.648Z,CCS_EZE,gol,2026-10-16,16,,USD,,true,"",
+2026-09-30T19:04:09.077Z,CCS_EZE,gol,2026-10-17,17,,USD,,true,"",
+2026-09-30T19:04:30.857Z,CCS_EZE,gol,2026-10-18,18,591,USD,,true,"",
+2026-09-30T19:06:41.489Z,CCS_EZE,gol,2026-10-19,19,,,,false,"locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('text=Ida e volta').first()
+    - locator resolved to <tgr-text-label size="md-1" id="tgr-dropdown__label">…</tgr-text-label>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="container-modal">…</div> from <div id="redirGeo">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="container-modal">…</div> from <div id="redirGeo">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    29 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="container-modal">…</div> from <div id="redirGeo">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+",
+2026-09-30T19:07:51.345Z,CCS_EZE,gol,2026-10-20,20,812,USD,,true,"",
+2026-09-30T19:08:13.914Z,CCS_EZE,gol,2026-10-21,21,,USD,,true,"",
+2026-09-30T19:08:36.042Z,CCS_EZE,gol,2026-10-22,22,874,USD,,true,"",
+2026-09-30T19:08:57.883Z,CCS_EZE,gol,2026-10-23,23,,USD,,true,"",
+2026-09-30T19:09:20.011Z,CCS_EZE,gol,2026-10-24,24,,USD,,true,"",
+2026-09-30T19:11:29.502Z,CCS_EZE,gol,2026-10-25,25,599,USD,,true,"",
+2026-09-30T19:12:36.247Z,CCS_EZE,gol,2026-10-26,26,,USD,,true,"",
+2026-09-30T19:12:58.249Z,CCS_EZE,gol,2026-10-27,27,812,USD,,true,"",
+2026-09-30T19:15:11.635Z,CCS_EZE,gol,2026-10-28,28,,,,false,"No se recibió respuesta válida de flightcalendar",
+2026-09-30T19:16:17.512Z,CCS_EZE,gol,2026-10-29,29,599,USD,,true,"",
+2026-09-30T19:17:23.918Z,CCS_EZE,gol,2026-10-30,30,,USD,,true,"",
+2026-09-30T19:19:37.689Z,CCS_EZE,gol,2026-11-29,60,,,,false,"No se recibió respuesta válida de flightcalendar",
+2026-09-30T19:20:00.074Z,CCS_MIA,laser,2026-10-01,1,495.81,USD,12:30,true,"",G6
+2026-09-30T19:20:12.236Z,CCS_MIA,laser,2026-10-02,2,495.81,USD,12:30,true,"",G6
+2026-09-30T19:20:22.770Z,CCS_MIA,laser,2026-10-03,3,495.81,USD,12:30,true,"",G6
+2026-09-30T19:20:34.830Z,CCS_MIA,laser,2026-10-04,4,495.81,USD,12:30,true,"",G6
+2026-09-30T19:20:46.284Z,CCS_MIA,laser,2026-10-05,5,450.42,USD,12:30,true,"",G6
+2026-09-30T19:21:00.410Z,CCS_MIA,laser,2026-10-06,6,413.7,USD,12:30,true,"",G6
+2026-09-30T19:21:11.799Z,CCS_MIA,laser,2026-10-07,7,413.7,USD,12:30,true,"",G6
+2026-09-30T19:21:25.932Z,CCS_MIA,laser,2026-10-08,8,450.42,USD,12:30,true,"",G6
+2026-09-30T19:21:40.859Z,CCS_MIA,laser,2026-10-09,9,450.42,USD,12:30,true,"",G6
+2026-09-30T19:21:54.304Z,CCS_MIA,laser,2026-10-10,10,450.42,USD,12:30,true,"",G6
+2026-09-30T19:22:06.502Z,CCS_MIA,laser,2026-10-11,11,450.42,USD,12:30,true,"",G6
+2026-09-30T19:22:22.068Z,CCS_MIA,laser,2026-10-12,12,450.42,USD,12:30,true,"",G6
+2026-09-30T19:22:34.363Z,CCS_MIA,laser,2026-10-13,13,395.85,USD,12:30,true,"",G6
+2026-09-30T19:22:43.382Z,CCS_MIA,laser,2026-10-14,14,395.85,USD,12:30,true,"",G6
+2026-09-30T19:22:54.942Z,CCS_MIA,laser,2026-10-15,15,395.85,USD,12:30,true,"",G6
+2026-09-30T19:23:05.894Z,CCS_MIA,laser,2026-10-16,16,413.7,USD,12:30,true,"",G6
+2026-09-30T19:23:19.135Z,CCS_MIA,laser,2026-10-17,17,395.85,USD,12:30,true,"",G6
+2026-09-30T19:23:33.153Z,CCS_MIA,laser,2026-10-18,18,395.85,USD,12:30,true,"",G6
+2026-09-30T19:23:41.970Z,CCS_MIA,laser,2026-10-19,19,395.85,USD,12:30,true,"",G6
+2026-09-30T19:26:55.089Z,CCS_MIA,laser,2026-10-20,20,395.85,USD,12:30,true,"",G6
+2026-09-30T19:27:06.045Z,CCS_MIA,laser,2026-10-21,21,395.85,USD,12:30,true,"",G6
+2026-09-30T19:27:16.340Z,CCS_MIA,laser,2026-10-22,22,395.85,USD,12:30,true,"",G6
+2026-09-30T19:27:28.128Z,CCS_MIA,laser,2026-10-23,23,395.85,USD,12:30,true,"",G6
+2026-09-30T19:27:40.900Z,CCS_MIA,laser,2026-10-24,24,395.85,USD,12:30,true,"",G6
+2026-09-30T19:27:53.713Z,CCS_MIA,laser,2026-10-25,25,395.85,USD,12:30,true,"",G6
+2026-09-30T19:28:06.013Z,CCS_MIA,laser,2026-10-26,26,395.85,USD,12:30,true,"",G6
+2026-09-30T19:28:20.122Z,CCS_MIA,laser,2026-10-27,27,395.85,USD,12:30,true,"",G6
+2026-09-30T19:28:32.305Z,CCS_MIA,laser,2026-10-28,28,395.85,USD,12:30,true,"",G6
+2026-09-30T19:28:45.277Z,CCS_MIA,laser,2026-10-29,29,395.85,USD,12:30,true,"",G6
+2026-09-30T19:28:54.278Z,CCS_MIA,laser,2026-10-30,30,395.85,USD,12:30,true,"",G6
+2026-09-30T19:29:08.218Z,CCS_MIA,laser,2026-11-29,60,450.42,USD,13:30,true,"",G6
+2026-09-30T19:29:21.356Z,CCS_MIA,avianca,2026-10-01,1,500.7,USD,,true,"",
+2026-09-30T19:29:30.530Z,CCS_MIA,avianca,2026-10-02,2,500.7,USD,,true,"",
+2026-09-30T19:29:38.378Z,CCS_MIA,avianca,2026-10-03,3,500.7,USD,,true,"",
+2026-09-30T19:29:45.632Z,CCS_MIA,avianca,2026-10-04,4,500.7,USD,,true,"",
+2026-09-30T19:29:52.888Z,CCS_MIA,avianca,2026-10-05,5,500.7,USD,,true,"",
+2026-09-30T19:30:00.027Z,CCS_MIA,avianca,2026-10-06,6,500.7,USD,,true,"",
+2026-09-30T19:30:07.420Z,CCS_MIA,avianca,2026-10-07,7,500.7,USD,,true,"",
+2026-09-30T19:30:14.759Z,CCS_MIA,avianca,2026-10-08,8,500.7,USD,,true,"",
+2026-09-30T19:30:22.056Z,CCS_MIA,avianca,2026-10-09,9,500.7,USD,,true,"",
+2026-09-30T19:30:30.125Z,CCS_MIA,avianca,2026-10-10,10,500.7,USD,,true,"",
+2026-09-30T19:30:37.337Z,CCS_MIA,avianca,2026-10-11,11,500.7,USD,,true,"",
+2026-09-30T19:30:44.631Z,CCS_MIA,avianca,2026-10-12,12,500.7,USD,,true,"",
+2026-09-30T19:30:51.947Z,CCS_MIA,avianca,2026-10-13,13,500.7,USD,,true,"",
+2026-09-30T19:30:59.280Z,CCS_MIA,avianca,2026-10-14,14,500.7,USD,,true,"",
+2026-09-30T19:31:06.584Z,CCS_MIA,avianca,2026-10-15,15,500.7,USD,,true,"",
+2026-09-30T19:31:13.926Z,CCS_MIA,avianca,2026-10-16,16,500.7,USD,,true,"",
+2026-09-30T19:31:21.614Z,CCS_MIA,avianca,2026-10-17,17,500.7,USD,,true,"",
+2026-09-30T19:31:29.082Z,CCS_MIA,avianca,2026-10-18,18,501,USD,,true,"",
+2026-09-30T19:31:36.566Z,CCS_MIA,avianca,2026-10-19,19,501,USD,,true,"",
+2026-09-30T19:31:43.725Z,CCS_MIA,avianca,2026-10-20,20,500.7,USD,,true,"",
+2026-09-30T19:31:51.040Z,CCS_MIA,avianca,2026-10-21,21,500.7,USD,,true,"",
+2026-09-30T19:31:58.384Z,CCS_MIA,avianca,2026-10-22,22,500.7,USD,,true,"",
+2026-09-30T19:32:05.804Z,CCS_MIA,avianca,2026-10-23,23,500.7,USD,,true,"",
+2026-09-30T19:32:12.905Z,CCS_MIA,avianca,2026-10-24,24,500.7,USD,,true,"",
+2026-09-30T19:32:20.017Z,CCS_MIA,avianca,2026-10-25,25,500.7,USD,,true,"",
+2026-09-30T19:32:27.153Z,CCS_MIA,avianca,2026-10-26,26,500.7,USD,,true,"",
+2026-09-30T19:32:34.343Z,CCS_MIA,avianca,2026-10-27,27,500.7,USD,,true,"",
+2026-09-30T19:32:41.523Z,CCS_MIA,avianca,2026-10-28,28,501,USD,,true,"",
+2026-09-30T19:32:48.725Z,CCS_MIA,avianca,2026-10-29,29,501,USD,,true,"",
+2026-09-30T19:32:55.986Z,CCS_MIA,avianca,2026-10-30,30,845.1,USD,,true,"",
+2026-09-30T19:33:03.138Z,CCS_MIA,avianca,2026-11-29,60,868,USD,,true,"",
+2026-09-30T19:33:12.174Z,MIA_CCS,laser,2026-10-01,1,748.45,USD,07:30,true,"",G6
+2026-09-30T19:33:22.638Z,MIA_CCS,laser,2026-10-02,2,660.1,USD,07:30,true,"",G6
+2026-09-30T19:33:37.054Z,MIA_CCS,laser,2026-10-03,3,748.45,USD,07:30,true,"",G6
+2026-09-30T19:33:52.066Z,MIA_CCS,laser,2026-10-04,4,660.1,USD,07:30,true,"",G6
+2026-09-30T19:34:03.288Z,MIA_CCS,laser,2026-10-05,5,748.45,USD,07:30,true,"",G6
+2026-09-30T19:34:19.162Z,MIA_CCS,laser,2026-10-06,6,660.1,USD,07:30,true,"",G6
+2026-09-30T19:34:29.259Z,MIA_CCS,laser,2026-10-07,7,660.1,USD,07:30,true,"",G6
+2026-09-30T19:34:41.532Z,MIA_CCS,laser,2026-10-08,8,660.1,USD,07:30,true,"",G6
+2026-09-30T19:34:53.159Z,MIA_CCS,laser,2026-10-09,9,660.1,USD,07:30,true,"",G6
+2026-09-30T19:35:08.005Z,MIA_CCS,laser,2026-10-10,10,660.1,USD,07:30,true,"",G6
+2026-09-30T19:35:22.450Z,MIA_CCS,laser,2026-10-11,11,660.1,USD,07:30,true,"",G6
+2026-09-30T19:35:36.350Z,MIA_CCS,laser,2026-10-12,12,660.1,USD,07:30,true,"",G6
+2026-09-30T19:35:47.759Z,MIA_CCS,laser,2026-10-13,13,660.1,USD,07:30,true,"",G6
+2026-09-30T19:36:02.314Z,MIA_CCS,laser,2026-10-14,14,660.1,USD,07:30,true,"",G6
+2026-09-30T19:36:17.922Z,MIA_CCS,laser,2026-10-15,15,660.1,USD,07:30,true,"",G6
+2026-09-30T19:36:28.855Z,MIA_CCS,laser,2026-10-16,16,660.1,USD,07:30,true,"",G6
+2026-09-30T19:36:39.912Z,MIA_CCS,laser,2026-10-17,17,660.1,USD,07:30,true,"",G6
+2026-09-30T19:36:54.779Z,MIA_CCS,laser,2026-10-18,18,660.1,USD,07:30,true,"",G6
+2026-09-30T19:37:06.920Z,MIA_CCS,laser,2026-10-19,19,420.84,USD,07:30,true,"",G6
+2026-09-30T19:40:17.952Z,MIA_CCS,laser,2026-10-20,20,420.84,USD,07:30,true,"",G6
+2026-09-30T19:40:31.443Z,MIA_CCS,laser,2026-10-21,21,420.84,USD,07:30,true,"",G6
+2026-09-30T19:40:45.824Z,MIA_CCS,laser,2026-10-22,22,420.84,USD,07:30,true,"",G6
+2026-09-30T19:40:58.558Z,MIA_CCS,laser,2026-10-23,23,420.84,USD,07:30,true,"",G6
+2026-09-30T19:41:11.306Z,MIA_CCS,laser,2026-10-24,24,660.1,USD,07:30,true,"",G6
+2026-09-30T19:41:21.808Z,MIA_CCS,laser,2026-10-25,25,420.84,USD,07:30,true,"",G6
+2026-09-30T19:41:32.647Z,MIA_CCS,laser,2026-10-26,26,420.84,USD,07:30,true,"",G6
+2026-09-30T19:41:48.717Z,MIA_CCS,laser,2026-10-27,27,420.84,USD,07:30,true,"",G6
+2026-09-30T19:41:57.882Z,MIA_CCS,laser,2026-10-28,28,420.84,USD,07:30,true,"",G6
+2026-09-30T19:42:09.083Z,MIA_CCS,laser,2026-10-29,29,420.84,USD,07:30,true,"",G6
+2026-09-30T19:42:22.786Z,MIA_CCS,laser,2026-10-30,30,420.84,USD,07:30,true,"",G6
+2026-09-30T19:42:38.449Z,MIA_CCS,laser,2026-11-29,60,420.84,USD,07:30,true,"",G6
+2026-09-30T19:42:50.637Z,MIA_CCS,avianca,2026-10-01,1,600.9,USD,,true,"",
+2026-09-30T19:42:59.630Z,MIA_CCS,avianca,2026-10-02,2,600.9,USD,,true,"",
+2026-09-30T19:43:06.973Z,MIA_CCS,avianca,2026-10-03,3,759.1,USD,,true,"",
+2026-09-30T19:43:14.078Z,MIA_CCS,avianca,2026-10-04,4,1633.6,USD,,true,"",
+2026-09-30T19:43:21.275Z,MIA_CCS,avianca,2026-10-05,5,619.3,USD,,true,"",
+2026-09-30T19:43:28.633Z,MIA_CCS,avianca,2026-10-06,6,600.9,USD,,true,"",
+2026-09-30T19:43:35.804Z,MIA_CCS,avianca,2026-10-07,7,609.2,USD,,true,"",
+2026-09-30T19:43:43.070Z,MIA_CCS,avianca,2026-10-08,8,759.1,USD,,true,"",
+2026-09-30T19:43:50.311Z,MIA_CCS,avianca,2026-10-09,9,602.4,USD,,true,"",
+2026-09-30T19:43:57.620Z,MIA_CCS,avianca,2026-10-10,10,656.4,USD,,true,"",
+2026-09-30T19:44:04.868Z,MIA_CCS,avianca,2026-10-11,11,759.1,USD,,true,"",
+2026-09-30T19:44:12.053Z,MIA_CCS,avianca,2026-10-12,12,1305.3,USD,,true,"",
+2026-09-30T19:44:19.248Z,MIA_CCS,avianca,2026-10-13,13,656.4,USD,,true,"",
+2026-09-30T19:44:26.505Z,MIA_CCS,avianca,2026-10-14,14,611,USD,,true,"",
+2026-09-30T19:44:33.934Z,MIA_CCS,avianca,2026-10-15,15,611,USD,,true,"",
+2026-09-30T19:44:41.124Z,MIA_CCS,avianca,2026-10-16,16,602.4,USD,,true,"",
+2026-09-30T19:44:48.580Z,MIA_CCS,avianca,2026-10-17,17,610.7,USD,,true,"",
+2026-09-30T19:44:55.899Z,MIA_CCS,avianca,2026-10-18,18,628.5,USD,,true,"",
+2026-09-30T19:45:03.134Z,MIA_CCS,avianca,2026-10-19,19,619.3,USD,,true,"",
+2026-09-30T19:45:10.356Z,MIA_CCS,avianca,2026-10-20,20,619.3,USD,,true,"",
+2026-09-30T19:45:17.521Z,MIA_CCS,avianca,2026-10-21,21,602.4,USD,,true,"",
+2026-09-30T19:45:24.615Z,MIA_CCS,avianca,2026-10-22,22,600.9,USD,,true,"",
+2026-09-30T19:45:31.910Z,MIA_CCS,avianca,2026-10-23,23,602.4,USD,,true,"",
+2026-09-30T19:45:39.176Z,MIA_CCS,avianca,2026-10-24,24,602.4,USD,,true,"",
+2026-09-30T19:45:46.774Z,MIA_CCS,avianca,2026-10-25,25,602.4,USD,,true,"",
+2026-09-30T19:45:54.035Z,MIA_CCS,avianca,2026-10-26,26,602.4,USD,,true,"",
+2026-09-30T19:46:01.363Z,MIA_CCS,avianca,2026-10-27,27,602.4,USD,,true,"",
+2026-09-30T19:46:08.635Z,MIA_CCS,avianca,2026-10-28,28,602.4,USD,,true,"",
+2026-09-30T19:46:16.362Z,MIA_CCS,avianca,2026-10-29,29,602.4,USD,,true,"",
+2026-09-30T19:46:23.592Z,MIA_CCS,avianca,2026-10-30,30,602.4,USD,,true,"",
+2026-09-30T19:46:30.925Z,MIA_CCS,avianca,2026-11-29,60,600.9,USD,,true,"",
