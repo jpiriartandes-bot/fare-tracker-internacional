@@ -1,0 +1,63 @@
+fecha_busqueda,ruta,aerolinea,fecha_vuelo,dias_anticipacion,precio,moneda,hora_salida,ok,error,operador,fuente,nota
+2026-09-30T12:21:23.205Z,EZE_CCS,copa,2026-10-01,1,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:21:39.848Z,EZE_CCS,copa,2026-10-02,2,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:21:55.278Z,EZE_CCS,copa,2026-10-03,3,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:22:11.891Z,EZE_CCS,copa,2026-10-04,4,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:22:27.678Z,EZE_CCS,copa,2026-10-05,5,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:22:47.616Z,EZE_CCS,copa,2026-10-06,6,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:23:05.382Z,EZE_CCS,copa,2026-10-07,7,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:23:21.082Z,EZE_CCS,copa,2026-10-08,8,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:23:37.672Z,EZE_CCS,copa,2026-10-09,9,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:23:55.985Z,EZE_CCS,copa,2026-10-10,10,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:11.217Z,EZE_CCS,copa,2026-10-11,11,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:29.149Z,EZE_CCS,copa,2026-10-12,12,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:24:46.687Z,EZE_CCS,copa,2026-10-13,13,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:25:04.651Z,EZE_CCS,copa,2026-10-14,14,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:25:21.997Z,EZE_CCS,copa,2026-10-15,15,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:25:39.418Z,EZE_CCS,copa,2026-10-16,16,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:25:54.582Z,EZE_CCS,copa,2026-10-17,17,871,USD,8:59,true,,,google_flights,
+2026-09-30T12:26:44.868Z,EZE_CCS,copa,2026-10-18,18,690,USD,5:25,true,,,google_flights,
+2026-09-30T12:27:57.161Z,EZE_CCS,copa,2026-10-19,19,623,USD,14:49,true,,,google_flights,
+2026-09-30T12:28:57.730Z,EZE_CCS,copa,2026-10-20,20,871,USD,5:25,true,,,google_flights,
+2026-09-30T12:29:49.211Z,EZE_CCS,copa,2026-10-21,21,818,USD,14:49,true,,,google_flights,
+2026-09-30T12:30:45.191Z,EZE_CCS,copa,2026-10-22,22,623,USD,8:59,true,,,google_flights,
+2026-09-30T12:31:43.661Z,EZE_CCS,copa,2026-10-23,23,623,USD,5:25,true,,,google_flights,
+2026-09-30T12:32:34.585Z,EZE_CCS,copa,2026-10-24,24,818,USD,4:15,true,,,google_flights,
+2026-09-30T12:33:30.325Z,EZE_CCS,copa,2026-10-25,25,623,USD,5:50,true,,,google_flights,
+2026-09-30T12:34:23.461Z,EZE_CCS,copa,2026-10-26,26,658,USD,4:26,true,,,google_flights,
+2026-09-30T12:35:27.990Z,EZE_CCS,copa,2026-10-27,27,623,USD,4:26,true,,,google_flights,
+2026-09-30T12:36:21.081Z,EZE_CCS,copa,2026-10-28,28,623,USD,4:26,true,,,google_flights,
+2026-09-30T12:37:18.262Z,EZE_CCS,copa,2026-10-29,29,623,USD,13:18,true,,,google_flights,
+2026-09-30T12:38:09.777Z,EZE_CCS,copa,2026-10-30,30,623,USD,4:26,true,,,google_flights,
+2026-09-30T12:39:25.040Z,EZE_CCS,copa,2026-11-29,60,818,USD,2:02,true,,,google_flights,
+2026-09-30T12:40:21.635Z,CCS_EZE,copa,2026-10-01,1,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:40:38.949Z,CCS_EZE,copa,2026-10-02,2,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:40:54.959Z,CCS_EZE,copa,2026-10-03,3,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:41:14.313Z,CCS_EZE,copa,2026-10-04,4,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:41:29.609Z,CCS_EZE,copa,2026-10-05,5,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:41:47.411Z,CCS_EZE,copa,2026-10-06,6,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:42:03.956Z,CCS_EZE,copa,2026-10-07,7,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:42:22.472Z,CCS_EZE,copa,2026-10-08,8,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:42:38.116Z,CCS_EZE,copa,2026-10-09,9,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:42:56.178Z,CCS_EZE,copa,2026-10-10,10,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:43:12.152Z,CCS_EZE,copa,2026-10-11,11,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:43:30.447Z,CCS_EZE,copa,2026-10-12,12,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:43:49.222Z,CCS_EZE,copa,2026-10-13,13,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:44:08.664Z,CCS_EZE,copa,2026-10-14,14,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:44:27.082Z,CCS_EZE,copa,2026-10-15,15,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:44:42.470Z,CCS_EZE,copa,2026-10-16,16,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:44:58.547Z,CCS_EZE,copa,2026-10-17,17,548,USD,6:35,true,,,google_flights,
+2026-09-30T12:45:51.572Z,CCS_EZE,copa,2026-10-18,18,506,USD,6:35,true,,,google_flights,
+2026-09-30T12:46:58.098Z,CCS_EZE,copa,2026-10-19,19,,USD,,true,,,google_flights,Copa no tiene vuelos con precio en la lista de Google Flights
+2026-09-30T12:47:17.775Z,CCS_EZE,copa,2026-10-20,20,506,USD,6:35,true,,,google_flights,
+2026-09-30T12:48:27.531Z,CCS_EZE,copa,2026-10-21,21,506,USD,6:35,true,,,google_flights,
+2026-09-30T12:49:15.859Z,CCS_EZE,copa,2026-10-22,22,506,USD,6:35,true,,,google_flights,
+2026-09-30T12:50:11.824Z,CCS_EZE,copa,2026-10-23,23,568,USD,6:35,true,,,google_flights,
+2026-09-30T12:51:06.909Z,CCS_EZE,copa,2026-10-24,24,568,USD,6:35,true,,,google_flights,
+2026-09-30T12:52:01.876Z,CCS_EZE,copa,2026-10-25,25,633,USD,6:35,true,,,google_flights,
+2026-09-30T12:52:57.305Z,CCS_EZE,copa,2026-10-26,26,633,USD,6:35,true,,,google_flights,
+2026-09-30T12:53:53.810Z,CCS_EZE,copa,2026-10-27,27,633,USD,6:35,true,,,google_flights,
+2026-09-30T12:54:53.569Z,CCS_EZE,copa,2026-10-28,28,991,USD,6:35,true,,,google_flights,
+2026-09-30T12:55:49.171Z,CCS_EZE,copa,2026-10-29,29,707,USD,6:35,true,,,google_flights,
+2026-09-30T12:56:42.296Z,CCS_EZE,copa,2026-10-30,30,861,USD,6:35,true,,,google_flights,
+2026-09-30T12:57:32.658Z,CCS_EZE,copa,2026-11-29,60,506,USD,6:35,true,,,google_flights,
