@@ -104,6 +104,13 @@ async function scrapeAvianca({ origen, destino, fechaVuelo, tramoId }, _opts = {
     const json = JSON.parse(result.text);
     const entry = (json.dayPrices || []).find((dp) => dp.date === fechaVuelo);
     if (!entry) {
+      // Fecha dentro del rango del calendario pero sin entrada: no hay
+      // vuelo/precio ese día (2026-10-03: EZE->CCS 14/10 con 325 días
+      // recibidos). No es una falla.
+      const fechas = (json.dayPrices || []).map((dp) => dp.date).sort();
+      if (fechas.length && fechaVuelo > fechas[0] && fechaVuelo < fechas[fechas.length - 1]) {
+        return { ...base, moneda: "USD", ok: true, nota: "sin precio para la fecha en el calendario de Avianca" };
+      }
       throw new Error(
         `Fecha ${fechaVuelo} no está en la ventana que devolvió el calendario (${(json.dayPrices || []).length} días recibidos)`
       );

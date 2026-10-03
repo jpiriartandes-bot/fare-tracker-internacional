@@ -1,12 +1,13 @@
 {
   "name": "fare-tracker-internacional",
   "version": "0.1.0",
-  "description": "Relevamiento periódico de tarifas aéreas internacionales (EZE<->CCS) por aerolínea",
-  "main": "index.js",
+  "description": "Estudios de tarifas aéreas internacionales (CCS-MIA, EZE-CCS, BUE-MIA), una hoja por estudio",
+  "main": "estudio.js",
   "scripts": {
-    "start": "node index.js",
-    "debug": "cross-env HEADLESS=false node index.js",
-    "debug:ps": "$env:HEADLESS='false'; node index.js"
+    "estudio:ccs-mia": "node estudio.js --estudio=ccs-mia",
+    "estudio:eze-ccs": "node estudio.js --estudio=eze-ccs",
+    "estudio:bue-mia": "node estudio.js --estudio=bue-mia",
+    "debug": "cross-env HEADLESS=false node estudio.js"
   },
   "dependencies": {
     "googleapis": "^176.0.0",

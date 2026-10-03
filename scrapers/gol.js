@@ -143,6 +143,11 @@ async function _scrapeGolOnce({ origen, destino, fechaVuelo, tramoId }) {
 
     const entry = calendarData.calendar.find((d) => d.data === fechaVuelo);
     if (!entry) {
+      // Dentro del rango del calendario pero sin entrada: sin vuelo ese día.
+      const fechas = calendarData.calendar.map((d) => d.data).sort();
+      if (fechas.length && fechaVuelo > fechas[0] && fechaVuelo < fechas[fechas.length - 1]) {
+        return { ...base, moneda: "USD", ok: true, nota: "sin vuelo para la fecha en el calendario de Gol" };
+      }
       throw new Error(
         `Fecha ${fechaVuelo} no está en la ventana que devolvió el calendario (${calendarData.calendar.length} días recibidos)`
       );

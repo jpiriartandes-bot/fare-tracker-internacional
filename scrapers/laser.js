@@ -47,9 +47,13 @@
 //   Ej. real CCS->MIA 2026-09-30, ECONOMY-BASIC: base 188.70 + OB 25 +
 //   YQ 200 = 413.70 (total con tasas: 561.23).
 //
-//   Se toma la familia más barata CON ASIENTOS (fares[f].rbd.posting > 0):
-//   el sitio muestra como "Agotada" las que tienen posting 0 aunque la API
-//   igual devuelva su precio.
+//   (2026-10-03) Una entrada por familia — ECONOMY-LIGHT, ECONOMY-BASIC y
+//   ECONOMY-PLUS —, cada una con su más barata CON ASIENTOS
+//   (fares[f].rbd.posting > 0): el sitio muestra como "Agotada" las que
+//   tienen posting 0 aunque la API igual devuelva su precio; esas van con
+//   disponible=false y sin precio. Resultado: { ok, familias:[...] }.
+//   Horarios, duración (journey.order.total_time) y número de vuelo salen
+//   de la misma respuesta.
 //
 // OPERADOR: los vuelos CCS<->MIA que vende Laser los opera GlobalX (código
 //   G6, remark "OPERADO POR GLOBAL X"). Se guarda en `operador`.
@@ -80,6 +84,8 @@ const COUNTRY_SETTING_USD = {
   setting: "2bd17390-0b3f-4f8a-835c-f55ee2eb68fd",
   user_id: "PTY00QLEW",
 };
+// Familias que se relevan, en este orden (una fila por familia).
+const FAMILIAS = ["ECONOMY-LIGHT", "ECONOMY-BASIC", "ECONOMY-PLUS"];
 const CODIGOS_CARGO_AEROLINEA = new Set(["YQ", "YR"]);
 const ERROR_SIN_ITINERARIO = "0201060";
 
@@ -199,40 +205,54 @@ async function _scrapeLaserOnce({ origen, destino, fechaVuelo, tramoId }) {
       },
     });
 
-    // Familia más barata con asientos, entre todos los vuelos del día.
-    let mejor = null;
-    for (const journey of Object.values(r.journeys ?? {})) {
-      const vuelo = r.flights?.[journey.flights?.[0]] ?? null;
-      for (const fare of Object.values(journey.fares ?? {})) {
-        if (fare.total_equivalent_paid == null) continue;
-        if (!(Number(fare.rbd?.posting) > 0)) continue; // agotada
-        const d = desglosar(fare);
-        if (!mejor || d.tarifa < mejor.tarifa) mejor = { ...d, vuelo };
-      }
-    }
-
-    if (!mejor) {
-      // Hay vuelo pero todas las familias económicas/premium están agotadas.
-      return { ...base, moneda: "USD", ok: true, nota: "sin asientos disponibles" };
-    }
-
-    const { vuelo, ...precios } = mejor;
-    const remark = (vuelo?.flight_additional_information?.flight_remarks_list ?? [])
-      .map((s) => s.trim())
-      .find((s) => /OPERADO POR/i.test(s));
-    return {
-      ...base,
-      ...precios,
-      moneda: "USD",
-      hora_salida: vuelo?.departure_information?.time?.slice(0, 5) ?? null,
-      numero_vuelo: vuelo?.flight_number ?? null,
-      operador: codigoAerolinea(vuelo?.carrier_reference_id),
-      operador_nombre: remark ? remark.replace(/^OPERADO POR\s*/i, "") : null,
-      ok: true,
+    // Una entrada por familia (FAMILIAS): la más barata CON ASIENTOS entre
+    // todos los vuelos del día. Agotada (rbd.posting = 0, el sitio la
+    // muestra como "Agotada" aunque la API devuelva precio) -> disponible
+    // "no", sin precio.
+    const hhmm = (t) => t?.slice(0, 5) ?? null;
+    const aMin = (t) => {
+      const m = /^(\d+):(\d+)/.exec(t ?? "");
+      return m ? Number(m[1]) * 60 + Number(m[2]) : null;
     };
+    const familias = FAMILIAS.map((familia) => {
+      let mejor = null; // más barata con asientos
+      let agotada = null; // primera vista, para los datos del vuelo
+      for (const journey of Object.values(r.journeys ?? {})) {
+        const vuelo = r.flights?.[journey.flights?.[0]] ?? null;
+        for (const [clave, fare] of Object.entries(journey.fares ?? {})) {
+          if (clave.replace(/_.*$/, "") !== familia || fare.total_equivalent_paid == null) continue;
+          const dato = { vuelo, journey, ...desglosar(fare) };
+          if (Number(fare.rbd?.posting) > 0) {
+            if (!mejor || dato.tarifa < mejor.tarifa) mejor = dato;
+          } else if (!agotada) agotada = dato;
+        }
+      }
+      const e = mejor ?? agotada;
+      const vuelo = e?.vuelo;
+      const remark = (vuelo?.flight_additional_information?.flight_remarks_list ?? [])
+        .map((x) => x.trim())
+        .find((x) => /OPERADO POR/i.test(x));
+      const escalas = e ? Number(e.journey.order?.total_stops ?? vuelo?.flight_stops ?? 0) : null;
+      return {
+        familia,
+        disponible: !!mejor,
+        precio: mejor ? mejor.tarifa : null,
+        total_con_tasas: mejor ? mejor.total_con_tasas : null,
+        desglose: mejor ? { base: mejor.tarifa_base, cargos_aerolinea: mejor.cargos_aerolinea, tasas_gobierno: mejor.tasas_gobierno } : null,
+        hora_salida: hhmm(vuelo?.departure_information?.time),
+        hora_llegada: hhmm(vuelo?.arrival_information?.time),
+        escalas,
+        duracion_total_min: e ? aMin(e.journey.order?.total_time ?? vuelo?.flight_duration) : null,
+        numero_vuelo: vuelo?.flight_number ?? null,
+        operador: codigoAerolinea(vuelo?.carrier_reference_id),
+        operador_nombre: remark ? remark.replace(/^OPERADO PORs*/i, "") : null,
+        nota: e ? null : "la familia no figura en la respuesta",
+      };
+    });
+    return { ...base, moneda: "USD", ok: true, familias };
   } catch (err) {
     if (err instanceof SinDisponibilidad) {
-      return { ...base, moneda: "USD", ok: true, nota: "sin vuelo disponible" };
+      return { ...base, moneda: "USD", ok: true, familias: [], nota: "sin vuelo disponible" };
     }
     sesion = null; // el reintento arranca con sesión nueva
     return { ...base, error: err.message, rateLimit: err instanceof RateLimit };
@@ -266,4 +286,4 @@ async function scrapeLaser(params, _opts = {}) {
   return ultimo;
 }
 
-module.exports = { scrapeLaser, desglosar };
+module.exports = { scrapeLaser, desglosar, FAMILIAS };

@@ -11,7 +11,76 @@ bloqueo total (ver abajo) y se adelantó Gol en su lugar.
 Por corrida: 31 fechas (día 1 a 30 + un extra a día 60) × 2 rutas ×
 aerolíneas activas en `config.js`.
 
-## Estado actual (2026-09-09)
+## Estructura actual (2026-10-03): 3 estudios independientes
+
+Cada estudio corre todas sus fuentes y escribe **solo su hoja** del Sheet
+"Fare Tracker Internacional" y su propio CSV. Workflows escalonados, uno
+por estudio (cron diario + `workflow_dispatch`):
+
+| Estudio | Hoja | Rutas | Fuentes | Workflow | UTC |
+|---|---|---|---|---|---|
+| CCS-MIA | `CCS-MIA` | CCS→MIA, MIA→CCS | Laser (sitio, 3 familias), American (GF, 3 familias), Copa (GF), Avianca (precio sitio; escalas GF) | `estudio-ccs-mia.yml` | 06:00 |
+| EZE-CCS | `EZE-CCS` | EZE→CCS, CCS→EZE | Avianca y Gol (precio sitio; escalas GF), Copa y LATAM (GF) + `Frecuencias_Futuras` | `estudio-eze-ccs.yml` | 08:00 |
+| BUE-MIA | `BUE-MIA` | BUE→MIA, MIA→BUE | Copa y LATAM (GF), solo 1 escala | `estudio-bue-mia.yml` | 10:00 |
+
+`node estudio.js --estudio=ccs-mia|eze-ccs|bue-mia [--prueba] [--ventanas=1,15,60]`.
+`--prueba`: 3 fechas por ruta, CSV en `output/prueba/`, **sin Sheets**.
+Salida: `output/estudio_ccs_mia.csv`, `estudio_eze_ccs.csv`, `estudio_bue_mia.csv`.
+Se escribe a medida que avanza (CSV + hoja después de cada ruta/fecha). El
+push del workflow hace `git pull --rebase` con reintentos y el commit
+corre con `if: always()`.
+
+**"Historico" está congelada** (no se escribe ni se borra; `output/historico.csv`
+queda como está). "Frecuencias" y su workflow (`frecuencias.yml`) no cambian.
+Reemplazan a `fare-tracker-internacional.yml`, `google-flights.yml`,
+`index.js`, `google_flights.js` y `sheets.js` (borrados).
+
+Código: `estudio.js` (orquestador y armado de filas), `lib/google-flights.js`
+(lectura de Google Flights), `lib/salida.js` (columnas, CSV, Sheets),
+`scrapers/{laser,avianca,gol}.js` (fuentes de sitio).
+
+### Columnas (las 3 hojas y los 3 CSV)
+fecha_busqueda, ruta, fecha_vuelo, dias_anticipacion, aerolinea, tarifa
+(nombre de la familia; vacío si no aplica), precio, moneda, incluye_tasas
+(si/no), total_con_tasas, disponible (si/no), hora_salida, hora_llegada,
+escalas, aeropuertos_escala (códigos IATA separados por "/"),
+duracion_total_min, conexion_min (suma de las escalas), horas_vuelo_min
+(= duración total − conexión), operador, numero_vuelo, fuente
+(sitio_aerolinea / google_flights), nota. Duraciones en minutos, como número.
+
+### Reglas por fuente
+- **Laser** (sitio): una fila por familia ECONOMY-LIGHT / -BASIC / -PLUS.
+  `precio` = base + cargos de aerolínea (sin tasas de gobierno),
+  `incluye_tasas=no`, `total_con_tasas` = `average_amount`. Familia agotada
+  (`rbd.posting = 0`): fila con `disponible=no` y precio vacío. Horarios,
+  duración y número de vuelo salen de la misma respuesta.
+- **American** (Google Flights): del vuelo de American más barato del día
+  (donde American vende directo), bloque "Reservar con American": Basic
+  Economy, Main Cabin y Main Plus (Business se ignora). Precio final con
+  tasas (`incluye_tasas=si`).
+- **Copa / LATAM** (Google Flights): Google da un solo precio → una fila,
+  `tarifa` vacía. Se abren las reservas de los 2 vuelos propios más baratos
+  y se toma el menor precio de la propia aerolínea (nunca el de una agencia
+  ni el de una socia).
+- **Avianca / Gol** (sitio): el precio sale de su calendario de precios;
+  `incluye_tasas` queda **vacío** (no está verificado qué incluye). Escalas
+  y duraciones salen del itinerario **solo de esa aerolínea** con menos
+  escalas en Google Flights (desempate: menor duración total; con precio); nunca de un itinerario combinado ("Avianca y
+  United"). Si no hay uno, esos campos quedan vacíos con `nota`.
+  Avianca en CCS-MIA: además se consulta si Google ofrece familias de tarifa
+  (hasta ahora responde "No encontramos opciones de reserva" para los vuelos
+  solo de Avianca; si algún día las ofrece, se agrega una fila por familia).
+- **Escalas y duraciones**: salen del aria-label de cada vuelo en la lista de
+  Google Flights ("Duración total: …", "Esta escala (1 de 2) es una escala de
+  3 h 5 min en <aeropuerto>"). Los nombres de aeropuerto se mapean a IATA
+  (`AEROPUERTOS` en `lib/google-flights.js`); los desconocidos quedan con el
+  nombre y se avisa por consola.
+- `numero_vuelo` solo lo trae Laser (Google no lo expone en la lista).
+- Una fuente que falla deja una fila con `disponible` vacío y `nota` =
+  `ERROR: …`.
+
+## Estado de las fuentes (histórico, 2026-09)
+### Estado actual (2026-09-09)
 - **Avianca** (`scrapers/avianca.js`): **funcional para precio**, probado
   contra las dos rutas y en los 4 bordes de ventana (día 1, 15, 30, 60) —
   8/8 OK. Usa la API interna de calendario de precios
@@ -143,8 +212,7 @@ aerolíneas activas en `config.js`.
   Se escribe a medida que avanza (después de cada ruta/fecha) en
   "Historico" y en un CSV propio por job (`output/historico_gf_<par>.csv`,
   nunca en `historico.csv`, que es del workflow de tarifas).
-  Prueba: `node google_flights.js --prueba --ventanas=1,15,60`
-  (no sube a Sheets).
+  (Ahora lo hace `estudio.js`; ver arriba.)
 
 ## Setup local (correr con Claude Code local — necesita salida a internet real)
 
