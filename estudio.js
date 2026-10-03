@@ -20,7 +20,6 @@ const path = require("path");
 const { chromium } = require("playwright");
 const gf = require("./lib/google-flights");
 const { fila, appendCsv, prepararHoja, appendHoja, subirFrecuencias } = require("./lib/salida");
-const { scrapeAvianca } = require("./scrapers/avianca");
 const { scrapeGol } = require("./scrapers/gol");
 const { scrapeLaser, FAMILIAS: FAMILIAS_LASER } = require("./scrapers/laser");
 
@@ -139,52 +138,41 @@ async function filasLaser(ctx) {
   );
 }
 
-// ── fuente: Avianca / Gol (precio del sitio; escalas y duraciones de GF) ───
+// ── fuente: Avianca (Google Flights) ───────────────────────────────────────
+//
+// 2026-10-03: el calendario de precios del sitio (airmkt/api/pricing/calendar)
+// NO es un precio en vivo: EZE->CCS 10/11 daba USD 1.223 contra 1.843 en
+// Google para el mismo vuelo (y COP 4.046.400 contra 4.768.900 en la página de
+// reservas). La fuente real (apibooking.avianca.com/v2/search/air-bounds)
+// está detrás del WAF Imperva y responde 403 "WAF_403 / errorCode 15" desde
+// la home, desde el propio dominio de la API y con las cookies de Imperva ya
+// cargadas; booking.avianca.com como página queda en el desafío de
+// Incapsula. Se documentó y no se insiste con evasión. Avianca pasa a Google
+// Flights: precio de lista del vuelo SOLO de Avianca más barato. Para estos
+// vuelos Google responde "No encontramos opciones de reserva" (Avianca no
+// vende por Google), así que el precio de lista puede ser de una agencia.
 
-const SCRAPERS_SITIO = { avianca: scrapeAvianca, gol: scrapeGol };
-
-async function filasSitio(ctx, id) {
-  const [origen, destino] = ctx.ruta.split("-");
-  const r = await SCRAPERS_SITIO[id]({ origen, destino, fechaVuelo: ctx.fechaVuelo, tramoId: ctx.ruta });
-  if (!r.ok) return [filaError(ctx, id, r.error, "sitio_aerolinea")];
-
-  const nombre = gf.AEROLINEAS[id].nombre;
-  // Escalas y duraciones: itinerario de la aerolínea SOLA en Google
-  // Flights con menos escalas (nunca uno combinado con otra aerolínea).
-  let vuelo = null;
-  let notaGF;
-  if (ctx.gfError) notaGF = `escalas y duraciones vacías: Google Flights falló (${ctx.gfError})`;
-  else {
-    // El precio del sitio no corresponde a un vuelo puntual de Google: se
-    // toma el itinerario más representativo (menos escalas; a igual
-    // cantidad, menor duración total; luego el más barato).
-    vuelo =
-      gf.vuelosPropios(ctx.vuelos, id).sort(
-        (x, y) =>
-          x.escalas - y.escalas ||
-          (x.duracion_total_min ?? Infinity) - (y.duracion_total_min ?? Infinity) ||
-          x.precio_gf - y.precio_gf
-      )[0] ?? null;
-    notaGF = vuelo
-      ? `itinerario GF con menos escalas (solo ${nombre}, desempate por menor duración; US$ ${vuelo.precio_gf} en Google)`
-      : `escalas y duraciones vacías: Google Flights no muestra un vuelo solo de ${nombre} con precio`;
+async function filasAvianca(ctx) {
+  const b = { ...base(ctx, "avianca"), moneda: "USD", fuente: "google_flights" };
+  if (ctx.gfError) return [fila({ ...b, nota: `ERROR: ${ctx.gfError}` })];
+  const vuelo = gf.vuelosPropios(ctx.vuelos, "avianca")[0];
+  if (!vuelo) {
+    return [fila({ ...b, disponible: "no", nota: "Google Flights no muestra un vuelo solo de Avianca con precio" })];
   }
-
   const filas = [
     fila({
-      ...base(ctx, id),
-      precio: r.tarifa,
-      moneda: r.moneda ?? "USD",
-      // El calendario de precios no dice si incluye tasas: no verificado.
-      disponible: r.tarifa != null ? "si" : "no",
-      ...(vuelo ? detalle(vuelo) : {}),
-      fuente: "sitio_aerolinea",
-      nota: [r.nota, notaGF].filter(Boolean).join(" | "),
+      ...b,
+      precio: vuelo.precio_gf,
+      incluye_tasas: "si",
+      total_con_tasas: vuelo.precio_gf,
+      disponible: "si",
+      ...detalle(vuelo),
+      nota: "precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)",
     }),
   ];
 
   // ¿Google muestra familias de tarifa de Avianca? Si sí, una fila por familia.
-  if (id === "avianca" && ctx.estudio.familiasGoogleAvianca && vuelo) {
+  if (ctx.estudio.familiasGoogleAvianca) {
     try {
       await asegurarBusqueda(ctx);
       await gf.pausa();
@@ -194,15 +182,13 @@ async function filasSitio(ctx, id) {
         for (const f of propia.familias) {
           filas.push(
             fila({
-              ...base(ctx, id),
+              ...b,
               tarifa: f.nombre,
               precio: f.precio,
-              moneda: "USD",
               incluye_tasas: "si",
               total_con_tasas: f.precio,
               disponible: "si",
               ...detalle(vuelo),
-              fuente: "google_flights",
               nota: "familia de tarifa de Avianca según Google Flights",
             })
           );
@@ -217,6 +203,45 @@ async function filasSitio(ctx, id) {
     }
   }
   return filas;
+}
+
+// ── fuente: Gol (precio del sitio; escalas y duraciones de GF) ─────────────
+
+async function filasGol(ctx) {
+  const [origen, destino] = ctx.ruta.split("-");
+  const r = await scrapeGol({ origen, destino, fechaVuelo: ctx.fechaVuelo, tramoId: ctx.ruta });
+  if (!r.ok) return [filaError(ctx, "gol", r.error, "sitio_aerolinea")];
+
+  // Escalas y duraciones: itinerario de Gol SOLA en Google Flights con
+  // menos escalas (nunca uno combinado con otra aerolínea); a igual
+  // cantidad, menor duración total; luego el más barato.
+  let vuelo = null;
+  let notaGF;
+  if (ctx.gfError) notaGF = `escalas y duraciones vacías: Google Flights falló (${ctx.gfError})`;
+  else {
+    vuelo =
+      gf.vuelosPropios(ctx.vuelos, "gol").sort(
+        (x, y) =>
+          x.escalas - y.escalas ||
+          (x.duracion_total_min ?? Infinity) - (y.duracion_total_min ?? Infinity) ||
+          x.precio_gf - y.precio_gf
+      )[0] ?? null;
+    notaGF = vuelo
+      ? `itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ ${vuelo.precio_gf} en Google)`
+      : "escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio";
+  }
+  return [
+    fila({
+      ...base(ctx, "gol"),
+      precio: r.tarifa,
+      moneda: r.moneda ?? "USD",
+      // El calendario de precios no dice si incluye tasas: no verificado.
+      disponible: r.tarifa != null ? "si" : "no",
+      ...(vuelo ? detalle(vuelo) : {}),
+      fuente: "sitio_aerolinea",
+      nota: [r.nota, notaGF].filter(Boolean).join(" | "),
+    }),
+  ];
 }
 
 // ── fuente: Google Flights (Copa, LATAM, American) ─────────────────────────
@@ -308,13 +333,13 @@ function familiasAmerican(propia) {
 
 const FUENTES = {
   laser: (ctx) => filasLaser(ctx),
-  avianca: (ctx) => filasSitio(ctx, "avianca"),
-  gol: (ctx) => filasSitio(ctx, "gol"),
+  avianca: (ctx) => filasAvianca(ctx),
+  gol: (ctx) => filasGol(ctx),
   american: (ctx) => filasGoogle(ctx, "american"),
   copa: (ctx) => filasGoogle(ctx, "copa"),
   latam: (ctx) => filasGoogle(ctx, "latam"),
 };
-const FUENTE_DE_ERROR = { laser: "sitio_aerolinea", avianca: "sitio_aerolinea", gol: "sitio_aerolinea" };
+const FUENTE_DE_ERROR = { laser: "sitio_aerolinea", gol: "sitio_aerolinea" };
 
 // ── corrida ────────────────────────────────────────────────────────────────
 

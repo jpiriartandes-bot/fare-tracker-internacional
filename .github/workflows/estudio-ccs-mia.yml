@@ -30,19 +30,13 @@ jobs:
       - name: Instalar Chromium (Playwright)
         run: npx playwright install --with-deps chromium
 
-      - name: Instalar Xvfb
-        # Avianca y Gol bloquean/fallan en headless real (Akamai detecta
-        # "HeadlessChrome"; Gol ni carga el formulario): sus scrapers fuerzan
-        # headless:false y en un runner sin display hace falta un framebuffer.
-        run: sudo apt-get update && sudo apt-get install -y xvfb
-
       - name: Escribir credenciales de Google
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         run: echo "$GOOGLE_CREDENTIALS" > credenciales-google.json
 
       - name: Correr estudio ccs-mia
-        run: xvfb-run -a node estudio.js --estudio=ccs-mia
+        run: node estudio.js --estudio=ccs-mia
 
       - name: Limpiar credenciales
         if: always()

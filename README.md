@@ -19,8 +19,8 @@ por estudio (cron diario + `workflow_dispatch`):
 
 | Estudio | Hoja | Rutas | Fuentes | Workflow | UTC |
 |---|---|---|---|---|---|
-| CCS-MIA | `CCS-MIA` | CCS→MIA, MIA→CCS | Laser (sitio, 3 familias), American (GF, 3 familias), Copa (GF), Avianca (precio sitio; escalas GF) | `estudio-ccs-mia.yml` | 06:00 |
-| EZE-CCS | `EZE-CCS` | EZE→CCS, CCS→EZE | Avianca y Gol (precio sitio; escalas GF), Copa y LATAM (GF) + `Frecuencias_Futuras` | `estudio-eze-ccs.yml` | 08:00 |
+| CCS-MIA | `CCS-MIA` | CCS→MIA, MIA→CCS | Laser (sitio, 3 familias), American (GF, 3 familias), Copa (GF), Avianca (GF) | `estudio-ccs-mia.yml` | 06:00 |
+| EZE-CCS | `EZE-CCS` | EZE→CCS, CCS→EZE | Avianca, Copa y LATAM (GF), Gol (precio sitio; escalas GF) + `Frecuencias_Futuras` | `estudio-eze-ccs.yml` | 08:00 |
 | BUE-MIA | `BUE-MIA` | BUE→MIA, MIA→BUE | Copa y LATAM (GF), solo 1 escala | `estudio-bue-mia.yml` | 10:00 |
 
 `node estudio.js --estudio=ccs-mia|eze-ccs|bue-mia [--prueba] [--ventanas=1,15,60]`.
@@ -62,14 +62,31 @@ duracion_total_min, conexion_min (suma de las escalas), horas_vuelo_min
   `tarifa` vacía. Se abren las reservas de los 2 vuelos propios más baratos
   y se toma el menor precio de la propia aerolínea (nunca el de una agencia
   ni el de una socia).
-- **Avianca / Gol** (sitio): el precio sale de su calendario de precios;
-  `incluye_tasas` queda **vacío** (no está verificado qué incluye). Escalas
-  y duraciones salen del itinerario **solo de esa aerolínea** con menos
-  escalas en Google Flights (desempate: menor duración total; con precio); nunca de un itinerario combinado ("Avianca y
-  United"). Si no hay uno, esos campos quedan vacíos con `nota`.
-  Avianca en CCS-MIA: además se consulta si Google ofrece familias de tarifa
-  (hasta ahora responde "No encontramos opciones de reserva" para los vuelos
-  solo de Avianca; si algún día las ofrece, se agrega una fila por familia).
+- **Avianca** (Google Flights, desde 2026-10-03): precio de lista del vuelo
+  **solo de Avianca** más barato (sin combinados), con sus escalas y duraciones;
+  `fuente=google_flights`, `incluye_tasas=si`. Para esos vuelos Google responde
+  "No encontramos opciones de reserva" (Avianca no vende por Google), así que
+  el precio de lista puede ser de una agencia (la nota lo dice) y no hay
+  familias; en CCS-MIA se sigue consultando por si aparecieran.
+  **Por qué ya no es del sitio:** el calendario de precios
+  (`avianca.com/airmkt/api/pricing/calendar`) no es un precio en vivo
+  (EZE→CCS 10/11: USD 1.223 en el calendario contra 1.843 en Google; COP
+  4.046.400 contra 4.768.900 en la página de reservas). La API real
+  (`POST apibooking.avianca.com/v2/search/air-bounds`) está detrás del WAF
+  Imperva: 403 `WAF_403 / errorCode 15` llamada con fetch() desde la home de
+  avianca.com, desde el propio dominio de la API y con las cookies de Imperva
+  ya cargadas (el preflight OPTIONS sí responde 200); y booking.avianca.com
+  como página queda en el desafío de Incapsula. No se insiste con evasión.
+  `scrapers/avianca.js` queda en el repo pero ya no se usa.
+- **Gol** (sitio): precio del calendario de precios (`flightcalendar`);
+  `incluye_tasas` queda **vacío** (no verificado). Verificado 2026-10-03
+  contra la página de resultados de Gol (Chrome real, CCS→EZE, en BRL): 13/10
+  calendario 4.235 vs vuelo 4.234,02; 15/10 3.323 vs 3.323,00; 11/10 (barra de
+  fechas) 5.402 vs 5.401,28. A diferencia de Avianca, el calendario de Gol
+  coincide con el precio real. (La búsqueda de resultados de Gol da 406 desde
+  Chromium automatizado, por eso se verificó a mano.) Escalas y duraciones del
+  itinerario solo de Gol con menos escalas en Google Flights (desempate: menor
+  duración total); si no hay, quedan vacíos con `nota`.
 - **Escalas y duraciones**: salen del aria-label de cada vuelo en la lista de
   Google Flights ("Duración total: …", "Esta escala (1 de 2) es una escala de
   3 h 5 min en <aeropuerto>"). Los nombres de aeropuerto se mapean a IATA
