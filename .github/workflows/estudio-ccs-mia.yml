@@ -1,28 +1,78 @@
 name: Estudio CCS-MIA
 
 on:
+  # Disparo principal: el Apps Script de la planilla "Fare Tracker
+  # Internacional" lanza los 3 estudios con workflow_dispatch a las 05:00 ARG.
+  # El cron es solo respaldo (GitHub demora los schedule varias horas): los 3
+  # escalonados 10:17 / 10:37 / 10:57 UTC, en minutos raros para no caer en la
+  # hora en punto, que es la más congestionada. Si ese día ya corrió, el job
+  # "chequeo" lo descarta.
   schedule:
-    # Diario a las 06:00 UTC. Los 3 estudios van escalonados (06:00, 08:00 y
-    # 10:00 UTC) para no pisarse; cada uno escribe solo su hoja y su CSV.
-    - cron: "0 6 * * *"
-  workflow_dispatch: {} # permite dispararlo a mano desde la pestaña "Actions"
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Correr aunque el CSV ya tenga filas de hoy"
+        type: boolean
+        default: false
+
+# Un solo ccs-mia a la vez: si el respaldo cae mientras corre el del Apps
+# Script, queda en cola y al arrancar el chequeo ve las filas de hoy.
+concurrency:
+  group: estudio-ccs-mia
+  cancel-in-progress: false
 
 jobs:
+  chequeo:
+    name: ¿ya corrió hoy?
+    runs-on: ubuntu-24.04
+    outputs:
+      correr: ${{ steps.chequeo.outputs.correr }}
+    steps:
+      - name: Checkout del CSV
+        # ref: main y no el SHA del evento: si esta corrida quedó en cola por
+        # concurrency, el SHA es el de cuando se encoló y el CSV no tendría
+        # las filas que commiteó la corrida anterior.
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          sparse-checkout: output/estudio_ccs_mia.csv
+          sparse-checkout-cone-mode: false
+
+      - name: ¿Hay filas con la fecha de hoy?
+        id: chequeo
+        env:
+          FORZAR: ${{ inputs.forzar }}
+        run: |
+          CSV=output/estudio_ccs_mia.csv
+          HOY=$(date -u +%Y-%m-%d) # fecha_busqueda se escribe en UTC
+          if [ "$FORZAR" = "true" ]; then
+            echo "Corrida forzada a mano."
+            echo "correr=true" >> "$GITHUB_OUTPUT"
+          elif [ -f "$CSV" ] && grep -q "^$HOY," "$CSV"; then
+            echo "::notice::$CSV ya tiene filas de $HOY: no se corre de nuevo."
+            echo "correr=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "correr=true" >> "$GITHUB_OUTPUT"
+          fi
+
   estudio:
+    needs: chequeo
+    if: needs.chequeo.outputs.correr == 'true'
     name: estudio ccs-mia
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 345
     permissions:
       contents: write
 
     steps:
       - name: Checkout del repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Instalar dependencias
         run: npm install

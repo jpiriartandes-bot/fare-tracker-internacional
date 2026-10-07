@@ -14,14 +14,15 @@ aerolíneas activas en `config.js`.
 ## Estructura actual (2026-10-03): 3 estudios independientes
 
 Cada estudio corre todas sus fuentes y escribe **solo su hoja** del Sheet
-"Fare Tracker Internacional" y su propio CSV. Workflows escalonados, uno
-por estudio (cron diario + `workflow_dispatch`):
+"Fare Tracker Internacional" y su propio CSV. Un workflow por estudio,
+lanzado a diario por el Apps Script de la planilla (ver "Disparo diario") y
+con un cron de respaldo:
 
-| Estudio | Hoja | Rutas | Fuentes | Workflow | UTC |
+| Estudio | Hoja | Rutas | Fuentes | Workflow | Cron respaldo (UTC) |
 |---|---|---|---|---|---|
-| CCS-MIA | `CCS-MIA` | CCS→MIA, MIA→CCS | Laser (sitio, 3 familias), American (GF, 3 familias), Copa (GF), Avianca (GF) | `estudio-ccs-mia.yml` | 06:00 |
-| EZE-CCS | `EZE-CCS` | EZE→CCS, CCS→EZE | Avianca, Copa y LATAM (GF), Gol (precio sitio; escalas GF) + `Frecuencias_Futuras` | `estudio-eze-ccs.yml` | 08:00 |
-| BUE-MIA | `BUE-MIA` | BUE→MIA, MIA→BUE | Copa y LATAM (GF), solo 1 escala | `estudio-bue-mia.yml` | 10:00 |
+| CCS-MIA | `CCS-MIA` | CCS→MIA, MIA→CCS | Laser (sitio, 3 familias), American (GF, 3 familias), Copa (GF), Avianca (GF) | `estudio-ccs-mia.yml` | 10:17 |
+| EZE-CCS | `EZE-CCS` | EZE→CCS, CCS→EZE | Avianca, Copa y LATAM (GF), Gol (precio sitio; escalas GF) + `Frecuencias_Futuras` | `estudio-eze-ccs.yml` | 10:37 |
+| BUE-MIA | `BUE-MIA` | BUE→MIA, MIA→BUE | Copa y LATAM (GF), solo 1 escala | `estudio-bue-mia.yml` | 10:57 |
 
 `node estudio.js --estudio=ccs-mia|eze-ccs|bue-mia [--prueba] [--ventanas=1,15,60]`.
 `--prueba`: 3 fechas por ruta, CSV en `output/prueba/`, **sin Sheets**.
@@ -29,6 +30,52 @@ Salida: `output/estudio_ccs_mia.csv`, `estudio_eze_ccs.csv`, `estudio_bue_mia.cs
 Se escribe a medida que avanza (CSV + hoja después de cada ruta/fecha). El
 push del workflow hace `git pull --rebase` con reintentos y el commit
 corre con `if: always()`.
+
+### Reintentos de Google Flights (2026-10-07)
+Si la lista viene vacía o la página de reserva no carga: 60 s de espera y
+hasta 2 reintentos (3 intentos). Si fallan 3 búsquedas seguidas (contando
+intentos, en toda la corrida) se pausa 5 min. Las fuentes que igual quedan
+con `ERROR` se repiten una vez al final de la corrida: sus filas se escriben
+recién ahí (bien o con error, una sola vez por ruta/fecha), así que quedan
+al final de la hoja con la nota "repetida al final de la corrida". La nota
+dice cuántos intentos llevó cuando fue más de uno ("búsqueda GF: 2
+intentos", "página de reserva: 3 intentos").
+
+### Disparo diario (2026-10-07)
+Los cron de GitHub arrancaban 5 a 9 h tarde. Ahora el disparo principal es
+`apps-script/disparador.gs`, en el Apps Script de la planilla: todos los días
+a las 05:00 ARG (±15 min) hace `workflow_dispatch` de los 3 workflows. Cada
+workflow tiene un job `chequeo` que termina sin correr si su CSV ya tiene
+filas con la fecha de hoy (UTC), así el cron de respaldo no duplica. Un
+`workflow_dispatch` a mano con "forzar" tildado lo saltea. `concurrency`
+evita que dos corridas del mismo estudio se pisen.
+
+Configuración del Apps Script (una vez):
+1. GitHub, logueado como el dueño del repo (`jpiriartandes-bot`): Settings →
+   Developer settings → Personal access tokens → **Fine-grained tokens** →
+   Generate new token.
+2. Nombre: `apps-script-fare-tracker-internacional`. Expiration: la más larga
+   que ofrezca (anotá la fecha: cuando venza, el disparo falla y solo queda
+   el cron de respaldo). Resource owner: `jpiriartandes-bot`.
+3. Repository access: **Only select repositories** →
+   `fare-tracker-internacional`.
+4. Permissions → Repository permissions → **Actions: Read and write**. Nada
+   más (Metadata: Read-only se agrega solo y es obligatorio). Generate token
+   y copialo (empieza con `github_pat_`; no se vuelve a mostrar).
+5. Planilla "Fare Tracker Internacional" → Extensiones → Apps Script. Archivo
+   nuevo (+ → Secuencia de comandos) `disparador`, pegar el contenido de
+   `apps-script/disparador.gs`, guardar.
+6. Configuración del proyecto (engranaje) → Propiedades de la secuencia de
+   comandos → Agregar: propiedad `GITHUB_TOKEN`, valor = el token. Guardar.
+7. En el editor elegir la función `lanzarEstudios` → Ejecutar (la 1ª vez pide
+   autorizar: "Conectarse a un servicio externo" y "Permitir que la app se
+   ejecute cuando no estés presente"). Verificar en la pestaña Actions del repo
+   que aparecen las 3 corridas (los chequeos pueden descartarlas si ya
+   corrieron hoy; está bien).
+8. Elegir la función `crearDisparador` → Ejecutar. En Activadores (reloj)
+   tiene que aparecer `lanzarEstudios`, "Basado en tiempo", diario. En ese
+   activador, "Notificaciones de error": inmediatamente, para enterarte si el
+   token vence o falla.
 
 **"Historico" está congelada** (no se escribe ni se borra; `output/historico.csv`
 queda como está). "Frecuencias" y su workflow (`frecuencias.yml`) no cambian.

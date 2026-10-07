@@ -99,6 +99,103 @@ async function asegurarBusqueda(ctx) {
   await gf.volverABusqueda(ctx.page, ctx.url);
 }
 
+// ── reintentos de Google Flights ───────────────────────────────────────────
+//
+// Entre el 3% y el 31% de las búsquedas venían con la lista vacía (Google
+// frena de a ratos). Cada búsqueda y cada página de reserva se intenta hasta
+// 3 veces con 60 s entre intentos; si fallan 3 búsquedas seguidas (contando
+// intentos, en toda la corrida) se pausa 5 min. Lo que queda con error se
+// repite una vez al final de la corrida (ver main).
+
+const INTENTOS_GF = 3;
+const ESPERA_REINTENTO_MS = 60_000;
+const RACHA_MAX = 3;
+const PAUSA_RACHA_MS = 5 * 60_000;
+let rachaFallasBusqueda = 0;
+
+// Carga la lista de vuelos de ctx.url en ctx.vuelos (y las frecuencias si
+// el estudio las pide). Deja ctx.intentosGF y, si no hubo caso, ctx.gfError.
+async function buscarEnGoogle(ctx, { conFrecuencias }) {
+  for (let n = 1; n <= INTENTOS_GF; n++) {
+    ctx.intentosGF++;
+    try {
+      await gf.irABusqueda(ctx.page, ctx.url);
+      if (conFrecuencias) {
+        // Frecuencias: la lista tal como carga, sin expandir.
+        const visibles = await gf.extraerVuelos(ctx.page);
+        ctx.frecuencias = visibles.map((v) => ({
+          fecha_busqueda: ctx.fechaBusqueda,
+          ruta: ctx.ruta,
+          fecha_vuelo: ctx.fechaVuelo,
+          aerolinea: v.aerolinea,
+          hora_salida: v.hora_salida,
+          hora_llegada: v.hora_llegada,
+          escalas: v.escalas,
+          precio_gf: v.precio_gf,
+          moneda: "USD",
+          fuente: "Google Flights",
+        }));
+        console.log(`  Frecuencias: ${ctx.frecuencias.length} vuelo(s) visibles.`);
+      }
+      await gf.expandirLista(ctx.page);
+      ctx.vuelos = await gf.extraerVuelos(ctx.page);
+      console.log(`  ${ctx.vuelos.length} vuelo(s) en la lista completa.`);
+      if (!ctx.vuelos.length) throw new Error("la lista de vuelos de Google Flights vino vacía");
+      rachaFallasBusqueda = 0;
+      ctx.gfError = null;
+      return;
+    } catch (err) {
+      ctx.gfError = err.message.split("\n")[0];
+      ctx.frecuencias = [];
+      rachaFallasBusqueda++;
+      console.log(`  FALLÓ Google Flights (intento ${n}/${INTENTOS_GF}): ${ctx.gfError}`);
+      if (rachaFallasBusqueda >= RACHA_MAX) {
+        console.log(`  ${rachaFallasBusqueda} búsquedas seguidas fallidas: pausa de ${PAUSA_RACHA_MS / 60_000} min.`);
+        await gf.sleep(PAUSA_RACHA_MS);
+        rachaFallasBusqueda = 0;
+      } else if (n < INTENTOS_GF) {
+        await gf.sleep(ESPERA_REINTENTO_MS);
+      }
+    }
+  }
+}
+
+// leerOpcionesDeReserva con reintentos. En los reintentos recarga la
+// búsqueda (si el vuelo no estaba en la lista, volver "atrás" no alcanza).
+// Devuelve el resultado con `intentos`; si fallan todos, el error lleva
+// `err.intentos`.
+async function reservaConReintentos(ctx, masterLabel) {
+  for (let n = 1; ; n++) {
+    try {
+      if (n === 1) await asegurarBusqueda(ctx);
+      else {
+        await gf.irABusqueda(ctx.page, ctx.url);
+        await gf.expandirLista(ctx.page);
+      }
+      await gf.pausa();
+      const r = await gf.leerOpcionesDeReserva(ctx.page, masterLabel);
+      return { ...r, intentos: n };
+    } catch (err) {
+      console.log(`    página de reserva: falló (intento ${n}/${INTENTOS_GF}): ${err.message.split("\n")[0]}`);
+      if (n >= INTENTOS_GF) {
+        err.intentos = n;
+        throw err;
+      }
+      await gf.sleep(ESPERA_REINTENTO_MS);
+    }
+  }
+}
+
+// Texto para la nota: cuántos intentos llevó (solo si fue más de uno).
+function notaIntentos(ctx, intentosReserva = 1) {
+  return [
+    ctx.intentosGF > 1 ? `búsqueda GF: ${ctx.intentosGF} intentos` : "",
+    intentosReserva > 1 ? `página de reserva: ${intentosReserva} intentos` : "",
+  ].filter(Boolean).join(", ");
+}
+
+const unirNotas = (...partes) => partes.filter(Boolean).join(" | ");
+
 // ── fuente: Laser (sitio, HTTP) ────────────────────────────────────────────
 
 async function filasLaser(ctx) {
@@ -154,10 +251,10 @@ async function filasLaser(ctx) {
 
 async function filasAvianca(ctx) {
   const b = { ...base(ctx, "avianca"), moneda: "USD", fuente: "google_flights" };
-  if (ctx.gfError) return [fila({ ...b, nota: `ERROR: ${ctx.gfError}` })];
+  if (ctx.gfError) return [fila({ ...b, nota: unirNotas(`ERROR: ${ctx.gfError}`, notaIntentos(ctx)) })];
   const vuelo = gf.vuelosPropios(ctx.vuelos, "avianca")[0];
   if (!vuelo) {
-    return [fila({ ...b, disponible: "no", nota: "Google Flights no muestra un vuelo solo de Avianca con precio" })];
+    return [fila({ ...b, disponible: "no", nota: unirNotas("Google Flights no muestra un vuelo solo de Avianca con precio", notaIntentos(ctx)) })];
   }
   const filas = [
     fila({
@@ -172,11 +269,11 @@ async function filasAvianca(ctx) {
   ];
 
   // ¿Google muestra familias de tarifa de Avianca? Si sí, una fila por familia.
+  let intentosReserva = 1;
   if (ctx.estudio.familiasGoogleAvianca) {
     try {
-      await asegurarBusqueda(ctx);
-      await gf.pausa();
-      const { vendedores, sinOpciones } = await gf.leerOpcionesDeReserva(ctx.page, vuelo.masterLabel);
+      const { vendedores, sinOpciones, intentos } = await reservaConReintentos(ctx, vuelo.masterLabel);
+      intentosReserva = intentos;
       const propia = vendedores.find((v) => v.esAerolinea && gf.AEROLINEAS.avianca.vendedor.test(v.nombre));
       if (propia?.familias.length) {
         for (const f of propia.familias) {
@@ -199,9 +296,12 @@ async function filasAvianca(ctx) {
           : " | Google no desglosa familias de Avianca";
       }
     } catch (err) {
+      intentosReserva = err.intentos ?? 1;
       filas[0].nota += ` | no se pudo consultar familias en Google: ${err.message.split("\n")[0]}`;
     }
   }
+  const nIntentos = notaIntentos(ctx, intentosReserva);
+  for (const f of filas) f.nota = unirNotas(f.nota, nIntentos);
   return filas;
 }
 
@@ -239,7 +339,7 @@ async function filasGol(ctx) {
       disponible: r.tarifa != null ? "si" : "no",
       ...(vuelo ? detalle(vuelo) : {}),
       fuente: "sitio_aerolinea",
-      nota: [r.nota, notaGF].filter(Boolean).join(" | "),
+      nota: unirNotas(r.nota, notaGF, notaIntentos(ctx)),
     }),
   ];
 }
@@ -249,7 +349,7 @@ async function filasGol(ctx) {
 async function filasGoogle(ctx, id) {
   const cfg = gf.AEROLINEAS[id];
   const b = { ...base(ctx, id), moneda: "USD", fuente: "google_flights" };
-  if (ctx.gfError) return [fila({ ...b, nota: `ERROR: ${ctx.gfError}` })];
+  if (ctx.gfError) return [fila({ ...b, nota: unirNotas(`ERROR: ${ctx.gfError}`, notaIntentos(ctx)) })];
 
   const { escalas } = ctx.estudio;
   const candidatos = gf.vuelosPropios(ctx.vuelos, id, escalas ?? null).slice(0, id === "american" ? 3 : 2);
@@ -258,7 +358,10 @@ async function filasGoogle(ctx, id) {
       fila({
         ...b,
         disponible: "no",
-        nota: `${cfg.nombre} no tiene vuelos propios con precio en Google Flights` + (escalas != null ? ` (con ${escalas} escala)` : ""),
+        nota: unirNotas(
+          `${cfg.nombre} no tiene vuelos propios con precio en Google Flights` + (escalas != null ? ` (con ${escalas} escala)` : ""),
+          notaIntentos(ctx)
+        ),
       }),
     ];
   }
@@ -270,29 +373,35 @@ async function filasGoogle(ctx, id) {
   const errores = [];
   const otros = new Set();
   let mejor = null;
+  let intentosReserva = 1; // el máximo entre los candidatos consultados
   for (const c of candidatos) {
     try {
-      await asegurarBusqueda(ctx);
-      await gf.pausa();
-      const { vendedores } = await gf.leerOpcionesDeReserva(ctx.page, c.masterLabel);
+      const { vendedores, intentos } = await reservaConReintentos(ctx, c.masterLabel);
+      intentosReserva = Math.max(intentosReserva, intentos);
       const propia = vendedores.find((v) => v.esAerolinea && cfg.vendedor.test(v.nombre) && v.precio != null);
       vendedores.filter((v) => v !== propia).forEach((v) => otros.add(v.nombre));
       if (propia && (!mejor || propia.precio < mejor.propia.precio)) mejor = { propia, vuelo: c };
       if (propia && id === "american") break;
     } catch (err) {
+      intentosReserva = Math.max(intentosReserva, err.intentos ?? 1);
       errores.push(err.message.split("\n")[0]);
     }
   }
+  const nIntentos = notaIntentos(ctx, intentosReserva);
 
   if (!mejor) {
-    if (errores.length === candidatos.length) return [fila({ ...b, nota: `ERROR: no cargó ninguna página de reserva: ${errores[0]}` })];
+    if (errores.length === candidatos.length) {
+      return [fila({ ...b, nota: unirNotas(`ERROR: no cargó ninguna página de reserva: ${errores[0]}`, nIntentos) })];
+    }
     return [
       fila({
         ...b,
         disponible: "no",
-        nota:
+        nota: unirNotas(
           `${cfg.nombre} no aparece como vendedor en sus ${candidatos.length} vuelo(s) más barato(s)` +
-          (otros.size ? ` (vendían: ${[...otros].join(", ")})` : ""),
+            (otros.size ? ` (vendían: ${[...otros].join(", ")})` : ""),
+          nIntentos
+        ),
       }),
     ];
   }
@@ -304,8 +413,14 @@ async function filasGoogle(ctx, id) {
   if (id === "american" && propia.familias.length) {
     return familiasAmerican(propia).map(({ nombre, f }) =>
       f
-        ? fila({ ...comun, tarifa: nombre, precio: f.precio, total_con_tasas: f.precio, disponible: "si", nota: notaErr })
-        : fila({ ...comun, tarifa: nombre, incluye_tasas: "", disponible: "no", nota: "Google no ofrece esta familia en este vuelo" })
+        ? fila({ ...comun, tarifa: nombre, precio: f.precio, total_con_tasas: f.precio, disponible: "si", nota: unirNotas(notaErr, nIntentos) })
+        : fila({
+            ...comun,
+            tarifa: nombre,
+            incluye_tasas: "",
+            disponible: "no",
+            nota: unirNotas("Google no ofrece esta familia en este vuelo", nIntentos),
+          })
     );
   }
   return [
@@ -314,11 +429,12 @@ async function filasGoogle(ctx, id) {
       precio: propia.precio,
       total_con_tasas: propia.precio,
       disponible: "si",
-      nota: [
+      nota: unirNotas(
         id === "american" ? "Google no desglosa familias de tarifa en este vuelo" : "",
         propia.desde ? "precio 'desde' (mínimo de varias clases)" : "",
         notaErr,
-      ].filter(Boolean).join(" | "),
+        nIntentos
+      ),
     }),
   ];
 }
@@ -343,42 +459,29 @@ const FUENTE_DE_ERROR = { laser: "sitio_aerolinea", gol: "sitio_aerolinea" };
 
 // ── corrida ────────────────────────────────────────────────────────────────
 
-async function relevarRutaFecha(browser, estudio, ruta, dias, fechaBusqueda, tiemposFuente) {
-  const fechaVuelo = fechaDesdeHoy(dias);
+// Fuentes que necesitan la lista de Google Flights (Laser va directo al sitio;
+// Gol saca de Google escalas y duraciones).
+const USA_GOOGLE = (fuente) => fuente !== "laser";
+
+// Releva una ruta/fecha. `opciones` se usa al repetir al final de la corrida:
+// solo las `fuentes` que fallaron, la misma fecha de vuelo, y los intentos de
+// búsqueda que ya se llevaban (para que la nota cuente el total).
+async function relevarRutaFecha(browser, estudio, ruta, dias, fechaBusqueda, tiemposFuente, opciones = {}) {
+  const fuentes = opciones.fuentes ?? estudio.fuentes;
+  const fechaVuelo = opciones.fechaVuelo ?? fechaDesdeHoy(dias);
   const url = gf.urlParaFecha(ruta, fechaVuelo);
-  const ctx = { estudio, ruta, dias, fechaVuelo, fechaBusqueda, url, page: null, vuelos: [], gfError: null, frecuencias: [] };
+  const ctx = {
+    estudio, ruta, dias, fechaVuelo, fechaBusqueda, url, page: null, vuelos: [], gfError: null, frecuencias: [],
+    intentosGF: opciones.intentosGF ?? 0,
+  };
   ctx.page = await browser.newPage({ userAgent: gf.UA, viewport: { width: 1280, height: 900 } });
   const filas = [];
   try {
-    try {
-      await gf.irABusqueda(ctx.page, url);
-      if (estudio.frecuenciasFuturas) {
-        // Frecuencias: la lista tal como carga, sin expandir.
-        const visibles = await gf.extraerVuelos(ctx.page);
-        ctx.frecuencias = visibles.map((v) => ({
-          fecha_busqueda: fechaBusqueda,
-          ruta,
-          fecha_vuelo: fechaVuelo,
-          aerolinea: v.aerolinea,
-          hora_salida: v.hora_salida,
-          hora_llegada: v.hora_llegada,
-          escalas: v.escalas,
-          precio_gf: v.precio_gf,
-          moneda: "USD",
-          fuente: "Google Flights",
-        }));
-        console.log(`  Frecuencias: ${ctx.frecuencias.length} vuelo(s) visibles.`);
-      }
-      await gf.expandirLista(ctx.page);
-      ctx.vuelos = await gf.extraerVuelos(ctx.page);
-      console.log(`  ${ctx.vuelos.length} vuelo(s) en la lista completa.`);
-      if (!ctx.vuelos.length) throw new Error("la lista de vuelos de Google Flights vino vacía");
-    } catch (err) {
-      ctx.gfError = err.message.split("\n")[0];
-      console.log(`  FALLÓ Google Flights: ${ctx.gfError}`);
+    if (fuentes.some(USA_GOOGLE)) {
+      await buscarEnGoogle(ctx, { conFrecuencias: estudio.frecuenciasFuturas && (opciones.conFrecuencias ?? true) });
     }
 
-    for (const fuente of estudio.fuentes) {
+    for (const fuente of fuentes) {
       const t0 = Date.now();
       try {
         const nuevas = await FUENTES[fuente](ctx);
@@ -400,8 +503,13 @@ async function relevarRutaFecha(browser, estudio, ruta, dias, fechaBusqueda, tie
   } finally {
     await ctx.page.close();
   }
-  return { filas, frecuencias: ctx.frecuencias, gfError: ctx.gfError };
+  return { filas, frecuencias: ctx.frecuencias, gfError: ctx.gfError, fechaVuelo, intentosGF: ctx.intentosGF };
 }
+
+const conError = (f) => String(f.nota).startsWith("ERROR");
+
+// Fuentes (aerolinea = id de fuente) con alguna fila de error.
+const fuentesConError = (filas) => [...new Set(filas.filter(conError).map((f) => f.aerolinea))];
 
 async function main() {
   const estudio = ESTUDIOS[ESTUDIO_ID];
@@ -428,6 +536,25 @@ async function main() {
   const tiemposFuente = {};
   const duraciones = [];
   let fallasGF = 0;
+  // Fuentes que quedaron con error, por ruta/fecha: se repiten una vez al
+  // final. Sus filas se guardan recién después de la repetición (las de las
+  // fuentes que salieron bien se guardan en el momento).
+  const aRepetir = [];
+
+  async function guardar(filas) {
+    if (!filas.length) return;
+    todas.push(...filas);
+    appendCsv(csvPath, filas);
+    if (PRUEBA) return;
+    pendientes.push(...filas);
+    try {
+      const n = await appendHoja(estudio.hoja, pendientes);
+      console.log(`  Sheets "${estudio.hoja}": ${n} fila(s) agregadas.`);
+      pendientes.length = 0;
+    } catch (err) {
+      console.error(`  Sheets "${estudio.hoja}": error — ${err.message} (${pendientes.length} fila(s) pendientes)`);
+    }
+  }
 
   const browser = await chromium.launch({ headless: process.env.HEADLESS !== "false" });
   try {
@@ -441,22 +568,33 @@ async function main() {
         const res = await relevarRutaFecha(browser, estudio, ruta, dias, fechaBusqueda, tiemposFuente);
         duraciones.push(Date.now() - tRuta);
         console.log(`  (${((Date.now() - tRuta) / 1000).toFixed(0)}s con pausas)`);
-        if (res.gfError) fallasGF++;
-        todas.push(...res.filas);
         frecuencias.push(...res.frecuencias);
 
-        appendCsv(csvPath, res.filas);
-        if (!PRUEBA) {
-          pendientes.push(...res.filas);
-          try {
-            const n = await appendHoja(estudio.hoja, pendientes);
-            console.log(`  Sheets "${estudio.hoja}": ${n} fila(s) agregadas.`);
-            pendientes.length = 0;
-          } catch (err) {
-            console.error(`  Sheets "${estudio.hoja}": error — ${err.message} (${pendientes.length} fila(s) pendientes)`);
-          }
+        const fallidas = fuentesConError(res.filas);
+        if (fallidas.length) {
+          console.log(`  Con error: ${fallidas.join(", ")} — se repite al final de la corrida.`);
+          aRepetir.push({ ruta, dias, res, fallidas });
         }
+        await guardar(res.filas.filter((f) => !fallidas.includes(f.aerolinea)));
       }
+    }
+
+    // Repetición única de lo que quedó con error. Se guarda lo que salga
+    // (bien o con error): cada fuente queda una sola vez por ruta/fecha.
+    if (aRepetir.length) console.log(`\nRepitiendo ${aRepetir.length} ruta/fecha(s) con error...`);
+    for (const { ruta, dias, res, fallidas } of aRepetir) {
+      await gf.pausa();
+      console.log(`Repitiendo ${ruta} — ${res.fechaVuelo} (+${dias}d): ${fallidas.join(", ")}...`);
+      const rep = await relevarRutaFecha(browser, estudio, ruta, dias, fechaBusqueda, tiemposFuente, {
+        fuentes: fallidas,
+        fechaVuelo: res.fechaVuelo,
+        intentosGF: res.intentosGF,
+        conFrecuencias: !res.frecuencias.length,
+      });
+      for (const f of rep.filas) f.nota = unirNotas(f.nota, "repetida al final de la corrida");
+      frecuencias.push(...rep.frecuencias);
+      if (fallidas.some(USA_GOOGLE) && rep.gfError) fallasGF++;
+      await guardar(rep.filas);
     }
   } finally {
     await browser.close();
@@ -476,7 +614,8 @@ async function main() {
   const errores = todas.filter((f) => String(f.nota).startsWith("ERROR")).length;
   console.log(
     `\n${todas.length} fila(s): ${conPrecio} con precio, ${todas.filter((f) => f.disponible === "no").length} no disponibles, ` +
-      `${errores} con error. Búsquedas de Google Flights caídas: ${fallasGF}.`
+      `${errores} con error. Ruta/fechas repetidas al final: ${aRepetir.length}. ` +
+      `Búsquedas de Google Flights caídas después de repetir: ${fallasGF}.`
   );
   console.log(gf.resumenTiempos("Búsquedas GF", gf.tiempos.busqueda));
   console.log(gf.resumenTiempos("Opciones de reserva GF", gf.tiempos.reserva));
