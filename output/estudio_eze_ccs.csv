@@ -1273,3 +1273,251 @@ Call log:
 2026-10-08,CCS_EZE,2026-12-07,60,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
 2026-10-08,CCS_EZE,2026-12-07,60,copa,,505,USD,si,505,si,6:35,22:20,1,PTY,885,307,578,,,google_flights,
 2026-10-08,CCS_EZE,2026-12-07,60,latam,,499,USD,si,499,si,11:50,3:00,2,BOG/LIM,850,265,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,EZE_CCS,2026-10-10,1,avianca,,1260,USD,si,1260,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-10,1,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-10,1,copa,,624,USD,si,624,si,14:49,0:59,1,PTY,670,86,584,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-10,1,latam,,970,USD,si,970,si,12:15,7:10,2,SCL/BOG,1195,585,610,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-11,2,avianca,,1260,USD,si,1260,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-11,2,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-11,2,copa,,1156,USD,si,1156,si,8:59,0:59,1,PTY,1020,435,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-11,2,latam,,1057,USD,si,1057,si,19:21,10:30,2,SCL/BOG,969,326,643,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-12,3,avianca,,941,USD,si,941,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-12,3,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-12,3,copa,,2248,USD,si,2248,si,14:49,0:59,1,PTY,670,86,584,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-12,3,latam,,1257,USD,si,1257,si,12:15,7:10,2,SCL/BOG,1195,585,610,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-13,4,avianca,,840,USD,si,840,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-13,4,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-13,4,copa,,624,USD,si,624,si,5:25,0:59,1,PTY,1234,649,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-13,4,latam,,970,USD,si,970,si,12:15,7:10,2,SCL/BOG,1195,585,610,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-14,5,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,EZE_CCS,2026-10-14,5,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-14,5,copa,,624,USD,si,624,si,14:49,0:59,1,PTY,670,86,584,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-14,5,latam,,686,USD,si,686,si,12:15,7:10,2,SCL/BOG,1195,585,610,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-15,6,avianca,,1109,USD,si,1109,si,7:10,2:25,1,BOG,1215,710,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-15,6,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-15,6,copa,,736,USD,si,736,si,14:49,0:59,1,PTY,670,86,584,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-15,6,latam,,686,USD,si,686,si,19:21,10:30,2,SCL/BOG,969,326,643,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-16,7,avianca,,1075,USD,si,1075,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-16,7,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-16,7,copa,,736,USD,si,736,si,14:49,0:59,1,PTY,670,86,584,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-16,7,latam,,628,USD,si,628,si,19:21,10:30,2,SCL/BOG,969,326,643,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-17,8,avianca,,1075,USD,si,1075,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-17,8,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-17,8,copa,,1156,USD,si,1156,si,8:59,0:59,1,PTY,1020,435,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-17,8,latam,,735,USD,si,735,si,12:15,7:10,2,SCL/BOG,1195,585,610,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-18,9,avianca,,1075,USD,si,1075,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-18,9,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-18,9,copa,,2248,USD,si,2248,si,0:10,12:07,1,PTY,777,196,581,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-10-18,9,latam,,848,USD,si,848,si,19:21,10:30,2,SCL/BOG,969,326,643,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,"búsqueda GF: 2 intentos, página de reserva: 3 intentos"
+2026-10-09,EZE_CCS,2026-10-19,10,avianca,,1161,USD,si,1161,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-19,10,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-19,10,copa,,904,USD,si,904,si,5:25,0:59,1,PTY,1234,649,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-19,10,latam,,787,USD,si,787,si,3:55,7:10,2,LIM/BOG,1695,1095,600,"Latam Airlines Peru, Latam Airlines Peru, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-20,11,avianca,,806,USD,si,806,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-20,11,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-20,11,copa,,1156,USD,si,1156,si,14:49,0:59,1,PTY,670,86,584,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-20,11,latam,,628,USD,si,628,si,7:35,7:10,2,LIM/BOG,1475,875,600,"Latam Airlines Peru, Latam Airlines Colombia, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-21,12,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,EZE_CCS,2026-10-21,12,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-21,12,copa,,736,USD,si,736,si,5:25,0:59,1,PTY,1234,649,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-21,12,latam,,518,USD,si,518,si,3:55,7:10,2,LIM/BOG,1695,1095,600,"Latam Airlines Peru, Latam Airlines Colombia, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-22,13,avianca,,1008,USD,si,1008,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-22,13,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-22,13,copa,,624,USD,si,624,si,5:25,0:59,1,PTY,1234,649,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-22,13,latam,,518,USD,si,518,si,12:15,10:30,2,SCL/BOG,1395,765,630,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-23,14,avianca,,1161,USD,si,1161,si,16:50,2:25,1,BOG,635,110,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-23,14,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-23,14,copa,,904,USD,si,904,si,5:25,0:59,1,PTY,1234,649,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-23,14,latam,,501,USD,si,501,si,12:15,10:30,2,SCL/BOG,1395,765,630,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-24,15,avianca,,1075,USD,si,1075,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-24,15,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-24,15,copa,,1156,USD,si,1156,si,8:59,0:59,1,PTY,1020,435,585,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-24,15,latam,,735,USD,si,735,si,7:35,7:10,2,LIM/BOG,1475,870,605,"Latam Airlines Peru, Latam Airlines Colombia, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-25,16,avianca,,2799,USD,si,2799,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 3 intentos
+2026-10-09,EZE_CCS,2026-10-25,16,gol,,,USD,,,no,3:35,22:15,2,GIG/GRU,1180,565,615,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 788 en Google) | búsqueda GF: 3 intentos"
+2026-10-09,EZE_CCS,2026-10-25,16,copa,,1057,USD,si,1057,si,6:40,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,1159,533,626,,,google_flights,búsqueda GF: 3 intentos
+2026-10-09,EZE_CCS,2026-10-25,16,latam,,787,USD,si,787,si,7:20,10:30,2,LIM/BOG,1690,1085,605,"Latam Airlines Peru, Latam Airlines Colombia, Latam Airlines Colombia",,google_flights,búsqueda GF: 3 intentos
+2026-10-09,EZE_CCS,2026-10-26,17,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-26,17,gol,,803,USD,,,si,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-26,17,copa,,574,USD,si,574,si,13:18,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,761,135,626,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-26,17,latam,,523,USD,si,523,si,2:05,7:10,2,GRU/BOG,1805,1125,680,"Latam Airlines Brasil, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-27,18,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-27,18,gol,,560,USD,,,si,3:30,22:15,2,FLN/GRU,1185,615,570,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 744 en Google)"
+2026-10-09,EZE_CCS,2026-10-27,18,copa,,574,USD,si,574,si,13:18,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,761,135,626,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-27,18,latam,,501,USD,si,501,si,11:20,7:10,2,SCL/BOG,1250,598,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-28,19,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-28,19,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-28,19,copa,,574,USD,si,574,si,13:18,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,761,135,626,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-28,19,latam,,501,USD,si,501,si,11:20,7:10,2,SCL/BOG,1250,598,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-29,20,avianca,,1690,USD,si,1690,si,2:35,2:25,3,MDE/BAQ/BOG,1490,805,685,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-29,20,gol,,518,USD,,,si,3:30,22:15,2,GIG/GRU,1185,560,625,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 739 en Google)"
+2026-10-09,EZE_CCS,2026-10-29,20,copa,,1057,USD,si,1057,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-29,20,latam,,501,USD,si,501,si,11:20,10:30,2,SCL/BOG,1450,803,647,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-30,21,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-30,21,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-30,21,copa,,1057,USD,si,1057,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-30,21,latam,,501,USD,si,501,si,11:20,10:30,2,SCL/BOG,1450,798,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-10-31,22,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-10-31,22,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-10-31,22,copa,,574,USD,si,574,si,13:18,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,761,135,626,,,google_flights,
+2026-10-09,EZE_CCS,2026-10-31,22,latam,,501,USD,si,501,si,11:20,7:10,2,SCL/BOG,1250,598,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-01,23,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-01,23,gol,,,USD,,,no,3:35,22:15,2,GIG/GRU,1180,565,615,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 739 en Google)"
+2026-10-09,EZE_CCS,2026-11-01,23,copa,,624,USD,si,624,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-01,23,latam,,523,USD,si,523,si,2:05,10:30,2,GRU/BOG,2005,1320,685,"Latam Airlines Brasil, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-02,24,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-02,24,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-11-02,24,copa,,624,USD,si,624,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-02,24,latam,,523,USD,si,523,si,2:05,7:10,2,GRU/BOG,1805,1120,685,"Latam Airlines Brasil, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-03,25,avianca,,1849,USD,si,1849,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-03,25,gol,,,USD,,,no,3:30,22:15,2,GIG/GRU,1185,560,625,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 739 en Google)"
+2026-10-09,EZE_CCS,2026-11-03,25,copa,,624,USD,si,624,si,13:18,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,761,135,626,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-03,25,latam,,501,USD,si,501,si,11:20,7:10,2,SCL/BOG,1250,598,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-04,26,avianca,,1260,USD,si,1260,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-04,26,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-11-04,26,copa,,624,USD,si,624,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-04,26,latam,,501,USD,si,501,si,11:20,7:10,2,SCL/BOG,1250,598,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-05,27,avianca,,1849,USD,si,1849,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-05,27,gol,,,USD,,,no,3:30,22:15,2,GIG/GRU,1185,560,625,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 1120 en Google)"
+2026-10-09,EZE_CCS,2026-11-05,27,copa,,624,USD,si,624,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-05,27,latam,,501,USD,si,501,si,11:20,10:30,2,SCL/BOG,1450,798,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-06,28,avianca,,2286,USD,si,2286,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-06,28,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-11-06,28,copa,,624,USD,si,624,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-06,28,latam,,501,USD,si,501,si,11:20,10:30,2,SCL/BOG,1450,798,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-07,29,avianca,,2799,USD,si,2799,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-11-07,29,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,EZE_CCS,2026-11-07,29,copa,,624,USD,si,624,si,13:18,0:59,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,761,135,626,,,google_flights,
+2026-10-09,EZE_CCS,2026-11-07,29,latam,,518,USD,si,518,si,11:20,7:10,2,SCL/BOG,1250,598,652,"Latam Airlines Group, Wamos for Latam Airlines Group, Latam Airlines Colombia",,google_flights,
+2026-10-09,EZE_CCS,2026-11-08,30,avianca,,1563,USD,si,1563,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-11-08,30,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio | búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-11-08,30,copa,,624,USD,si,624,si,1:17,12:07,2,Aeropuerto Internacional Rosario Islas Malvinas de Rosario/PTY,710,88,622,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-11-08,30,latam,,501,USD,si,501,si,11:20,10:30,2,SCL/BOG,1450,846,604,"Latam Airlines Group, Latam Airlines Group, Latam Airlines Colombia",,google_flights,búsqueda GF: 2 intentos
+2026-10-09,EZE_CCS,2026-12-08,60,avianca,,1849,USD,si,1849,si,16:50,2:25,1,BOG,635,120,515,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-10-09,EZE_CCS,2026-12-08,60,gol,,,USD,,,no,3:30,22:15,2,GIG/GRU,1185,560,625,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 739 en Google)"
+2026-10-09,EZE_CCS,2026-12-08,60,copa,,1508,USD,si,1508,si,2:02,12:07,1,PTY,665,81,584,,,google_flights,
+2026-10-09,EZE_CCS,2026-12-08,60,latam,,628,USD,si,628,si,7:20,7:10,2,LIM/BOG,1490,885,605,"Latam Airlines Peru, Latam Airlines Colombia, Latam Airlines Colombia",,google_flights,
+2026-10-09,CCS_EZE,2026-10-10,1,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-10,1,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-10,1,copa,,377,USD,si,377,si,6:35,22:26,1,PTY,891,311,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-10,1,latam,,685,USD,si,685,si,11:50,11:30,2,BOG/SCL,1360,770,590,"Latam Airlines Colombia, Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-10-11,2,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-11,2,gol,,1103,USD,,,si,23:50,17:40,2,GRU/GIG,1010,370,640,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 1101 en Google)"
+2026-10-09,CCS_EZE,2026-10-11,2,copa,,377,USD,si,377,si,6:35,22:26,1,PTY,891,311,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-11,2,latam,,888,USD,si,888,si,8:55,15:45,2,BOG/GRU,1790,1120,670,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Brasil",,google_flights,
+2026-10-09,CCS_EZE,2026-10-12,3,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-12,3,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-12,3,copa,,377,USD,si,377,si,6:35,22:26,1,PTY,891,311,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-12,3,latam,,734,USD,si,734,si,11:50,18:21,2,BOG/SCL,1771,1180,591,"Latam Airlines Colombia, Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-10-13,4,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-13,4,gol,,812,USD,,,si,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-13,4,copa,,792,USD,si,792,si,6:35,22:26,1,PTY,891,311,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-13,4,latam,,685,USD,si,685,si,8:55,6:10,2,BOG/LIM,1215,645,570,"Latam Airlines Colombia, Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-14,5,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio | búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-14,5,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio | búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-14,5,copa,,377,USD,si,377,si,6:35,2:30,1,PTY,1135,555,580,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-14,5,latam,,653,USD,si,653,si,8:55,1:05,2,BOG/GRU,910,235,675,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Brasil",,google_flights,búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-15,6,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio | búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-15,6,gol,,615,USD,,,si,23:50,16:15,2,GRU/GIG,925,290,635,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 810 en Google) | búsqueda GF: 2 intentos"
+2026-10-09,CCS_EZE,2026-10-15,6,copa,,505,USD,si,505,si,6:35,22:26,1,PTY,891,311,580,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-15,6,latam,,734,USD,si,734,si,8:55,2:45,2,BOG/LIM,1010,445,565,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-10-16,7,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-16,7,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-16,7,copa,,522,USD,si,522,si,6:35,4:36,1,PTY,1261,681,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-16,7,latam,,848,USD,si,848,si,11:50,18:21,2,BOG/SCL,1771,1180,591,"Latam Airlines Colombia, Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-10-17,8,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-17,8,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-17,8,copa,,632,USD,si,632,si,6:35,0:51,1,PTY,1036,456,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-17,8,latam,,786,USD,si,786,si,11:50,6:10,2,BOG/LIM,1040,470,570,"Latam Airlines Colombia, Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-18,9,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-18,9,gol,,590,USD,,,si,23:50,11:45,2,GRU/GIG,2095,1450,645,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 1035 en Google)"
+2026-10-09,CCS_EZE,2026-10-18,9,copa,,567,USD,si,567,si,6:35,0:51,1,PTY,1036,456,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-18,9,latam,,685,USD,si,685,si,8:55,6:10,2,BOG/LIM,1215,645,570,"Latam Airlines Colombia, Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-19,10,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-19,10,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-19,10,copa,,377,USD,si,377,si,6:35,4:36,1,PTY,1261,681,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-19,10,latam,,565,USD,si,565,si,11:50,11:30,2,BOG/SCL,1360,770,590,"Latam Airlines Colombia, Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-10-20,11,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-20,11,gol,,812,USD,,,si,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-20,11,copa,,522,USD,si,522,si,6:35,4:21,1,PTY,1246,666,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-20,11,latam,,626,USD,si,626,si,8:55,2:45,2,BOG/LIM,1010,445,565,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-21,12,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-21,12,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-21,12,copa,,567,USD,si,567,si,6:35,0:51,1,PTY,1036,456,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-21,12,latam,,515,USD,si,515,si,8:55,2:45,2,BOG/LIM,1010,445,565,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-22,13,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-22,13,gol,,874,USD,,,si,23:50,16:15,2,GRU/GIG,925,290,635,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 872 en Google)"
+2026-10-09,CCS_EZE,2026-10-22,13,copa,,377,USD,si,377,si,6:35,2:30,1,PTY,1135,555,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-22,13,latam,,515,USD,si,515,si,8:55,2:45,2,BOG/LIM,1010,445,565,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-23,14,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-23,14,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-23,14,copa,,632,USD,si,632,si,6:35,4:36,1,PTY,1261,681,580,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-23,14,latam,,685,USD,si,685,si,11:50,6:10,2,BOG/LIM,1040,470,570,"Latam Airlines Colombia, Latam Airlines Peru, Latam Airlines Peru",,google_flights,página de reserva: 3 intentos
+2026-10-09,CCS_EZE,2026-10-24,15,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-24,15,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-24,15,copa,,632,USD,si,632,si,6:35,4:40,1,PTY,1265,702,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-24,15,latam,,734,USD,si,734,si,11:50,4:45,2,BOG/LIM,955,390,565,"Latam Airlines Colombia, Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-25,16,avianca,,1311,USD,si,1311,si,4:00,1:25,2,BOG/MDE,1225,645,580,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 3 intentos
+2026-10-09,CCS_EZE,2026-10-25,16,gol,,599,USD,,,si,23:40,13:40,1,GRU,780,220,560,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 1083 en Google) | búsqueda GF: 3 intentos"
+2026-10-09,CCS_EZE,2026-10-25,16,copa,,522,USD,si,522,si,6:35,3:58,1,PTY,1223,660,563,,,google_flights,búsqueda GF: 3 intentos
+2026-10-09,CCS_EZE,2026-10-25,16,latam,,786,USD,si,786,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,búsqueda GF: 3 intentos
+2026-10-09,CCS_EZE,2026-10-26,17,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-26,17,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-26,17,copa,,567,USD,si,567,si,6:35,3:16,1,PTY,1181,618,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-26,17,latam,,499,USD,si,499,si,11:50,18:35,2,BOG/SCL,1785,1158,627,"Latam Airlines Colombia, Wamos for Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-10-27,18,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-27,18,gol,,1015,USD,,,si,23:40,13:40,1,GRU,780,220,560,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 1014 en Google)"
+2026-10-09,CCS_EZE,2026-10-27,18,copa,,567,USD,si,567,si,6:35,0:07,1,PTY,992,429,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-27,18,latam,,499,USD,si,499,si,8:55,3:00,2,BOG/LIM,1025,445,580,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-28,19,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-28,19,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-28,19,copa,,567,USD,si,567,si,6:35,3:16,1,PTY,1181,618,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-28,19,latam,,565,USD,si,565,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,página de reserva: 2 intentos
+2026-10-09,CCS_EZE,2026-10-29,20,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-29,20,gol,,599,USD,,,si,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-29,20,copa,,632,USD,si,632,si,6:35,1:11,1,PTY,1056,493,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-29,20,latam,,848,USD,si,848,si,8:55,6:20,2,BOG/LIM,1225,630,595,"Latam Airlines Colombia, Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-10-30,21,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-30,21,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-30,21,copa,,792,USD,si,792,si,6:35,0:07,1,PTY,992,429,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-30,21,latam,,685,USD,si,685,si,11:50,18:35,2,BOG/SCL,1785,1158,627,"Latam Airlines Colombia, Wamos for Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-10-31,22,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-10-31,22,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-10-31,22,copa,,792,USD,si,792,si,6:35,0:07,1,PTY,992,429,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-10-31,22,latam,,715,USD,si,715,si,11:50,16:00,2,BOG/GRU,1630,950,680,"Latam Airlines Colombia, Wamos for Latam Airlines Group, Latam Airlines Brasil",,google_flights,
+2026-10-09,CCS_EZE,2026-11-01,23,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-01,23,gol,,520,USD,,,si,23:40,13:40,1,GRU,780,220,560,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 519 en Google)"
+2026-10-09,CCS_EZE,2026-11-01,23,copa,,792,USD,si,792,si,6:35,3:58,1,PTY,1223,660,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-01,23,latam,,972,USD,si,972,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-11-02,24,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-02,24,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-11-02,24,copa,,567,USD,si,567,si,13:37,3:16,1,PTY,759,196,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-02,24,latam,,499,USD,si,499,si,11:50,18:35,2,BOG/SCL,1785,1158,627,"Latam Airlines Colombia, Wamos for Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-10-09,CCS_EZE,2026-11-03,25,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-03,25,gol,,504,USD,,,si,23:40,13:40,1,GRU,780,220,560,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 503 en Google)"
+2026-10-09,CCS_EZE,2026-11-03,25,copa,,505,USD,si,505,si,6:35,3:58,1,PTY,1223,660,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-03,25,latam,,565,USD,si,565,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-11-04,26,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-04,26,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-11-04,26,copa,,505,USD,si,505,si,6:35,21:57,1,PTY,862,299,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-04,26,latam,,653,USD,si,653,si,8:55,3:15,2,BOG/GRU,1040,350,690,"Latam Airlines Colombia, Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-10-09,CCS_EZE,2026-11-05,27,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-05,27,gol,,792,USD,,,si,23:40,13:40,1,GRU,780,220,560,,,sitio_aerolinea,"itinerario GF con menos escalas (solo Gol, desempate por menor duración; US$ 790 en Google)"
+2026-10-09,CCS_EZE,2026-11-05,27,copa,,522,USD,si,522,si,6:35,0:07,1,PTY,992,429,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-05,27,latam,,565,USD,si,565,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-11-06,28,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio | búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-11-06,28,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio | búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-11-06,28,copa,,505,USD,si,505,si,6:35,21:57,1,PTY,862,299,563,,,google_flights,búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-11-06,28,latam,,626,USD,si,626,si,11:50,3:00,2,BOG/LIM,850,265,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,búsqueda GF: 2 intentos
+2026-10-09,CCS_EZE,2026-11-07,29,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-07,29,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-11-07,29,copa,,505,USD,si,505,si,6:35,1:11,1,PTY,1056,493,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-07,29,latam,,499,USD,si,499,si,11:50,3:00,2,BOG/LIM,850,265,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-11-08,30,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-11-08,30,gol,,,USD,,,no,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-11-08,30,copa,,505,USD,si,505,si,13:37,3:16,1,PTY,759,196,563,,,google_flights,
+2026-10-09,CCS_EZE,2026-11-08,30,latam,,499,USD,si,499,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
+2026-10-09,CCS_EZE,2026-12-08,60,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-09,CCS_EZE,2026-12-08,60,gol,,812,USD,,,si,,,,,,,,,,sitio_aerolinea,escalas y duraciones vacías: Google Flights no muestra un vuelo solo de Gol con precio
+2026-10-09,CCS_EZE,2026-12-08,60,copa,,505,USD,si,505,si,6:35,22:20,1,PTY,885,307,578,,,google_flights,
+2026-10-09,CCS_EZE,2026-12-08,60,latam,,499,USD,si,499,si,8:55,3:00,2,BOG/LIM,1025,440,585,"Latam Airlines Colombia, Latam Airlines Colombia, Latam Airlines Peru",,google_flights,
