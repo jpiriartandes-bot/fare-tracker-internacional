@@ -10088,3 +10088,481 @@ fecha_busqueda,ruta,fecha_vuelo,dias_anticipacion,aerolinea,tarifa,precio,moneda
 2026-10-23,MIA_CCS,2026-12-22,60,american,Main Plus,1023,USD,si,1023,si,8:47,13:15,0,,208,0,208,Envoy Air as American Eagle,,google_flights,
 2026-10-23,MIA_CCS,2026-12-22,60,copa,,768,USD,si,768,si,4:42,12:07,1,PTY,385,59,326,,,google_flights,página de reserva: 3 intentos
 2026-10-23,MIA_CCS,2026-12-22,60,avianca,,731,USD,si,731,si,15:35,18:45,2,CLO/BOG,1570,1165,405,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,CCS_MIA,2026-10-25,1,laser,ECONOMY-LIGHT,,USD,,,no,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-10-25,1,laser,ECONOMY-BASIC,,USD,,,no,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-10-25,1,laser,ECONOMY-PLUS,,USD,,,no,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-10-25,1,american,Basic Economy,736,USD,si,736,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-25,1,american,Main Cabin,844,USD,si,844,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-25,1,american,Main Plus,1050,USD,si,1050,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-25,1,copa,,642,USD,si,642,si,6:35,22:29,1,PTY,954,611,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-25,1,avianca,,2524,USD,si,2524,si,4:00,12:15,2,BOG/SAL,1935,1470,465,Taca International Airlines - Taca,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-10-26,2,laser,ECONOMY-LIGHT,,USD,,,no,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-10-26,2,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-26,2,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-26,2,american,Basic Economy,714,USD,si,714,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-26,2,american,Main Cabin,822,USD,si,822,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-26,2,american,Main Plus,1028,USD,si,1028,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-26,2,copa,,642,USD,si,642,si,6:35,14:39,1,PTY,484,141,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-26,2,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-10-27,3,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-27,3,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-27,3,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-27,3,american,Basic Economy,714,USD,si,714,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-27,3,american,Main Cabin,822,USD,si,822,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-27,3,american,Main Plus,1028,USD,si,1028,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-27,3,copa,,642,USD,si,642,si,6:35,14:39,1,PTY,484,141,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-27,3,avianca,,996,USD,si,996,si,20:10,0:25,2,BOG/GYE,1695,1190,505,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-10-28,4,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-28,4,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-28,4,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-28,4,american,Basic Economy,714,USD,si,714,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-28,4,american,Main Cabin,822,USD,si,822,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-28,4,american,Main Plus,1028,USD,si,1028,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-28,4,copa,,642,USD,si,642,si,6:35,14:39,1,PTY,484,141,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-28,4,avianca,,1017,USD,si,1017,si,20:10,15:30,2,BOG/MDE,1160,765,395,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-10-29,5,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-29,5,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-29,5,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-29,5,american,Basic Economy,714,USD,si,714,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-29,5,american,Main Cabin,822,USD,si,822,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-29,5,american,Main Plus,1028,USD,si,1028,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-29,5,copa,,642,USD,si,642,si,6:35,14:39,1,PTY,484,141,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-29,5,avianca,,3295,USD,si,3295,si,20:10,0:25,2,BOG/GYE,1695,1190,505,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-10-30,6,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-30,6,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-30,6,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-30,6,american,Basic Economy,1291,USD,si,1291,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-30,6,american,Main Cabin,1398,USD,si,1398,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-30,6,american,Main Plus,1605,USD,si,1605,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-30,6,copa,,642,USD,si,642,si,6:35,14:39,1,PTY,484,141,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-30,6,avianca,,870,USD,si,870,si,4:00,11:50,2,BOG/SJO,1910,1485,425,Avianca Costa Rica S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-10-31,7,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-31,7,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-31,7,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,12:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-10-31,7,american,Basic Economy,736,USD,si,736,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-31,7,american,Main Cabin,844,USD,si,844,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-31,7,american,Main Plus,1050,USD,si,1050,si,14:40,18:10,0,,210,0,210,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-31,7,copa,,1049,USD,si,1049,si,6:35,14:39,1,PTY,484,141,343,,,google_flights,
+2026-10-24,CCS_MIA,2026-10-31,7,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-01,8,laser,ECONOMY-LIGHT,,USD,,,no,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-11-01,8,laser,ECONOMY-BASIC,450.42,USD,no,602.34,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-01,8,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-01,8,american,Basic Economy,736,USD,si,736,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-01,8,american,Main Cabin,844,USD,si,844,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-01,8,american,Main Plus,1050,USD,si,1050,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-01,8,copa,,642,USD,si,642,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-01,8,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-02,9,laser,ECONOMY-LIGHT,,USD,,,no,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-11-02,9,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-02,9,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-02,9,american,Basic Economy,714,USD,si,714,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-02,9,american,Main Cabin,822,USD,si,822,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-02,9,american,Main Plus,1028,USD,si,1028,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-02,9,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-02,9,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-03,10,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-03,10,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-03,10,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-03,10,american,Basic Economy,714,USD,si,714,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-03,10,american,Main Cabin,822,USD,si,822,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-03,10,american,Main Plus,1028,USD,si,1028,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-03,10,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-03,10,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-04,11,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-04,11,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-04,11,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-04,11,american,Basic Economy,714,USD,si,714,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-04,11,american,Main Cabin,822,USD,si,822,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-04,11,american,Main Plus,1028,USD,si,1028,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-04,11,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-04,11,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-05,12,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-05,12,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-05,12,laser,ECONOMY-PLUS,627.9,USD,no,801.13,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-05,12,american,Basic Economy,714,USD,si,714,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-05,12,american,Main Cabin,822,USD,si,822,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-05,12,american,Main Plus,1028,USD,si,1028,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-05,12,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-05,12,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-06,13,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-06,13,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-06,13,laser,ECONOMY-PLUS,627.9,USD,no,801.13,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-06,13,american,Basic Economy,736,USD,si,736,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-06,13,american,Main Cabin,844,USD,si,844,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-06,13,american,Main Plus,1050,USD,si,1050,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-06,13,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-06,13,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-07,14,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-07,14,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-07,14,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-07,14,american,Basic Economy,670,USD,si,670,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-07,14,american,Main Cabin,778,USD,si,778,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-07,14,american,Main Plus,984,USD,si,984,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-07,14,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-07,14,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-08,15,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-08,15,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-08,15,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-08,15,american,Basic Economy,670,USD,si,670,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-08,15,american,Main Cabin,778,USD,si,778,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-08,15,american,Main Plus,984,USD,si,984,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-08,15,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-08,15,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-09,16,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-09,16,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-09,16,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-09,16,american,Basic Economy,649,USD,si,649,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-09,16,american,Main Cabin,756,USD,si,756,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-09,16,american,Main Plus,962,USD,si,962,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-09,16,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-09,16,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-10,17,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-10,17,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-10,17,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-10,17,american,Basic Economy,649,USD,si,649,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-10,17,american,Main Cabin,756,USD,si,756,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-10,17,american,Main Plus,962,USD,si,962,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-10,17,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-10,17,avianca,,830,USD,si,830,si,20:10,14:30,2,BOG/MDE,1160,765,395,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-11-11,18,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-11,18,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-11,18,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-11,18,american,Basic Economy,649,USD,si,649,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-11,18,american,Main Cabin,756,USD,si,756,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-11,18,american,Main Plus,962,USD,si,962,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-11,18,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-11,18,avianca,,996,USD,si,996,si,4:00,23:25,2,BOG/GYE,1225,715,510,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-11-12,19,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-12,19,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-12,19,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-12,19,american,Basic Economy,649,USD,si,649,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-12,19,american,Main Cabin,756,USD,si,756,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-12,19,american,Main Plus,962,USD,si,962,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-12,19,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-12,19,avianca,,1601,USD,si,1601,si,20:10,14:30,2,BOG/MDE,1160,765,395,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no ofrece opciones de reserva de Avianca (sin familias)
+2026-10-24,CCS_MIA,2026-11-13,20,laser,ECONOMY-LIGHT,,USD,,,no,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-11-13,20,laser,ECONOMY-BASIC,,USD,,,no,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-11-13,20,laser,ECONOMY-PLUS,,USD,,,no,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-11-13,20,american,Basic Economy,670,USD,si,670,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-13,20,american,Main Cabin,778,USD,si,778,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-13,20,american,Main Plus,984,USD,si,984,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-13,20,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-13,20,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-14,21,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-14,21,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-14,21,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-14,21,american,Basic Economy,670,USD,si,670,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-14,21,american,Main Cabin,778,USD,si,778,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-14,21,american,Main Plus,984,USD,si,984,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-14,21,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-14,21,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-15,22,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-15,22,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-15,22,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-15,22,american,Basic Economy,670,USD,si,670,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-15,22,american,Main Cabin,778,USD,si,778,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-15,22,american,Main Plus,984,USD,si,984,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-15,22,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-15,22,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-16,23,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-16,23,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-16,23,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-16,23,american,Basic Economy,649,USD,si,649,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-16,23,american,Main Cabin,756,USD,si,756,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-16,23,american,Main Plus,962,USD,si,962,si,14:00,16:35,0,,215,0,215,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-16,23,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-16,23,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-17,24,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-17,24,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-17,24,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-17,24,american,Basic Economy,649,USD,si,649,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-17,24,american,Main Cabin,756,USD,si,756,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-17,24,american,Main Plus,962,USD,si,962,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-17,24,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-17,24,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-18,25,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-18,25,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-18,25,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-18,25,american,Basic Economy,649,USD,si,649,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-18,25,american,Main Cabin,756,USD,si,756,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-18,25,american,Main Plus,962,USD,si,962,si,15:40,18:21,0,,221,0,221,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-18,25,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-18,25,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-19,26,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-19,26,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-19,26,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-19,26,american,Basic Economy,649,USD,si,649,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-19,26,american,Main Cabin,756,USD,si,756,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-19,26,american,Main Plus,962,USD,si,962,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-19,26,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-19,26,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-20,27,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-20,27,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-20,27,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-20,27,american,Basic Economy,670,USD,si,670,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-20,27,american,Main Cabin,778,USD,si,778,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-20,27,american,Main Plus,984,USD,si,984,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-20,27,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-20,27,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-21,28,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-21,28,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-21,28,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-21,28,american,Basic Economy,670,USD,si,670,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-21,28,american,Main Cabin,778,USD,si,778,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-21,28,american,Main Plus,984,USD,si,984,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-21,28,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-21,28,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-22,29,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-22,29,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-22,29,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-22,29,american,Basic Economy,670,USD,si,670,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-22,29,american,Main Cabin,778,USD,si,778,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-22,29,american,Main Plus,984,USD,si,984,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-22,29,copa,,390,USD,si,390,si,13:37,19:06,1,PTY,389,54,335,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-22,29,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-11-23,30,laser,ECONOMY-LIGHT,395.85,USD,no,541.24,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-23,30,laser,ECONOMY-BASIC,413.7,USD,no,561.23,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-23,30,laser,ECONOMY-PLUS,495.81,USD,no,653.19,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-11-23,30,american,Basic Economy,649,USD,si,649,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-23,30,american,Main Cabin,756,USD,si,756,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-23,30,american,Main Plus,962,USD,si,962,si,14:00,16:40,0,,220,0,220,Envoy Air as American Eagle,,google_flights,
+2026-10-24,CCS_MIA,2026-11-23,30,copa,,390,USD,si,390,si,6:35,13:34,1,PTY,479,141,338,,,google_flights,
+2026-10-24,CCS_MIA,2026-11-23,30,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,CCS_MIA,2026-12-23,60,laser,ECONOMY-LIGHT,,USD,,,no,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,CCS_MIA,2026-12-23,60,laser,ECONOMY-BASIC,450.42,USD,no,602.34,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-12-23,60,laser,ECONOMY-PLUS,550.38,USD,no,714.3,si,13:30,15:45,0,,195,0,195,G6,201,sitio_aerolinea,
+2026-10-24,CCS_MIA,2026-12-23,60,american,Basic Economy,649,USD,si,649,si,15:40,18:18,0,,218,0,218,,,google_flights,
+2026-10-24,CCS_MIA,2026-12-23,60,american,Main Cabin,756,USD,si,756,si,15:40,18:18,0,,218,0,218,,,google_flights,
+2026-10-24,CCS_MIA,2026-12-23,60,american,Main Plus,962,USD,si,962,si,15:40,18:18,0,,218,0,218,,,google_flights,
+2026-10-24,CCS_MIA,2026-12-23,60,copa,,662,USD,si,662,si,6:35,13:35,1,PTY,480,141,339,,,google_flights,
+2026-10-24,CCS_MIA,2026-12-23,60,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-10-24,MIA_CCS,2026-10-25,1,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-25,1,laser,ECONOMY-BASIC,660.1,USD,no,718.25,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-25,1,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-25,1,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-25,1,copa,,583,USD,si,583,si,5:40,12:07,1,PTY,387,59,328,,,google_flights,
+2026-10-24,MIA_CCS,2026-10-25,1,avianca,,623,USD,si,623,si,17:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-10-26,2,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-26,2,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-26,2,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-26,2,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-26,2,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: FlightHub, AranGrant, Ovago, Justfly.com)"
+2026-10-24,MIA_CCS,2026-10-26,2,avianca,,623,USD,si,623,si,17:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-10-27,3,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-27,3,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-27,3,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-27,3,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-27,3,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: FlightHub, AranGrant, Ovago, Justfly.com)"
+2026-10-24,MIA_CCS,2026-10-27,3,avianca,,623,USD,si,623,si,7:55,18:45,1,BOG,650,310,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-10-28,4,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-28,4,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-28,4,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-28,4,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-28,4,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: FlightHub, AranGrant, Ovago, Justfly.com)"
+2026-10-24,MIA_CCS,2026-10-28,4,avianca,,623,USD,si,623,si,17:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-10-29,5,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-29,5,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-29,5,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-29,5,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-29,5,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, FlightHub, Ovago, Justfly.com)"
+2026-10-24,MIA_CCS,2026-10-29,5,avianca,,623,USD,si,623,si,7:55,18:45,1,BOG,650,310,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-10-30,6,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-30,6,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-30,6,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-30,6,american,Basic Economy,772,USD,si,772,si,10:09,13:36,0,,207,0,207,,,google_flights,
+2026-10-24,MIA_CCS,2026-10-30,6,american,Main Cabin,872,USD,si,872,si,10:09,13:36,0,,207,0,207,,,google_flights,
+2026-10-24,MIA_CCS,2026-10-30,6,american,Main Plus,1062,USD,si,1062,si,10:09,13:36,0,,207,0,207,,,google_flights,
+2026-10-24,MIA_CCS,2026-10-30,6,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-30,6,avianca,,623,USD,si,623,si,7:55,18:45,1,BOG,650,310,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-10-31,7,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-10-31,7,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-31,7,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,10:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-10-31,7,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-31,7,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-10-31,7,avianca,,623,USD,si,623,si,7:55,18:45,1,BOG,650,310,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-01,8,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-01,8,laser,ECONOMY-BASIC,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-11-01,8,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-01,8,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-11-01,8,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-11-01,8,avianca,,623,USD,si,623,si,6:55,18:45,1,BOG,650,310,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-02,9,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-02,9,laser,ECONOMY-BASIC,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-11-02,9,laser,ECONOMY-PLUS,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-11-02,9,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-11-02,9,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, FlightHub, Ovago, Justfly.com)"
+2026-10-24,MIA_CCS,2026-11-02,9,avianca,,663,USD,si,663,si,11:25,2:35,2,BAQ/BOG,850,450,400,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-03,10,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-03,10,laser,ECONOMY-BASIC,660.1,USD,no,718.25,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-03,10,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-03,10,american,,,USD,,,no,,,,,,,,,,google_flights,American no tiene vuelos propios con precio en Google Flights
+2026-10-24,MIA_CCS,2026-11-03,10,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, FlightHub, Ovago, Justfly.com)"
+2026-10-24,MIA_CCS,2026-11-03,10,avianca,,661,USD,si,661,si,5:30,2:35,3,Aeropuerto Internacional Augusto C/SAL/BOG,1205,700,505,"Taca International Airlines - Taca, Taca International Airlines - Taca, Taca International Airlines - Taca",,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-04,11,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-04,11,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-04,11,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-04,11,american,Basic Economy,819,USD,si,819,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-04,11,american,Main Cabin,919,USD,si,919,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-04,11,american,Main Plus,1110,USD,si,1110,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-04,11,copa,,612,USD,si,612,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-04,11,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-05,12,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-05,12,laser,ECONOMY-BASIC,660.1,USD,no,718.25,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-05,12,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-05,12,american,Basic Economy,591,USD,si,591,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-05,12,american,Main Cabin,691,USD,si,691,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-05,12,american,Main Plus,882,USD,si,882,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-05,12,copa,,612,USD,si,612,si,16:34,0:59,1,PTY,445,111,334,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-05,12,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-06,13,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-06,13,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-06,13,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-06,13,american,Basic Economy,611,USD,si,611,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-06,13,american,Main Cabin,711,USD,si,711,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-06,13,american,Main Plus,902,USD,si,902,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-06,13,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-06,13,avianca,,623,USD,si,623,si,1:35,18:45,1,BOG,970,630,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-07,14,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-07,14,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-07,14,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-07,14,american,Basic Economy,550,USD,si,550,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-07,14,american,Main Cabin,650,USD,si,650,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-07,14,american,Main Plus,841,USD,si,841,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-07,14,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-07,14,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-08,15,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-08,15,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-08,15,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-08,15,american,Basic Economy,601,USD,si,601,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-08,15,american,Main Cabin,701,USD,si,701,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-08,15,american,Main Plus,892,USD,si,892,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-08,15,copa,,630,USD,si,630,si,16:34,0:59,1,PTY,445,111,334,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-08,15,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-09,16,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-09,16,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-09,16,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-09,16,american,Basic Economy,656,USD,si,656,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-09,16,american,Main Cabin,756,USD,si,756,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-09,16,american,Main Plus,947,USD,si,947,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-09,16,copa,,630,USD,si,630,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-09,16,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-10,17,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-10,17,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-10,17,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-10,17,american,Basic Economy,581,USD,si,581,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-10,17,american,Main Cabin,681,USD,si,681,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-10,17,american,Main Plus,872,USD,si,872,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-10,17,copa,,630,USD,si,630,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-10,17,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-11,18,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-11,18,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-11,18,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-11,18,american,Basic Economy,530,USD,si,530,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-11,18,american,Main Cabin,630,USD,si,630,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-11,18,american,Main Plus,821,USD,si,821,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-11,18,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-11,18,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-12,19,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-12,19,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-12,19,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-12,19,american,Basic Economy,530,USD,si,530,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-12,19,american,Main Cabin,630,USD,si,630,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-12,19,american,Main Plus,821,USD,si,821,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-12,19,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-12,19,avianca,,623,USD,si,623,si,1:35,18:45,1,BOG,970,630,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-13,20,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-13,20,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-13,20,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-13,20,american,Basic Economy,601,USD,si,601,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-13,20,american,Main Cabin,701,USD,si,701,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-13,20,american,Main Plus,892,USD,si,892,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-13,20,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-13,20,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-14,21,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-14,21,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-14,21,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-14,21,american,Basic Economy,601,USD,si,601,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-14,21,american,Main Cabin,701,USD,si,701,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-14,21,american,Main Plus,892,USD,si,892,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-14,21,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-14,21,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-15,22,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-15,22,laser,ECONOMY-BASIC,660.1,USD,no,718.25,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-15,22,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-15,22,american,Basic Economy,601,USD,si,601,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-15,22,american,Main Cabin,701,USD,si,701,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-15,22,american,Main Plus,892,USD,si,892,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-15,22,copa,,583,USD,si,583,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-15,22,avianca,,623,USD,si,623,si,1:35,18:45,1,BOG,970,630,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-16,23,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-16,23,laser,ECONOMY-BASIC,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-11-16,23,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-16,23,american,Basic Economy,656,USD,si,656,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-16,23,american,Main Cabin,756,USD,si,756,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-16,23,american,Main Plus,947,USD,si,947,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-16,23,copa,,565,USD,si,565,si,4:41,12:07,1,PTY,386,59,327,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-16,23,avianca,,623,USD,si,623,si,1:35,18:45,1,BOG,970,630,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-17,24,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-17,24,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-17,24,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-17,24,american,Basic Economy,581,USD,si,581,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-17,24,american,Main Cabin,681,USD,si,681,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-17,24,american,Main Plus,872,USD,si,872,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-17,24,copa,,583,USD,si,583,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-17,24,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-18,25,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-18,25,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-18,25,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-18,25,american,Basic Economy,656,USD,si,656,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-18,25,american,Main Cabin,756,USD,si,756,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-18,25,american,Main Plus,947,USD,si,947,si,8:51,13:15,0,,204,0,204,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-18,25,copa,,583,USD,si,583,si,4:41,12:07,1,PTY,386,59,327,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-18,25,avianca,,623,USD,si,623,si,6:55,18:45,1,BOG,650,310,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-19,26,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-19,26,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-19,26,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-19,26,american,Basic Economy,530,USD,si,530,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-19,26,american,Main Cabin,630,USD,si,630,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-19,26,american,Main Plus,821,USD,si,821,si,10:10,14:36,0,,206,0,206,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-19,26,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-19,26,avianca,,623,USD,si,623,si,1:35,18:45,1,BOG,970,630,340,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-20,27,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-20,27,laser,ECONOMY-BASIC,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-11-20,27,laser,ECONOMY-PLUS,853.9,USD,no,919.81,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-20,27,american,Basic Economy,806,USD,si,806,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-20,27,american,Main Cabin,906,USD,si,906,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-20,27,american,Main Plus,1097,USD,si,1097,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-20,27,copa,,583,USD,si,583,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-20,27,avianca,,669,USD,si,669,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-21,28,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-21,28,laser,ECONOMY-BASIC,660.1,USD,no,718.25,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-21,28,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-21,28,american,Basic Economy,915,USD,si,915,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-21,28,american,Main Cabin,1015,USD,si,1015,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-21,28,american,Main Plus,1206,USD,si,1206,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-21,28,copa,,583,USD,si,583,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-21,28,avianca,,669,USD,si,669,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-22,29,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-22,29,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-22,29,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-22,29,american,Basic Economy,755,USD,si,755,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-22,29,american,Main Cabin,855,USD,si,855,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-22,29,american,Main Plus,1046,USD,si,1046,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-22,29,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-22,29,avianca,,661,USD,si,661,si,16:55,18:45,3,Aeropuerto Internacional Augusto C/SAL/BOG,1490,975,515,"Taca International Airlines - Taca, Taca International Airlines - Taca, Taca International Airlines - Taca",,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-11-23,30,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-11-23,30,laser,ECONOMY-BASIC,420.84,USD,no,469.43,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-23,30,laser,ECONOMY-PLUS,748.45,USD,no,810.14,si,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,
+2026-10-24,MIA_CCS,2026-11-23,30,american,Basic Economy,656,USD,si,656,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-23,30,american,Main Cabin,756,USD,si,756,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-23,30,american,Main Plus,947,USD,si,947,si,8:52,13:15,0,,203,0,203,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-11-23,30,copa,,565,USD,si,565,si,17:22,0:59,1,PTY,397,67,330,,,google_flights,
+2026-10-24,MIA_CCS,2026-11-23,30,avianca,,623,USD,si,623,si,16:00,2:35,1,BOG,575,225,350,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
+2026-10-24,MIA_CCS,2026-12-23,60,laser,ECONOMY-LIGHT,,USD,,,no,,,,,,,,,,sitio_aerolinea,la familia no figura en la respuesta
+2026-10-24,MIA_CCS,2026-12-23,60,laser,ECONOMY-BASIC,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-12-23,60,laser,ECONOMY-PLUS,,USD,,,no,07:30,11:45,0,,195,0,195,G6,200,sitio_aerolinea,agotada (rbd.posting = 0)
+2026-10-24,MIA_CCS,2026-12-23,60,american,Basic Economy,808,USD,si,808,si,8:47,13:15,0,,208,0,208,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-12-23,60,american,Main Cabin,908,USD,si,908,si,8:47,13:15,0,,208,0,208,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-12-23,60,american,Main Plus,1099,USD,si,1099,si,8:47,13:15,0,,208,0,208,Envoy Air as American Eagle,,google_flights,
+2026-10-24,MIA_CCS,2026-12-23,60,copa,,768,USD,si,768,si,4:42,12:07,1,PTY,385,59,326,,,google_flights,
+2026-10-24,MIA_CCS,2026-12-23,60,avianca,,786,USD,si,786,si,15:35,18:45,2,CLO/BOG,1570,1165,405,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | Google no desglosa familias de Avianca
