@@ -3641,3 +3641,127 @@ fecha_busqueda,ruta,fecha_vuelo,dias_anticipacion,aerolinea,tarifa,precio,moneda
 2026-11-02,MIA_BUE,2026-12-02,30,latam,,337,USD,si,337,si,19:30,18:35,1,SCL,1265,638,627,"Latam Airlines Group, Latam Airlines Group",,google_flights,
 2026-11-02,MIA_BUE,2027-01-01,60,copa,,288,USD,si,288,si,4:42,0:52,1,PTY,1090,467,623,,,google_flights,
 2026-11-02,MIA_BUE,2027-01-01,60,latam,,337,USD,si,337,si,0:15,18:35,1,LIM,980,365,615,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-04,1,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-04,1,latam,,537,USD,si,537,si,2:05,16:40,1,GRU,995,320,675,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,BUE_MIA,2026-11-05,2,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-05,2,latam,,,USD,,,no,,,,,,,,,,google_flights,"LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Delta, Travomint)"
+2026-11-03,BUE_MIA,2026-11-06,3,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-06,3,latam,,984,USD,si,984,si,20:05,6:10,1,LIM,725,80,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-07,4,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-07,4,latam,,,USD,,,no,,,,,,,,,,google_flights,"LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Delta, Travomint)"
+2026-11-03,BUE_MIA,2026-11-08,5,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-08,5,latam,,494,USD,si,494,si,21:00,17:00,1,SCL,1320,659,661,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-09,6,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-09,6,latam,,454,USD,si,454,si,21:00,16:25,1,SCL,1285,629,656,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-10,7,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights (con 1 escala)
+2026-11-03,BUE_MIA,2026-11-10,7,latam,,382,USD,si,382,si,20:05,6:10,1,LIM,725,80,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,página de reserva: 2 intentos
+2026-11-03,BUE_MIA,2026-11-11,8,copa,,456,USD,si,456,si,5:16,15:39,1,PTY,743,108,635,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-11,8,latam,,381,USD,si,381,si,17:35,7:10,1,LIM,935,290,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-12,9,copa,,456,USD,si,456,si,9:10,19:06,1,PTY,716,80,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-12,9,latam,,377,USD,si,377,si,4:00,14:20,1,LIM,740,90,650,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-13,10,copa,,456,USD,si,456,si,4:20,15:39,1,PTY,799,164,635,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-13,10,latam,,377,USD,si,377,si,10:35,5:25,1,GRU,1250,580,670,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,BUE_MIA,2026-11-14,11,copa,,495,USD,si,495,si,3:40,21:36,1,PTY,1196,560,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-14,11,latam,,676,USD,si,676,si,8:40,6:10,1,LIM,1410,765,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-15,12,copa,,911,USD,si,911,si,2:02,21:36,1,PTY,1294,661,633,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-15,12,latam,,532,USD,si,532,si,2:05,16:40,1,GRU,995,320,675,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,BUE_MIA,2026-11-16,13,copa,,608,USD,si,608,si,9:10,21:36,1,PTY,866,230,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-16,13,latam,,419,USD,si,419,si,12:50,5:50,1,SCL,1140,490,650,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-17,14,copa,,1052,USD,si,1052,si,3:40,15:39,1,PTY,839,203,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-17,14,latam,,419,USD,si,419,si,12:50,5:50,1,SCL,1140,490,650,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-18,15,copa,,1052,USD,si,1052,si,2:02,21:36,1,PTY,1294,661,633,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-18,15,latam,,381,USD,si,381,si,12:50,5:50,1,SCL,1140,490,650,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-19,16,copa,,5338,USD,si,5338,si,2:02,19:06,1,PTY,1144,511,633,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-19,16,latam,,,USD,,,no,,,,,,,,,,google_flights,"LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Delta, Travomint) | página de reserva: 3 intentos"
+2026-11-03,BUE_MIA,2026-11-20,17,copa,,1421,USD,si,1421,si,14:45,0:37,1,PTY,712,78,634,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-20,17,latam,,528,USD,si,528,si,2:05,16:40,1,GRU,995,320,675,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,BUE_MIA,2026-11-21,18,copa,,911,USD,si,911,si,2:02,22:10,1,PTY,1328,691,637,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-21,18,latam,,537,USD,si,537,si,20:05,14:15,1,LIM,1210,565,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-22,19,copa,,647,USD,si,647,si,2:02,19:06,1,PTY,1144,511,633,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-22,19,latam,,554,USD,si,554,si,2:05,16:40,1,GRU,995,320,675,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,BUE_MIA,2026-11-23,20,copa,,456,USD,si,456,si,3:40,21:36,1,PTY,1196,560,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-23,20,latam,,377,USD,si,377,si,12:50,5:50,1,SCL,1140,490,650,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-24,21,copa,,456,USD,si,456,si,9:10,19:06,1,PTY,716,80,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-24,21,latam,,377,USD,si,377,si,12:50,5:50,1,SCL,1140,490,650,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-11-25,22,copa,,456,USD,si,456,si,0:05,19:06,1,PTY,1261,629,632,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-25,22,latam,,537,USD,si,537,si,2:05,16:40,1,GRU,995,320,675,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,BUE_MIA,2026-11-26,23,copa,,456,USD,si,456,si,9:10,19:06,1,PTY,716,80,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-26,23,latam,,,USD,,,no,,,,,,,,,,google_flights,"LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Delta, Travomint)"
+2026-11-03,BUE_MIA,2026-11-27,24,copa,,456,USD,si,456,si,9:10,19:06,1,PTY,716,80,636,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-27,24,latam,,474,USD,si,474,si,2:05,18:45,1,GRU,1120,450,670,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,página de reserva: 2 intentos
+2026-11-03,BUE_MIA,2026-11-28,25,copa,,494,USD,si,494,si,14:45,0:37,1,PTY,712,78,634,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-28,25,latam,,617,USD,si,617,si,8:40,19:25,1,LIM,765,120,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-29,26,copa,,911,USD,si,911,si,4:20,0:37,1,PTY,1337,702,635,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-29,26,latam,,932,USD,si,932,si,17:35,6:10,1,LIM,875,230,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-11-30,27,copa,,2533,USD,si,2533,si,0:05,11:24,1,PTY,799,165,634,,,google_flights,
+2026-11-03,BUE_MIA,2026-11-30,27,latam,,377,USD,si,377,si,19:35,16:25,1,SCL,1370,714,656,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-12-01,28,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s)
+2026-11-03,BUE_MIA,2026-12-01,28,latam,,377,USD,si,377,si,21:00,17:00,1,SCL,1320,659,661,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,BUE_MIA,2026-12-02,29,copa,,456,USD,si,456,si,2:02,21:37,1,PTY,1295,663,632,,,google_flights,
+2026-11-03,BUE_MIA,2026-12-02,29,latam,,377,USD,si,377,si,20:05,6:10,1,LIM,725,80,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2026-12-03,30,copa,,456,USD,si,456,si,3:40,13:35,1,PTY,715,81,634,,,google_flights,
+2026-11-03,BUE_MIA,2026-12-03,30,latam,,377,USD,si,377,si,4:00,14:20,1,LIM,740,90,650,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,BUE_MIA,2027-01-02,60,copa,,2533,USD,si,2533,si,0:05,11:26,1,PTY,801,177,624,,,google_flights,
+2026-11-03,BUE_MIA,2027-01-02,60,latam,,1994,USD,si,1994,si,8:40,6:10,1,LIM,1410,765,645,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-04,1,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-04,1,latam,,689,USD,si,689,si,20:25,18:35,1,SCL,1210,573,637,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-05,2,copa,,770,USD,si,770,si,4:41,3:16,1,PTY,1235,633,602,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-05,2,latam,,721,USD,si,721,si,9:20,9:40,1,GRU,1340,660,680,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,MIA_BUE,2026-11-06,3,copa,,770,USD,si,770,si,11:21,0:07,1,PTY,646,43,603,,,google_flights,página de reserva: 3 intentos
+2026-11-03,MIA_BUE,2026-11-06,3,latam,,681,USD,si,681,si,16:05,7:40,1,LIM,815,205,610,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-07,4,copa,,770,USD,si,770,si,11:21,0:07,1,PTY,646,43,603,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-07,4,latam,,716,USD,si,716,si,12:45,7:40,1,LIM,1015,410,605,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-08,5,copa,,770,USD,si,770,si,4:41,21:57,1,PTY,916,314,602,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-08,5,latam,,759,USD,si,759,si,16:05,16:00,1,LIM,1315,700,615,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-09,6,copa,,770,USD,si,770,si,12:54,3:16,1,PTY,742,141,601,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-09,6,latam,,661,USD,si,661,si,23:10,18:30,1,LIM,1040,430,610,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-10,7,copa,,425,USD,si,425,si,4:41,4:30,1,PTY,1309,707,602,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-10,7,latam,,614,USD,si,614,si,23:10,16:00,1,LIM,890,275,615,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-11,8,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-11,8,latam,,614,USD,si,614,si,23:10,18:30,1,LIM,1040,430,610,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-12,9,copa,,568,USD,si,568,si,4:41,22:20,1,PTY,939,326,613,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-12,9,latam,,626,USD,si,626,si,9:20,9:40,1,GRU,1340,660,680,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,MIA_BUE,2026-11-13,10,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-13,10,latam,,,USD,,,no,,,,,,,,,,google_flights,"LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Delta, FlightHub, Justfly.com, OneTravel, Ovago)"
+2026-11-03,MIA_BUE,2026-11-14,11,copa,,478,USD,si,478,si,4:41,3:10,1,PTY,1229,614,615,,,google_flights,página de reserva: 2 intentos
+2026-11-03,MIA_BUE,2026-11-14,11,latam,,310,USD,si,310,si,12:45,3:00,1,LIM,735,125,610,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-15,12,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-15,12,latam,,419,USD,si,419,si,16:45,16:00,1,LIM,1275,665,610,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-16,13,copa,,288,USD,si,288,si,4:41,0:52,1,PTY,1091,476,615,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-16,13,latam,,337,USD,si,337,si,20:25,10:40,1,SCL,735,95,640,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-17,14,copa,,288,USD,si,288,si,12:54,3:10,1,PTY,736,122,614,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-17,14,latam,,337,USD,si,337,si,18:40,10:40,1,SCL,840,210,630,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-18,15,copa,,288,USD,si,288,si,12:54,3:10,1,PTY,736,122,614,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-18,15,latam,,397,USD,si,397,si,19:30,10:40,1,SCL,790,160,630,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-19,16,copa,,408,USD,si,408,si,11:21,3:10,1,PTY,829,213,616,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-19,16,latam,,530,USD,si,530,si,12:45,6:20,1,LIM,935,315,620,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-20,17,copa,,722,USD,si,722,si,2:36,0:52,1,PTY,1216,600,616,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-20,17,latam,,482,USD,si,482,si,9:20,10:30,1,GRU,1390,710,680,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,MIA_BUE,2026-11-21,18,copa,,408,USD,si,408,si,12:54,3:10,1,PTY,736,122,614,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-21,18,latam,,354,USD,si,354,si,16:05,6:20,1,LIM,735,110,625,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-22,19,copa,,1118,USD,si,1118,si,4:41,0:52,1,PTY,1091,476,615,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-22,19,latam,,546,USD,si,546,si,19:10,10:30,1,GRU,800,115,685,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,página de reserva: 2 intentos
+2026-11-03,MIA_BUE,2026-11-23,20,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-23,20,latam,,539,USD,si,539,si,9:20,9:40,1,GRU,1340,660,680,"Latam Airlines Brasil, Latam Airlines Brasil",,google_flights,
+2026-11-03,MIA_BUE,2026-11-24,21,copa,,722,USD,si,722,si,12:54,2:10,1,PTY,676,56,620,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-24,21,latam,,343,USD,si,343,si,18:40,18:35,1,SCL,1315,688,627,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-25,22,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-25,22,latam,,,USD,,,no,,,,,,,,,,google_flights,"LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Delta, FlightHub, Justfly.com, OneTravel, Ovago, AranGrant)"
+2026-11-03,MIA_BUE,2026-11-26,23,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-11-26,23,latam,,345,USD,si,345,si,20:25,18:35,1,SCL,1210,573,637,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-27,24,copa,,288,USD,si,288,si,4:41,0:52,1,PTY,1091,476,615,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-27,24,latam,,407,USD,si,407,si,0:15,16:00,1,LIM,825,210,615,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-28,25,copa,,316,USD,si,316,si,7:31,2:10,1,PTY,999,378,621,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-28,25,latam,,454,USD,si,454,si,12:45,3:00,1,LIM,735,125,610,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
+2026-11-03,MIA_BUE,2026-11-29,26,copa,,316,USD,si,316,si,12:54,2:10,1,PTY,676,56,620,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-29,26,latam,,451,USD,si,451,si,20:25,18:35,1,SCL,1210,573,637,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-11-30,27,copa,,288,USD,si,288,si,12:54,2:10,1,PTY,676,56,620,,,google_flights,
+2026-11-03,MIA_BUE,2026-11-30,27,latam,,379,USD,si,379,si,19:30,10:40,1,SCL,790,160,630,"Latam Airlines Group, Latam Airlines Group",,google_flights,página de reserva: 3 intentos
+2026-11-03,MIA_BUE,2026-12-01,28,copa,,,USD,,,no,,,,,,,,,,google_flights,"Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: AranGrant, Ovago)"
+2026-11-03,MIA_BUE,2026-12-01,28,latam,,337,USD,si,337,si,18:40,18:35,1,SCL,1315,688,627,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-12-02,29,copa,,288,USD,si,288,si,12:44,3:10,1,PTY,746,117,629,,,google_flights,
+2026-11-03,MIA_BUE,2026-12-02,29,latam,,337,USD,si,337,si,19:30,10:40,1,SCL,790,160,630,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2026-12-03,30,copa,,288,USD,si,288,si,4:42,0:52,1,PTY,1090,471,619,,,google_flights,
+2026-11-03,MIA_BUE,2026-12-03,30,latam,,348,USD,si,348,si,20:35,19:40,1,SCL,1265,628,637,"Latam Airlines Group, Latam Airlines Group",,google_flights,
+2026-11-03,MIA_BUE,2027-01-02,60,copa,,408,USD,si,408,si,7:35,2:10,1,PTY,995,367,628,,,google_flights,
+2026-11-03,MIA_BUE,2027-01-02,60,latam,,614,USD,si,614,si,16:05,16:00,1,LIM,1315,700,615,"Latam Airlines Peru, Latam Airlines Peru",,google_flights,
