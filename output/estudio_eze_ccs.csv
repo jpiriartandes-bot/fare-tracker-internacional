@@ -11019,3 +11019,94 @@ Call log:
 2026-11-25,CCS_EZE,2026-12-06,11,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
 2026-11-25,CCS_EZE,2026-12-06,11,copa,,460,USD,si,460,si,6:35,0:52,1,PTY,1037,456,581,,,google_flights,1 de 2 página(s) de reserva fallaron: el vuelo ya no aparece en la lista al volver a la búsqueda | página de reserva: 3 intentos
 2026-11-25,CCS_EZE,2026-12-06,11,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-11-27,1,avianca,,1036,USD,si,1036,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-11-27,1,copa,,898,USD,si,898,si,2:02,12:07,1,PTY,665,79,586,,,google_flights,
+2026-11-26,EZE_CCS,2026-11-27,1,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint)
+2026-11-26,EZE_CCS,2026-11-28,2,avianca,,2097,USD,si,2097,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-11-28,2,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-11-28,2,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-11-29,3,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-11-29,3,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-11-30,4,avianca,,1763,USD,si,1763,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-11-30,4,copa,,2825,USD,si,2825,si,2:02,12:07,1,PTY,665,79,586,,,google_flights,búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-11-30,4,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint) | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-02,6,avianca,,1193,USD,si,1193,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-02,6,copa,,957,USD,si,957,si,4:28,0:59,1,PTY,1291,701,590,,,google_flights,
+2026-11-26,EZE_CCS,2026-12-02,6,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-03,7,avianca,,2608,USD,si,2608,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-03,7,copa,,845,USD,si,845,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-03,7,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-04,8,avianca,,2097,USD,si,2097,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-04,8,copa,,1348,USD,si,1348,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,
+2026-11-26,EZE_CCS,2026-12-04,8,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint) | página de reserva: 3 intentos
+2026-11-26,EZE_CCS,2026-12-06,10,avianca,,2097,USD,si,2097,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-06,10,copa,,1070,USD,si,1070,si,4:28,0:59,1,PTY,1291,701,590,,,google_flights,página de reserva: 2 intentos
+2026-11-26,EZE_CCS,2026-12-06,10,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-07,11,avianca,,2097,USD,si,2097,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-07,11,copa,,1826,USD,si,1826,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,
+2026-11-26,EZE_CCS,2026-12-07,11,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-08,12,avianca,,2254,USD,si,2254,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-08,12,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-08,12,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint) | página de reserva: 3 intentos
+2026-11-26,EZE_CCS,2026-12-10,14,avianca,,2608,USD,si,2608,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-10,14,copa,,2825,USD,si,2825,si,0:05,12:07,1,PTY,782,198,584,,,google_flights,búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-10,14,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 1 vuelo(s) más barato(s) (vendían: Travomint) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-11,15,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-11,15,copa,,2825,USD,si,2825,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,"1 de 2 página(s) de reserva fallaron: el vuelo ya no aparece en la lista al volver a la búsqueda | búsqueda GF: 2 intentos, página de reserva: 3 intentos"
+2026-11-26,EZE_CCS,2026-12-11,15,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-12,16,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-12,16,copa,,2008,USD,si,2008,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,"búsqueda GF: 3 intentos, página de reserva: 3 intentos"
+2026-11-26,EZE_CCS,2026-12-12,16,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-13,17,avianca,,2608,USD,si,2608,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-13,17,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-13,17,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint)
+2026-11-26,EZE_CCS,2026-12-14,18,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-14,18,copa,,2008,USD,si,2008,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-14,18,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-18,22,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-18,22,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-18,22,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint)
+2026-11-26,EZE_CCS,2026-12-19,23,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-19,23,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-19,23,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-20,24,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-20,24,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-20,24,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-21,25,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-21,25,copa,,2825,USD,si,2825,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-21,25,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-22,26,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-22,26,copa,,2825,USD,si,2825,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-22,26,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-23,27,avianca,,2097,USD,si,2097,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-23,27,copa,,2307,USD,si,2307,si,12:18,0:59,1,PTY,821,231,590,,,google_flights,
+2026-11-26,EZE_CCS,2026-12-23,27,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-24,28,avianca,,1763,USD,si,1763,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,EZE_CCS,2026-12-24,28,copa,,1347,USD,si,1347,si,14:45,0:59,1,PTY,674,84,590,,,google_flights,página de reserva: 3 intentos
+2026-11-26,EZE_CCS,2026-12-24,28,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,EZE_CCS,2026-12-25,29,avianca,,2608,USD,si,2608,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-25,29,copa,,1526,USD,si,1526,si,0:05,12:07,1,PTY,782,198,584,,,google_flights,búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-25,29,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) (vendían: Travomint) | búsqueda GF: 3 intentos
+2026-11-26,EZE_CCS,2026-12-26,30,avianca,,2608,USD,si,2608,si,16:50,2:35,1,BOG,645,120,525,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-26,30,copa,,2009,USD,si,2009,si,9:10,0:59,1,PTY,1009,418,591,,,google_flights,búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2026-12-26,30,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2027-01-25,60,avianca,,1193,USD,si,1193,si,7:25,18:45,1,BOG,740,235,505,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google) | búsqueda GF: 2 intentos
+2026-11-26,EZE_CCS,2027-01-25,60,copa,,898,USD,si,898,si,14:45,0:59,1,PTY,674,94,580,,,google_flights,"búsqueda GF: 2 intentos, página de reserva: 3 intentos"
+2026-11-26,EZE_CCS,2027-01-25,60,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights | búsqueda GF: 2 intentos
+2026-11-26,CCS_EZE,2026-11-28,2,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-11-26,CCS_EZE,2026-11-28,2,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no tiene vuelos propios con precio en Google Flights
+2026-11-26,CCS_EZE,2026-11-30,4,avianca,,1342,USD,si,1342,si,4:00,0:30,1,BOG,2610,2095,515,,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,CCS_EZE,2026-11-30,4,copa,,,USD,,,no,,,,,,,,,,google_flights,Copa no aparece como vendedor en sus 2 vuelo(s) más barato(s) | página de reserva: 3 intentos
+2026-11-26,CCS_EZE,2026-11-30,4,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s) | página de reserva: 2 intentos
+2026-11-26,CCS_EZE,2026-12-03,7,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-11-26,CCS_EZE,2026-12-03,7,copa,,460,USD,si,460,si,13:37,2:10,1,PTY,693,101,592,,,google_flights,1 de 2 página(s) de reserva fallaron: el vuelo ya no aparece en la lista al volver a la búsqueda | página de reserva: 3 intentos
+2026-11-26,CCS_EZE,2026-12-03,7,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s)
+2026-11-26,CCS_EZE,2026-12-04,8,avianca,,1003,USD,si,1003,si,4:00,15:40,1,BOG,640,130,510,Avianca Ecuador S,,google_flights,precio de lista de Google Flights del vuelo solo de Avianca más barato (Avianca no figura como vendedor en Google)
+2026-11-26,CCS_EZE,2026-12-04,8,copa,,460,USD,si,460,si,6:35,22:20,1,PTY,885,307,578,,,google_flights,página de reserva: 2 intentos
+2026-11-26,CCS_EZE,2026-12-04,8,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s)
+2026-11-26,CCS_EZE,2026-12-05,9,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-11-26,CCS_EZE,2026-12-05,9,copa,,460,USD,si,460,si,6:35,0:52,1,PTY,1037,456,581,,,google_flights,
+2026-11-26,CCS_EZE,2026-12-05,9,latam,,,USD,,,no,,,,,,,,,,google_flights,LATAM no aparece como vendedor en sus 2 vuelo(s) más barato(s)
+2026-11-26,CCS_EZE,2026-12-06,10,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio
+2026-11-26,CCS_EZE,2026-12-06,10,copa,,460,USD,si,460,si,6:35,0:52,1,PTY,1037,456,581,,,google_flights,1 de 2 página(s) de reserva fallaron: el vuelo ya no aparece en la lista al volver a la búsqueda | página de reserva: 3 intentos
+2026-11-26,CCS_EZE,2026-12-07,11,avianca,,,USD,,,no,,,,,,,,,,google_flights,Google Flights no muestra un vuelo solo de Avianca con precio | búsqueda GF: 2 intentos
